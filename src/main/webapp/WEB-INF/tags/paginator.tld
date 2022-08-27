@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+
+	<description>Paginator</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>paginator</short-name>
+	<uri>http://corporation.com/custom-tag/paginator</uri>
+
+	<tag>
+		<description>Display numbers of pages in determined format</description>
+		<name>display</name>
+		<tag-class>com.gmail.fursovych20.tag.PaginationTag</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>currentPage</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>int</type>
+		</attribute>
+
+		<attribute>
+			<name>totalPageCount</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>int</type>
+		</attribute>
+
+		<attribute>
+			<name>viewPageCount</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>int</type>
+		</attribute>
+
+		<attribute>
+			<name>urlPattern</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+</taglib>

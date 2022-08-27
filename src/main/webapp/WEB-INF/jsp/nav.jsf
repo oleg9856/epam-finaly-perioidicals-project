@@ -1,0 +1,68 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="com.gmail.fursovych20.entity.Role" %>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+<fmt:setLocale value="${sessionScope.locale}"/>
+<fmt:bundle basename="localization.local" prefix="navbar.">
+    <fmt:message key="home" var="home"/>
+    <fmt:message key="login" var="login"/>
+    <fmt:message key="register" var="register"/>
+    <fmt:message key="logout" var="logout"/>
+</fmt:bundle>
+
+<header class="p-3 bg-primary text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="${contextPath}/controller/home" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bootstrap" width="40" height="32" fill="currentColor" class="bi bi-stickies-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1H1.5A1.5 1.5 0 0 0 0 1.5z"></path>
+                    <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2h-11zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177V10.5z"></path>
+                </svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="${contextPath}/controller/home" class="nav-link px-2 text-white">${home}</a></li>
+                <c:if test="${userName != null}">
+                    <li>
+                        <c:if test="${userRole == Role.CUSTOMER}">
+                            <a class="nav-link px-2 text-white" href="${contextPath}/controller/user/profile">${userName}</a>
+                        </c:if>
+                        <c:if test="${userRole == Role.ADMIN}">
+                            <a class="nav-link px-2 text-white" href="${contextPath}/controller/admin/add-publication-form">${userName}</a>
+                        </c:if>
+                        <c:if test="${userRole == Role.BLOCK}">
+                            <a class="nav-link px-2 disabled" href="#" tabindex="-1" aria-disabled="true">${userName}</a>
+                        </c:if>
+                    </li>
+                </c:if>
+                <li class="nav-item active">
+                    <a class="px-2 nav-link" style="color: white"
+                       href="${contextPath}/controller/change-locale?locale=uk_UA">UA</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="px-2 nav-link" style="color: white"
+                       href="${contextPath}/controller/change-locale?locale=en_US">EN</a>
+                </li>
+            </ul>
+
+            <div class="text-end">
+                <c:if test="${userName != null}">
+                    <button type="button" class="btn btn-outline-light me-2">
+                        <a class="text-white" href="${contextPath}/controller/logout">${logout}</a>
+                    </button>
+                </c:if>
+                <c:if test="${userName == null}">
+                    <button  type="button" class="btn btn-outline-light me-2">
+                        <a class="text-white" href="${pageContext.request.contextPath}/controller/login">${login}</a>
+                    </button>
+                    <button type="button" class="btn btn-warning">
+                        <a class="text-dark" href="${pageContext.request.contextPath}/controller/register">${register}</a>
+                    </button>
+                </c:if>
+            </div>
+        </div>
+    </div>
+</header>
+

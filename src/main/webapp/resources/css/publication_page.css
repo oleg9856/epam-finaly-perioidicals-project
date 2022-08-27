@@ -1,0 +1,17 @@
+.content {
+	margin-top: 80px;
+}
+
+#publication {
+	height: 500px;
+}
+
+#picture {
+	width: 340px;
+	height: 500px;
+	float: left;
+}
+
+#description {
+	margin-left: 380px;
+}
