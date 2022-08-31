@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <users id='1' login="userLogin1" password="user19001" name="user1" surname="SurnameUser1" email="user1@emal.com" balance="450.50" id_role="1"/>
+    <users id='2' login="userLogin2" password="user19002" name="user2" surname="SurnameUser2" email="user2@emal.com" balance="450.50" id_role="3"/>
+    <users id='3' login="userLogin3" password="user19003" name="user3" surname="SurnameUser3" email="user3@emal.com" balance="450.50" id_role="2"/>
+</dataset>

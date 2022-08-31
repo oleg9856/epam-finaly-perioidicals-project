@@ -171,10 +171,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
-        <finalName>periodicals</finalName>
+        <finalName>periodicals-epam</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

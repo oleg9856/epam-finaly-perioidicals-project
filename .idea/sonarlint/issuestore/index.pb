@@ -43,8 +43,6 @@ a
 1src/main/webapp/WEB-INF/jsp/admin/edit_themes.jsp,7\6\76b80cd3297a4ce732c13741518347db4238d512
 f
 6src/main/webapp/WEB-INF/jsp/admin/change_user_role.jsp,0\f\0ff8711864c02412eecf13ccf7aed06018aa515c
-j
-:src/main/java/com/gmail/fursovych20/entity/LocaleType.java,8\d\8d9775394453bd1499e150be2954b894a9d8e669
 d
 4src/main/java/com/gmail/fursovych20/entity/Role.java,c\f\cf367aafa62a55566b3d0c831861d6e6dd946ee5
 r
@@ -59,8 +57,6 @@ h
 8src/main/webapp/WEB-INF/jsp/admin/update_publication.jsp,2\f\2f815075a3e1ba6be84b1fbf478dcefe30f2a1dd
 o
 ?src/main/java/com/gmail/fursovych20/db/dao/SubscriptionDAO.java,0\9\09488dbdda768f6b755a7b19024ae01ebc2f2d4e
-k
-;src/main/java/com/gmail/fursovych20/entity/Publication.java,5\7\578a3b94781fa0ef44fc82539ca68d051784a279
 V
 &src/main/webapp/WEB-INF/jsp/search.jsp,7\1\7195e63f85565f6cbbb539832ed8ee9b79051780
 [
@@ -73,12 +69,6 @@ n
 >src/main/java/com/gmail/fursovych20/service/ReviewService.java,1\0\10c21eb496b19a8ce019e4181735ef019c6845f3
 i
 9src/main/webapp/WEB-INF/jsp/user/subscription_history.jsp,c\8\c8feff9d41760ce3084cfea40a268264e349130c
-p
-@src/main/java/com/gmail/fursovych20/entity/BalanceOperation.java,a\c\ac2ea1067b273a137f93f4624beb8d32448d3c36
-t
-Dsrc/main/java/com/gmail/fursovych20/entity/BalanceOperationType.java,8\7\87d1a0e8e39545897d452ad3daf9c95e0095858f
-e
-5src/main/java/com/gmail/fursovych20/entity/Issue.java,b\b\bb633106b5350ee5f62d7f7cca6c796713900d88
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 u
@@ -111,8 +101,6 @@ v
 Fsrc/main/java/com/gmail/fursovych20/service/impl/ThemeServiceImpl.java,5\1\512734887d46cee2abc582d9ec03bdb7a8dacc17
 z
 Jsrc/test/java/com/gmail/fursovych20/service/impl/ThemeServiceImplTest.java,b\8\b8603dd3802475046b4a49896fb9793ee15ba65b
-T
-$src/main/webapp/META-INF/context.xml,c\b\cbfb0d2e9b2b9fbf9d54374577c894a38643c6d0
 y
 Isrc/test/java/com/gmail/fursovych20/service/impl/TypeServiceImplTest.java,e\3\e3c80a31530d3f9b4b3a581f9beb6dd0d47bdfd4
 y
@@ -253,14 +241,10 @@ x
 Hsrc/main/java/com/gmail/fursovych20/web/command/impl/AddTypeCommand.java,e\d\ed546f4e0356a828fb63869d32747aa8c511f47a
 g
 7src/main/java/com/gmail/fursovych20/db/dao/UserDAO.java,1\e\1e4dca4cfccd1b290e4dc48d9a3f88225cc7ff1a
-p
-@src/main/java/com/gmail/fursovych20/db/dao/impl/UserDAOImpl.java,8\6\86939e5f06b2f794038712da130f9cff156863ac
 |
 Lsrc/main/java/com/gmail/fursovych20/db/dao/impl/BalanceOperationDAOImpl.java,1\e\1e4508fbc9dc89e0b6088535f7d74e6da653c02b
 v
 Fsrc/main/java/com/gmail/fursovych20/db/connectionpool/JDBCManager.java,2\4\24a49e28823dbc467a27b1d652d236022fa60a09
-k
-;src/main/java/com/gmail/fursovych20/web/FontController.java,f\9\f93a41530584ed1a02d59dc6e0302f2397d0c750
 l
 <src/main/java/com/gmail/fursovych20/service/UserService.java,7\e\7e7723e56128e507850525661981b2197154daf6
 u

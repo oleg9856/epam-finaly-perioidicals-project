@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="periodicals.war">
+    <root id="archive" name="periodicals-epam.war">
       <element id="artifact" artifact-name="periodicals-epam:war exploded" />
     </root>
   </artifact>
