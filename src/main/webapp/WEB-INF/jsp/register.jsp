@@ -25,6 +25,7 @@
 	<title>${title}</title>
 	<link href="<c:url value="/resources/css/register.css" />" rel="stylesheet" />
 	<link href="<c:url value="/resources/css/bootstrap/bootstrap.min.css" />" rel="stylesheet">
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 
@@ -38,6 +39,8 @@
 		<input  name="name" type="text" placeholder="${placeholder_name}" required />
 		<input  name="surname" type="text" placeholder="${placeholder_surname}" required />
 		<input  name="email" type="text" placeholder="${placeholder_email}" required />
+		<div class="g-recaptcha"
+			 data-sitekey="6Ld367khAAAAADEN8Wbv_RIUppssg2xk8SvHWn8r"></div>
 	</fieldset>
 	<p style="color:red">${fail_message}</p>
 	<fieldset id="actions">

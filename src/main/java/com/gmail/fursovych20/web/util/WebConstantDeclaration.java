@@ -39,6 +39,7 @@ public final class WebConstantDeclaration {
 	public static final String REQUEST_PARAM_ITEMS_PER_PAGE = "itemsPerPage";
 	public static final String REQUEST_PARAM_REVIEW_TEXT = "text";
 	public static final String REQUEST_PARAM_REVIEW_MARK = "mark";
+	public static final String REQUEST_PARAM_RECAPTCHA_NAME = "g-recaptcha-response";
 	public static final String REQUEST_PARAM_REVIEW_ID_OF_PUBLICATION = "id_publication";
 	public static final String REQUEST_PARAM_SUBSCRIPTION_ID_OF_PUBLICATION = "publication_id";
 	public static final String REQUEST_PARAM_ISSUE_ID_OF_PUBLICATION = "publication_id";

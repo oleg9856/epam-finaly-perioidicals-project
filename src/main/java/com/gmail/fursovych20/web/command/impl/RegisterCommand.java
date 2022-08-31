@@ -7,6 +7,7 @@ import com.gmail.fursovych20.service.exception.EmailAlreadyExistsException;
 import com.gmail.fursovych20.service.exception.LoginAlreadyExistsException;
 import com.gmail.fursovych20.service.exception.ServiceException;
 import com.gmail.fursovych20.service.exception.ValidationException;
+import com.gmail.fursovych20.service.util.VerifyRecaptcha;
 import com.gmail.fursovych20.web.command.Command;
 import com.gmail.fursovych20.web.command.exception.CommandExeption;
 import com.gmail.fursovych20.web.util.HttpUtil;
@@ -43,7 +44,10 @@ public class RegisterCommand implements Command {
 		if (referPage.contains(COMMAND_REGISTER)) {
 			LocaleType locale = HttpUtil.getLocale(request);
 			try {
-				
+
+				if(!VerifyRecaptcha.verify(request.getParameter(REQUEST_PARAM_RECAPTCHA_NAME))){
+					throw new ValidationException();
+				}
 				User user = getUser(request);
 				userService.createUser(user);
 				String path = (String) request.getSession().getAttribute(SESSION_ATTR_REFER_PAGE);

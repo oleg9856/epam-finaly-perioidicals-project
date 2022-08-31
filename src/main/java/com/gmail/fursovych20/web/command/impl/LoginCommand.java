@@ -5,6 +5,7 @@ import com.gmail.fursovych20.entity.User;
 import com.gmail.fursovych20.service.UserService;
 import com.gmail.fursovych20.service.exception.ServiceException;
 import com.gmail.fursovych20.service.exception.ValidationException;
+import com.gmail.fursovych20.service.util.VerifyRecaptcha;
 import com.gmail.fursovych20.web.command.Command;
 import com.gmail.fursovych20.web.command.exception.CommandExeption;
 import com.gmail.fursovych20.web.util.HttpUtil;
@@ -37,6 +38,9 @@ public class LoginCommand implements Command {
             String referPage = HttpUtil.getReferPage(request);
             if (!referPage.contains(COMMAND_LOGIN) && !referPage.contains(COMMAND_REGISTER)){
                 request.getSession().setAttribute(SESSION_ATTR_REFER_PAGE, referPage);
+            }
+            if(!VerifyRecaptcha.verify(request.getParameter(REQUEST_PARAM_RECAPTCHA_NAME))){
+                throw new ValidationException();
             }
             if (referPage.contains(COMMAND_LOGIN)) {
                 String loginOrEmail = request.getParameter(REQUEST_PARAM_LOGIN_OR_EMAIL);

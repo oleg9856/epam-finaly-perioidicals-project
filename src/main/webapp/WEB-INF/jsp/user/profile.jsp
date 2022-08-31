@@ -42,9 +42,9 @@
 
         <main role="main" class="col-md-9 col-lg-10 px-4">
             <h2>${title}</h2>
-            <b>${name}: </b> ${user.name}<br/>
-            <b>${sur_name}: </b> ${user.surName}<br/>
-            <b>${email}: </b> ${user.email}<br/>
+            <strong>${name}: </strong> ${user.name}<br/>
+            <strong>${sur_name}: </strong> ${user.surName}<br/>
+            <strong>${email}: </strong> ${user.email}<br/>
             <br/>
             ${balance}: ${user.balance} ${money}<br/>
 
@@ -53,7 +53,7 @@
                       name="balance" id="balance">
                     <div class="input-group">
                         <span class="input-group-text">${sum}, ${money}:</span>
-                        <input class="form-control" type="number" name="sum" pattern="[1-9]{1,3}.?[0-9]{0,2}"
+                        <input class="form-control" type="number" name="sum" pattern="[1-9]{1,3}.?[0-9]{0,2}" step="any"
                                required/>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <input class="btn btn-primary" id="submit" type="submit" value="${button}"/>

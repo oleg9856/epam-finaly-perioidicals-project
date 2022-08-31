@@ -102,7 +102,7 @@
                     <div class="col-2">
                         <div>
                             ${price}
-                            <input type="number" class="form-control" name="price" id="price" value="0" min="0"
+                            <input type="number" class="form-control" name="price" id="price" value="0" min="0" step="any"
                                    required>
                         </div>
                     </div>

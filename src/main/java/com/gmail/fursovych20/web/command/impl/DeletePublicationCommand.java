@@ -16,7 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-
+/**
+ * DeletePublicationCommand is command for deleting the specific publication
+ *
+ * @author O. Fursovych
+ */
 public class DeletePublicationCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(DeletePublicationCommand.class);

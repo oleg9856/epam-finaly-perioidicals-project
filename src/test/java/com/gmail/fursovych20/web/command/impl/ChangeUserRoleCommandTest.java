@@ -39,13 +39,14 @@ public class ChangeUserRoleCommandTest {
 
     private static final int ID = 1;
     private static final String ROLE = Role.CUSTOMER.name();
+    private static final String HEADER = "header";
 
     @Test
     public void testSuccessExecute() throws CommandExeption {
         when(request.getSession()).thenReturn(session);
         when(request.getParameter(REQUEST_ATTR_USER_ID)).thenReturn(String.valueOf(ID));
         when(request.getParameter(REQUEST_ATTR_ROLE)).thenReturn(ROLE);
-        when(request.getHeader(REQUEST_HEADER_REFER_PAGE)).thenReturn("header");
+        when(request.getHeader(REQUEST_HEADER_REFER_PAGE)).thenReturn(HEADER);
         assertNotNull(changeUserRoleCommand.execute(request, response));
     }
 }
