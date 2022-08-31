@@ -120,6 +120,6 @@ public class SubscriptionServiceImplTest {
     public void testCreate() throws DAOException, ServiceException {
         when(publicationService.readLocalized(ID)).thenReturn(LOCALIZED);
         when(userDAO.findUserBalance(ID)).thenReturn(SUM.doubleValue()+40);
-        subscriptionService.create(ID,ID, START_DATE, ID);
+        subscriptionService.create(ID,ID, START_DATE.minusDays(1), ID);
     }
 }

@@ -20680,3 +20680,1502 @@ com.gmail.fursovych20.service.exception.LoginAlreadyExistsException: Login alrea
 2022-08-30 23:58:47,206 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
 2022-08-30 23:58:47,228 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
 2022-08-30 23:58:47,231 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-08-31 21:46:46,175 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 21:46:46,204 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 21:46:46,207 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-08-31 22:53:34,732 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 22:55:26,307 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 22:56:10,454 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 22:59:33,863 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:00:40,166 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:01:20,828 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:02:01,049 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.Suite.runChild(Suite.java:128) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.Suite.runChild(Suite.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:17:20,032 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:17:20,042 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-08-31 23:17:20,073 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:17:20,074 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:17:20,086 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-08-31 23:17:20,116 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-08-31 23:17:20,130 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-08-31 23:17:20,147 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-08-31 23:17:20,242 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-08-31 23:17:20,251 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-08-31 23:17:20,258 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-08-31 23:17:20,275 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:17:20,303 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-08-31 23:17:20,311 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:17:20,343 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-08-31 23:17:20,355 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-08-31 23:17:20,360 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-08-31 23:17:20,370 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-08-31 23:17:20,384 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-08-31 23:17:20,417 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:17:20,418 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:17:20,440 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-08-31 23:17:20,451 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:17:20,452 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:17:20,469 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-08-31 23:17:20,486 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-08-31 23:17:20,513 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-08-31 23:17:20,519 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-08-31 23:17:20,525 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-08-31 23:17:20,530 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:17:20,534 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-08-31 23:17:20,560 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:17:20,591 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:17:20,597 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-08-31 23:17:20,612 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:17:20,616 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-08-31 23:17:20,632 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-08-31 23:17:20,637 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-08-31 23:17:20,642 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-08-31 23:17:20,650 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-08-31 23:17:20,654 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-08-31 23:17:20,660 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-08-31 23:17:20,665 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-08-31 23:17:20,670 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-08-31 23:17:20,682 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-08-31 23:17:20,687 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-08-31 23:17:20,816 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:17:20,820 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:17:20,953 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:17:20,955 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:20,977 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:17:20,977 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:20,988 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:17:20,988 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:20,991 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:17:20,992 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:21,120 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:21,123 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:21,167 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:21,176 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:17:21,674 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-08-31 23:17:21,674 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-08-31 23:17:21,675 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-08-31 23:17:21,676 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-08-31 23:17:21,677 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-08-31 23:17:22,020 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-08-31 23:17:22,097 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-08-31 23:17:22,101 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-08-31 23:17:22,120 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-08-31 23:17:22,121 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,122 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-08-31 23:17:22,125 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-08-31 23:17:22,127 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-08-31 23:17:22,148 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-08-31 23:17:22,149 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-08-31 23:17:22,158 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,173 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-08-31 23:17:22,177 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-08-31 23:17:22,201 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-08-31 23:17:22,201 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-08-31 23:17:22,202 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-08-31 23:17:22,202 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-08-31 23:17:22,203 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,204 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-08-31 23:17:22,205 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-08-31 23:17:22,215 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-08-31 23:17:22,216 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-08-31 23:17:22,216 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,216 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-08-31 23:17:22,246 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-08-31 23:17:22,247 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-08-31 23:17:22,247 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-08-31 23:17:22,248 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-08-31 23:17:22,248 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,249 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-08-31 23:17:22,250 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-08-31 23:17:22,250 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-08-31 23:17:22,267 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-08-31 23:17:22,269 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-08-31 23:17:22,269 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-08-31 23:17:22,270 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,274 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-08-31 23:17:22,275 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-08-31 23:17:22,275 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-08-31 23:17:22,289 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-08-31 23:17:22,294 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-08-31 23:17:22,295 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,295 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-08-31 23:17:22,295 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-08-31 23:17:22,299 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-08-31 23:17:22,300 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-08-31 23:17:22,301 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-08-31 23:17:22,305 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-08-31 23:17:22,307 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-08-31 23:17:22,311 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-08-31 23:17:22,312 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-08-31 23:17:22,318 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand starts
+2022-08-31 23:17:22,319 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand finish
+2022-08-31 23:17:22,324 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-08-31 23:17:22,324 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-08-31 23:17:22,325 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-08-31 23:17:22,334 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-08-31 23:17:22,335 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-08-31 23:17:22,335 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-08-31 23:17:22,336 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-08-31 23:17:22,336 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-08-31 23:17:22,371 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:17:22,372 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,376 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-08-31 23:17:22,378 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:17:22,379 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:17:22,379 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-08-31 23:17:23,227 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) ~[?:?]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) ~[?:?]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) ~[surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) ~[surefire-booter-2.12.4.jar:2.12.4]
+2022-08-31 23:19:18,439 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:19:18,446 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-08-31 23:19:18,470 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:19:18,471 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:19:18,481 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-08-31 23:19:18,500 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-08-31 23:19:18,510 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-08-31 23:19:18,516 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-08-31 23:19:18,606 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-08-31 23:19:18,618 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-08-31 23:19:18,627 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-08-31 23:19:18,653 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:19:18,692 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-08-31 23:19:18,703 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:19:18,731 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-08-31 23:19:18,737 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-08-31 23:19:18,745 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-08-31 23:19:18,756 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-08-31 23:19:18,786 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-08-31 23:19:18,812 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:19:18,812 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:19:18,828 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-08-31 23:19:18,842 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:19:18,843 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:19:18,855 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-08-31 23:19:18,865 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-08-31 23:19:18,886 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-08-31 23:19:18,897 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-08-31 23:19:18,905 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-08-31 23:19:18,912 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:19:18,920 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-08-31 23:19:18,948 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:19:18,983 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:19:18,987 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-08-31 23:19:19,004 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:19:19,010 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-08-31 23:19:19,030 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-08-31 23:19:19,034 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-08-31 23:19:19,042 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-08-31 23:19:19,050 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-08-31 23:19:19,057 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-08-31 23:19:19,065 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-08-31 23:19:19,073 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-08-31 23:19:19,078 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-08-31 23:19:19,085 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-08-31 23:19:19,090 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-08-31 23:19:19,169 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:19:19,175 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:19:19,334 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:19:19,335 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,350 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:19:19,350 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,360 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:19:19,360 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,363 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:19:19,364 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,529 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,532 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,559 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:19,561 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:19:20,149 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-08-31 23:19:20,150 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-08-31 23:19:20,151 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-08-31 23:19:20,152 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-08-31 23:19:20,152 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-08-31 23:19:20,492 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-08-31 23:19:20,583 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-08-31 23:19:20,586 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-08-31 23:19:20,607 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-08-31 23:19:20,608 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,609 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-08-31 23:19:20,609 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-08-31 23:19:20,612 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-08-31 23:19:20,647 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-08-31 23:19:20,648 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-08-31 23:19:20,662 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,675 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-08-31 23:19:20,678 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-08-31 23:19:20,706 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-08-31 23:19:20,707 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-08-31 23:19:20,708 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-08-31 23:19:20,709 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-08-31 23:19:20,711 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,712 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-08-31 23:19:20,715 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-08-31 23:19:20,728 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-08-31 23:19:20,731 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-08-31 23:19:20,733 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,734 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-08-31 23:19:20,782 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-08-31 23:19:20,783 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-08-31 23:19:20,783 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-08-31 23:19:20,784 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-08-31 23:19:20,785 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,786 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-08-31 23:19:20,787 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-08-31 23:19:20,788 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-08-31 23:19:20,802 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-08-31 23:19:20,803 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-08-31 23:19:20,804 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-08-31 23:19:20,805 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,812 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-08-31 23:19:20,824 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-08-31 23:19:20,826 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-08-31 23:19:20,837 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-08-31 23:19:20,838 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-08-31 23:19:20,842 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,843 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-08-31 23:19:20,843 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-08-31 23:19:20,854 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-08-31 23:19:20,856 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-08-31 23:19:20,862 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-08-31 23:19:20,873 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-08-31 23:19:20,874 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-08-31 23:19:20,878 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-08-31 23:19:20,878 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-08-31 23:19:20,884 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand starts
+2022-08-31 23:19:20,885 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand finish
+2022-08-31 23:19:20,894 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-08-31 23:19:20,895 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-08-31 23:19:20,895 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-08-31 23:19:20,903 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-08-31 23:19:20,904 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-08-31 23:19:20,905 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-08-31 23:19:20,908 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-08-31 23:19:20,909 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-08-31 23:19:20,917 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:19:20,919 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,931 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-08-31 23:19:20,934 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:19:20,935 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:19:20,935 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-08-31 23:22:52,971 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:22:52,982 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-08-31 23:22:53,013 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:22:53,014 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:22:53,027 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-08-31 23:22:53,057 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-08-31 23:22:53,076 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-08-31 23:22:53,092 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-08-31 23:22:53,205 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-08-31 23:22:53,219 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-08-31 23:22:53,228 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-08-31 23:22:53,243 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:22:53,272 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-08-31 23:22:53,284 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:22:53,305 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-08-31 23:22:53,311 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-08-31 23:22:53,316 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-08-31 23:22:53,323 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-08-31 23:22:53,334 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-08-31 23:22:53,363 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:22:53,364 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:22:53,403 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-08-31 23:22:53,426 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:22:53,426 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:22:53,441 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-08-31 23:22:53,457 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-08-31 23:22:53,479 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-08-31 23:22:53,488 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-08-31 23:22:53,506 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-08-31 23:22:53,515 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:22:53,519 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-08-31 23:22:53,545 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:22:53,582 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:22:53,587 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-08-31 23:22:53,591 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:22:53,596 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-08-31 23:22:53,609 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-08-31 23:22:53,614 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-08-31 23:22:53,618 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-08-31 23:22:53,627 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-08-31 23:22:53,632 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-08-31 23:22:53,647 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-08-31 23:22:53,657 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-08-31 23:22:53,663 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-08-31 23:22:53,674 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-08-31 23:22:53,679 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-08-31 23:22:53,761 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:22:53,767 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:22:53,927 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:22:53,927 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:53,940 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:22:53,940 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:53,945 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:22:53,945 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:53,948 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:22:53,948 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:54,079 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:54,081 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:54,113 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:54,115 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:22:54,596 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-08-31 23:22:54,598 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-08-31 23:22:54,598 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-08-31 23:22:54,599 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-08-31 23:22:54,601 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-08-31 23:22:54,939 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-08-31 23:22:55,048 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-08-31 23:22:55,052 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-08-31 23:22:55,073 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-08-31 23:22:55,073 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,074 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-08-31 23:22:55,075 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-08-31 23:22:55,075 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-08-31 23:22:55,096 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-08-31 23:22:55,097 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-08-31 23:22:55,106 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,116 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-08-31 23:22:55,119 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-08-31 23:22:55,138 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-08-31 23:22:55,139 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-08-31 23:22:55,139 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-08-31 23:22:55,140 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-08-31 23:22:55,140 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,141 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-08-31 23:22:55,142 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-08-31 23:22:55,155 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-08-31 23:22:55,156 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-08-31 23:22:55,156 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,157 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-08-31 23:22:55,171 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-08-31 23:22:55,172 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-08-31 23:22:55,172 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-08-31 23:22:55,172 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-08-31 23:22:55,173 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,173 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-08-31 23:22:55,174 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-08-31 23:22:55,174 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-08-31 23:22:55,185 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-08-31 23:22:55,185 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-08-31 23:22:55,186 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-08-31 23:22:55,186 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,187 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-08-31 23:22:55,187 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-08-31 23:22:55,188 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-08-31 23:22:55,197 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-08-31 23:22:55,199 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-08-31 23:22:55,199 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,200 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-08-31 23:22:55,200 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-08-31 23:22:55,209 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-08-31 23:22:55,210 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-08-31 23:22:55,213 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-08-31 23:22:55,218 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-08-31 23:22:55,218 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-08-31 23:22:55,223 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-08-31 23:22:55,223 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-08-31 23:22:55,233 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand starts
+2022-08-31 23:22:55,234 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand finish
+2022-08-31 23:22:55,238 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-08-31 23:22:55,239 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-08-31 23:22:55,239 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-08-31 23:22:55,249 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-08-31 23:22:55,249 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-08-31 23:22:55,249 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-08-31 23:22:55,250 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-08-31 23:22:55,252 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-08-31 23:22:55,259 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:22:55,261 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,266 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-08-31 23:22:55,268 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:22:55,268 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:22:55,268 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-08-31 23:22:56,080 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) ~[?:?]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) ~[?:?]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) ~[surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) ~[surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) ~[surefire-booter-2.12.4.jar:2.12.4]
+2022-08-31 23:23:25,948 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:23:25,956 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-08-31 23:23:25,978 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:23:25,979 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:23:25,988 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-08-31 23:23:26,011 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-08-31 23:23:26,021 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-08-31 23:23:26,030 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-08-31 23:23:26,125 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-08-31 23:23:26,134 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-08-31 23:23:26,141 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-08-31 23:23:26,154 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:23:26,195 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-08-31 23:23:26,210 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-08-31 23:23:26,259 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-08-31 23:23:26,268 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-08-31 23:23:26,275 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-08-31 23:23:26,284 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-08-31 23:23:26,294 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-08-31 23:23:26,321 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:23:26,323 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:23:26,341 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-08-31 23:23:26,355 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-08-31 23:23:26,356 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-08-31 23:23:26,363 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-08-31 23:23:26,369 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-08-31 23:23:26,389 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-08-31 23:23:26,396 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-08-31 23:23:26,401 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-08-31 23:23:26,409 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:23:26,416 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-08-31 23:23:26,444 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:23:26,477 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-08-31 23:23:26,498 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-08-31 23:23:26,508 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-08-31 23:23:26,512 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-08-31 23:23:26,526 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-08-31 23:23:26,530 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-08-31 23:23:26,538 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-08-31 23:23:26,550 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-08-31 23:23:26,553 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-08-31 23:23:26,558 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-08-31 23:23:26,563 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-08-31 23:23:26,568 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-08-31 23:23:26,577 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-08-31 23:23:26,582 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-08-31 23:23:26,674 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:23:26,686 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-08-31 23:23:26,858 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:23:26,859 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:26,882 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:23:26,883 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:26,888 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:23:26,889 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:26,891 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-08-31 23:23:26,891 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:27,066 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:27,068 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:27,107 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:27,109 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-08-31 23:23:27,581 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-08-31 23:23:27,582 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-08-31 23:23:27,583 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-08-31 23:23:27,584 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-08-31 23:23:27,585 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-08-31 23:23:27,926 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-08-31 23:23:28,025 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-08-31 23:23:28,028 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-08-31 23:23:28,057 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-08-31 23:23:28,058 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,058 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-08-31 23:23:28,059 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-08-31 23:23:28,060 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-08-31 23:23:28,076 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-08-31 23:23:28,077 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-08-31 23:23:28,085 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,096 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-08-31 23:23:28,100 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-08-31 23:23:28,117 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-08-31 23:23:28,118 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-08-31 23:23:28,119 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-08-31 23:23:28,120 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-08-31 23:23:28,120 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,121 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-08-31 23:23:28,122 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-08-31 23:23:28,136 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-08-31 23:23:28,137 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-08-31 23:23:28,138 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,139 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-08-31 23:23:28,166 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-08-31 23:23:28,166 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-08-31 23:23:28,167 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-08-31 23:23:28,167 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-08-31 23:23:28,168 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,169 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-08-31 23:23:28,171 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-08-31 23:23:28,172 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-08-31 23:23:28,179 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-08-31 23:23:28,180 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-08-31 23:23:28,181 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-08-31 23:23:28,182 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,183 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-08-31 23:23:28,184 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-08-31 23:23:28,184 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-08-31 23:23:28,195 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-08-31 23:23:28,196 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-08-31 23:23:28,196 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,196 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-08-31 23:23:28,197 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-08-31 23:23:28,204 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-08-31 23:23:28,205 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-08-31 23:23:28,206 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-08-31 23:23:28,212 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-08-31 23:23:28,213 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-08-31 23:23:28,217 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-08-31 23:23:28,218 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-08-31 23:23:28,225 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand starts
+2022-08-31 23:23:28,226 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand finish
+2022-08-31 23:23:28,234 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-08-31 23:23:28,236 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-08-31 23:23:28,237 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-08-31 23:23:28,244 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-08-31 23:23:28,244 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-08-31 23:23:28,245 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-08-31 23:23:28,246 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-08-31 23:23:28,246 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-08-31 23:23:28,252 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:23:28,254 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,256 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-08-31 23:23:28,259 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-08-31 23:23:28,260 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-08-31 23:23:28,261 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-08-31 23:25:24,254 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:26:05,479 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:37:08,212 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:51:11,289 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:109) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:52:03,022 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:109) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.UserServiceImpl.findUserByUserID(UserServiceImpl.java:49) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:78) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-31 23:56:18,512 ERROR c.g.f.d.d.i.UserDAOImpl [main] (SQLException) Cannot find user by ID
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT users.id, login, password, users.name, surname, email, balance, roles.name AS role FROM users JOIN roles ON users.id_role=roles.id WHERE users.id=? [42102-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8398) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1863) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableReference(Parser.java:2334) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2772) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseSelect(Parser.java:2878) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2762) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2633) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2612) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2605) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2598) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseQuery(Parser.java:2567) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at com.gmail.fursovych20.db.dao.impl.UserDAOImpl.findUserById(UserDAOImpl.java:104) ~[classes/:?]
+	at integration.DbUnitTest.readDB(DbUnitTest.java:76) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-09-01 00:28:05,782 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> commandName
+2022-09-01 00:28:05,845 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> commandName
+2022-09-01 00:29:37,785 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> /home
+2022-09-01 00:29:37,852 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> /home
+2022-09-01 00:31:55,291 DEBUG c.g.f.w.FontController [main] Controller#doGPost starts
+2022-09-01 00:31:55,308 DEBUG c.g.f.w.FontController [main] Controller starts
+2022-09-01 00:31:55,385 TRACE c.g.f.w.FontController [main] Request parameter: command --> null
+2022-09-01 00:31:55,388 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> null
+2022-09-01 00:31:55,392 TRACE c.g.f.w.FontController [main] Obtain key --> null
+2022-09-01 00:31:55,483 DEBUG c.g.f.w.FontController [main] Controller#doGet starts
+2022-09-01 00:31:55,484 DEBUG c.g.f.w.FontController [main] Controller starts
+2022-09-01 00:31:55,485 TRACE c.g.f.w.FontController [main] Request parameter: command --> null
+2022-09-01 00:31:55,485 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> null
+2022-09-01 00:31:55,485 TRACE c.g.f.w.FontController [main] Obtain key --> null
+2022-09-01 00:33:19,711 DEBUG c.g.f.w.FontController [main] Controller#doGPost starts
+2022-09-01 00:33:19,726 DEBUG c.g.f.w.FontController [main] Controller starts
+2022-09-01 00:33:19,736 TRACE c.g.f.w.FontController [main] Request parameter: command --> /home
+2022-09-01 00:33:19,741 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> /home
+2022-09-01 00:33:19,741 TRACE c.g.f.w.FontController [main] Obtain key --> null
+2022-09-01 00:33:19,776 DEBUG c.g.f.w.FontController [main] Controller#doGet starts
+2022-09-01 00:33:19,777 DEBUG c.g.f.w.FontController [main] Controller starts
+2022-09-01 00:33:19,777 TRACE c.g.f.w.FontController [main] Request parameter: command --> /home
+2022-09-01 00:33:19,778 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> /home
+2022-09-01 00:33:19,778 TRACE c.g.f.w.FontController [main] Obtain key --> null
+2022-09-01 00:41:30,288 WARN c.g.f.w.c.CommandContainer [main] Command not found, commandName --> /home
+2022-09-01 00:56:13,313 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand starts
+2022-09-01 00:56:13,342 TRACE c.g.f.w.u.HttpUtil [main] Header page --> null
+2022-09-01 00:56:13,351 TRACE c.g.f.w.c.i.LogoutCommand [main] referPage --> null
+2022-09-01 00:56:13,352 TRACE c.g.f.w.c.i.LogoutCommand [main] Session is --> session
+2022-09-01 00:56:13,357 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand finish
+2022-09-01 00:57:20,878 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand starts
+2022-09-01 00:57:20,908 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 00:57:20,909 TRACE c.g.f.w.c.i.LogoutCommand [main] referPage --> header
+2022-09-01 00:57:20,910 TRACE c.g.f.w.c.i.LogoutCommand [main] Session is --> session
+2022-09-01 00:57:20,917 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand finish

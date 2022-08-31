@@ -95,8 +95,6 @@ Fsrc/main/java/com/gmail/fursovych20/service/impl/IssueServiceImpl.java,b\3\b36
 Ksrc/test/java/com/gmail/fursovych20/service/impl/ReviewServiceImplTest.java,0\9\098e79ebfc24d59ddd774a484df00de4f7c3b1f8
 }
 Msrc/main/java/com/gmail/fursovych20/service/impl/SubscriptionServiceImpl.java,b\b\bbc01b0613d4a8a605ce585d4a23b9ee6efc8ab2
-Å
-Qsrc/test/java/com/gmail/fursovych20/service/impl/SubscriptionServiceImplTest.java,2\6\26c43a55af24e2d9d79fc69bd98e2baabf1e948f
 v
 Fsrc/main/java/com/gmail/fursovych20/service/impl/ThemeServiceImpl.java,5\1\512734887d46cee2abc582d9ec03bdb7a8dacc17
 z
@@ -127,10 +125,6 @@ w
 Gsrc/main/java/com/gmail/fursovych20/db/dao/impl/PublicationDAOImpl.java,2\9\29aaea0c757e2fdc51e5a233dceabc9781ad647f
 p
 @src/main/java/com/gmail/fursovych20/service/util/MailSender.java,d\1\d1f0eba6be0e3b1b3245561eab77751fe3132bc8
-w
-Gsrc/main/java/com/gmail/fursovych20/web/command/impl/LogoutCommand.java,d\a\daf4d468b8abd851b9662c5bfb4cbea9cf7fcb90
-Å
-Qsrc/main/java/com/gmail/fursovych20/web/command/impl/ReplenishBalanceCommand.java,f\a\fafaf75c3877039e265e45453b0eda728dbd00df
 
 Osrc/main/java/com/gmail/fursovych20/web/command/impl/ShowResultPageCommand.java,6\3\631a45b3714951be62b5b929fcaec5980d93fd08
 á
@@ -255,8 +249,6 @@ x
 Hsrc/main/java/com/gmail/fursovych20/web/filter/CustomerAccessFilter.java,6\c\6c5dd3262432b2cfbc1933106776b74bf50223c3
 u
 Esrc/main/java/com/gmail/fursovych20/web/filter/AdminAccessFilter.java,e\e\eef97b2b54ebcef6be41c4d3ab86b5c10e5ba31e
-u
-Esrc/main/java/com/gmail/fursovych20/web/command/CommandContainer.java,5\3\53f533d82a2992a9d610e03fdb26f3ce67b147cf
 
 Osrc/main/java/com/gmail/fursovych20/web/command/impl/ChangeUserRoleCommand.java,e\5\e509b17da3dddb571c2b0ac4fe8c20741e34837f
 Å

@@ -19,7 +19,8 @@ import java.io.IOException;
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
 /**
- * WebFilter for user which have admin role
+ * WebController for redirect to the different pages, using
+ * forward and sendRedirect or do nothing.
  *
  * @author O. Fursovych
  */
