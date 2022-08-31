@@ -22179,3 +22179,140 @@ SELECT users.id, login, password, users.name, surname, email, balance, roles.nam
 2022-09-01 00:57:20,909 TRACE c.g.f.w.c.i.LogoutCommand [main] referPage --> header
 2022-09-01 00:57:20,910 TRACE c.g.f.w.c.i.LogoutCommand [main] Session is --> session
 2022-09-01 00:57:20,917 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand finish
+2022-09-01 01:11:27,285 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-01 01:11:27,318 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:27,320 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-09-01 01:11:27,348 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-01 01:11:27,349 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:27,350 WARN c.g.f.w.c.i.LoginCommand [main] referPage does not contain a login command!
+2022-09-01 01:11:28,315 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-09-01 01:11:28,367 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-09-01 01:11:28,377 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-09-01 01:11:28,396 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-09-01 01:11:28,416 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-09-01 01:11:28,462 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-09-01 01:11:28,465 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-09-01 01:11:28,465 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-09-01 01:11:28,467 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:28,518 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-09-01 01:11:28,526 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-09-01 01:11:28,527 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-09-01 01:11:28,573 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-09-01 01:11:28,575 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-09-01 01:11:28,577 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-09-01 01:11:28,586 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-09-01 01:11:28,587 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-09-01 01:11:28,604 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-09-01 01:11:28,605 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-09-01 01:11:28,606 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-09-01 01:11:28,609 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-09-01 01:11:28,614 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-09-01 01:11:28,636 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-09-01 01:11:28,637 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-09-01 01:11:28,638 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-09-01 01:11:28,639 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-09-01 01:11:28,640 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:28,641 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-09-01 01:11:28,643 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-09-01 01:11:28,644 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-09-01 01:11:28,650 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-09-01 01:11:28,650 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-09-01 01:11:28,801 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-09-01 01:11:28,815 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-09-01 01:11:28,824 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-09-01 01:11:28,833 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-09-01 01:11:28,883 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-09-01 01:11:28,896 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-09-01 01:11:29,088 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand starts
+2022-09-01 01:11:29,089 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand finish
+2022-09-01 01:11:29,101 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 01:11:29,104 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-09-01 01:11:29,117 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 01:11:29,118 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-01 01:11:29,135 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-09-01 01:11:29,314 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand starts
+2022-09-01 01:11:29,315 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:29,316 TRACE c.g.f.w.c.i.LogoutCommand [main] referPage --> header
+2022-09-01 01:11:29,316 TRACE c.g.f.w.c.i.LogoutCommand [main] Session is --> session
+2022-09-01 01:11:29,321 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand finish
+2022-09-01 01:11:29,328 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-09-01 01:11:29,329 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-09-01 01:11:29,330 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:29,331 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-09-01 01:11:29,332 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-09-01 01:11:29,347 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-09-01 01:11:29,356 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-09-01 01:11:29,363 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-09-01 01:11:29,376 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-09-01 01:11:29,384 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-09-01 01:11:29,396 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-09-01 01:11:29,413 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-09-01 01:11:29,421 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-09-01 01:11:29,431 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-09-01 01:11:29,445 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-09-01 01:11:30,572 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-09-01 01:11:30,573 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-09-01 01:11:30,574 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-09-01 01:11:30,575 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-09-01 01:11:30,576 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-09-01 01:11:31,310 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-09-01 01:11:31,338 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-09-01 01:11:31,339 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-09-01 01:11:31,339 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:31,339 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-09-01 01:11:31,340 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-09-01 01:11:31,414 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 01:11:31,417 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,464 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 01:11:31,465 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,480 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 01:11:31,480 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,484 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 01:11:31,484 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,497 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-09-01 01:11:31,497 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:31,497 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-09-01 01:11:31,498 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-09-01 01:11:31,499 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-09-01 01:11:31,538 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,549 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,590 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-09-01 01:11:31,601 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-09-01 01:11:31,611 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-09-01 01:11:31,621 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-09-01 01:11:31,622 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-09-01 01:11:31,628 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-09-01 01:11:31,629 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-09-01 01:11:31,629 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:31,629 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-09-01 01:11:31,649 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 01:11:31,650 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-01 01:11:31,678 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-09-01 01:11:31,683 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 01:11:31,683 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-01 01:11:31,688 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-09-01 01:11:31,698 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-09-01 01:11:31,742 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-09-01 01:11:31,749 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-09-01 01:11:31,777 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,782 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 01:11:31,810 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-09-01 01:11:31,811 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-09-01 01:11:31,812 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-09-01 01:11:31,814 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-09-01 01:11:31,815 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 01:11:31,815 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-09-01 01:11:31,816 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-09-01 01:11:31,826 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-09-01 01:11:31,836 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-09-01 01:11:31,845 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-09-01 01:11:31,853 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-09-01 01:11:31,859 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-09-01 01:11:31,867 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-09-01 01:11:31,884 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-09-01 01:11:31,890 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-09-01 01:11:31,897 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-09-01 01:11:31,900 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-09-01 01:11:31,907 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-09-01 01:11:31,908 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-09-01 01:11:31,909 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
