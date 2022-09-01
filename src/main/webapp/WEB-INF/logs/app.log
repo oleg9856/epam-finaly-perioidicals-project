@@ -22316,3 +22316,261 @@ SELECT users.id, login, password, users.name, surname, email, balance, roles.nam
 2022-09-01 01:11:31,907 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
 2022-09-01 01:11:31,908 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
 2022-09-01 01:11:31,909 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-09-01 22:08:08,722 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:08:08,771 TRACE c.g.f.w.u.HttpUtil [main] Header page --> null
+2022-09-01 22:12:15,745 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:12:15,898 TRACE c.g.f.w.u.HttpUtil [main] Header page --> HEADER
+2022-09-01 22:12:15,899 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> HEADER
+2022-09-01 22:15:29,968 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:15:29,996 TRACE c.g.f.w.u.HttpUtil [main] Header page --> HEADER
+2022-09-01 22:15:29,996 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> HEADER
+2022-09-01 22:15:29,997 TRACE c.g.f.w.c.i.RegisterCommand [main] RegisterCommand final failed!
+2022-09-01 22:16:47,633 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:16:49,443 TRACE c.g.f.w.u.HttpUtil [main] Header page --> HEADER
+2022-09-01 22:16:53,696 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> HEADER
+2022-09-01 22:16:56,433 TRACE c.g.f.w.c.i.RegisterCommand [main] RegisterCommand final failed!
+2022-09-01 22:19:42,227 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:19:42,252 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /register
+2022-09-01 22:19:42,253 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> /register
+2022-09-01 22:19:42,258 WARN c.g.f.w.c.i.RegisterCommand [main] Validation failed
+com.gmail.fursovych20.service.exception.ValidationException: null
+	at com.gmail.fursovych20.web.command.impl.RegisterCommand.execute(RegisterCommand.java:49) ~[classes/:?]
+	at com.gmail.fursovych20.web.command.impl.RegisterCommandTest.testSuccessExecute(RegisterCommandTest.java:43) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.13.2.jar:4.13.2]
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:55) ~[mockito-core-4.6.1.jar:?]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100) ~[mockito-core-4.6.1.jar:?]
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107) ~[mockito-core-4.6.1.jar:?]
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41) ~[mockito-core-4.6.1.jar:?]
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163) ~[mockito-core-4.6.1.jar:?]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-09-01 22:20:20,950 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-01 22:20:20,978 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /login
+2022-09-01 22:20:20,982 TRACE c.g.f.w.c.i.LoginCommand [main] User is not find is system
+2022-09-01 22:22:13,486 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:22:13,512 TRACE c.g.f.w.u.HttpUtil [main] Header page --> fail_header
+2022-09-01 22:22:13,512 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> fail_header
+2022-09-01 22:22:13,513 TRACE c.g.f.w.c.i.RegisterCommand [main] RegisterCommand final failed!
+2022-09-01 22:22:13,519 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:22:13,519 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /register
+2022-09-01 22:22:13,520 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> /register
+2022-09-01 22:22:13,528 TRACE c.g.f.w.c.i.RegisterCommand [main] Path to controller --> null/controller/home
+2022-09-01 22:22:13,529 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand finish successfully!
+2022-09-01 22:23:10,268 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-01 22:23:10,298 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /login
+2022-09-01 22:23:10,301 TRACE c.g.f.w.c.i.LoginCommand [main] User is not find is system
+2022-09-01 22:26:08,133 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:26:08,157 TRACE c.g.f.w.u.HttpUtil [main] Header page --> fail_header
+2022-09-01 22:26:08,158 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> fail_header
+2022-09-01 22:26:08,160 TRACE c.g.f.w.c.i.RegisterCommand [main] RegisterCommand final failed!
+2022-09-01 22:26:08,167 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 22:26:08,168 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /register
+2022-09-01 22:26:08,168 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> /register
+2022-09-01 22:26:08,175 TRACE c.g.f.w.c.i.RegisterCommand [main] Path to controller --> null/controller/home
+2022-09-01 22:26:08,176 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand finish successfully!
+2022-09-01 22:32:57,520 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand starts
+2022-09-01 22:33:41,673 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand starts
+2022-09-01 22:36:19,220 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand starts
+2022-09-01 22:36:19,245 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] UserID --> 1
+2022-09-01 22:36:19,247 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Sum --> 45.6
+2022-09-01 22:36:19,268 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Refer page --> null/controller/user/profile
+2022-09-01 22:36:19,269 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand finish success!
+2022-09-01 22:38:19,684 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand starts
+2022-09-01 22:38:19,710 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] UserID --> 1
+2022-09-01 22:38:19,711 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Sum --> 450.67
+2022-09-01 22:38:19,731 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Refer page --> null/controller/user/profile
+2022-09-01 22:38:19,731 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand finish success!
+2022-09-01 22:59:15,523 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand starts
+2022-09-01 22:59:15,546 TRACE c.g.f.w.c.i.SearchCommand [main] Locale --> en_US
+2022-09-01 22:59:15,547 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria starts
+2022-09-01 22:59:15,549 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria finally success!
+2022-09-01 22:59:15,552 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand finish
+2022-09-01 22:59:59,279 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand starts
+2022-09-01 22:59:59,301 TRACE c.g.f.w.c.i.SearchCommand [main] Locale --> en_US
+2022-09-01 22:59:59,302 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria starts
+2022-09-01 22:59:59,304 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria finally success!
+2022-09-01 22:59:59,305 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand finish
+2022-09-01 23:00:30,242 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-01 23:00:30,282 TRACE c.g.f.w.u.HttpUtil [main] Header page --> fail_header
+2022-09-01 23:00:30,284 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-09-01 23:00:30,324 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-01 23:00:30,325 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /login
+2022-09-01 23:00:30,327 TRACE c.g.f.w.c.i.LoginCommand [main] User is not find is system
+2022-09-01 23:00:31,886 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-09-01 23:00:31,944 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-09-01 23:00:31,959 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-09-01 23:00:31,977 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-09-01 23:00:32,008 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-09-01 23:00:32,109 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-09-01 23:00:32,124 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-09-01 23:00:32,125 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-09-01 23:00:32,127 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:32,167 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-09-01 23:00:32,174 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-09-01 23:00:32,175 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-09-01 23:00:32,242 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-09-01 23:00:32,244 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-09-01 23:00:32,263 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-09-01 23:00:32,289 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-09-01 23:00:32,291 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-09-01 23:00:32,310 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-09-01 23:00:32,312 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-09-01 23:00:32,312 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-09-01 23:00:32,315 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-09-01 23:00:32,318 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-09-01 23:00:32,335 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand starts
+2022-09-01 23:00:32,335 TRACE c.g.f.w.c.i.SearchCommand [main] Locale --> en_US
+2022-09-01 23:00:32,336 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria starts
+2022-09-01 23:00:32,344 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria finally success!
+2022-09-01 23:00:32,346 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand finish
+2022-09-01 23:00:32,381 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand starts
+2022-09-01 23:00:32,393 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] UserID --> 1
+2022-09-01 23:00:32,396 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Sum --> 450.67
+2022-09-01 23:00:32,400 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Refer page --> null/controller/user/profile
+2022-09-01 23:00:32,400 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand finish success!
+2022-09-01 23:00:32,407 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-09-01 23:00:32,408 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-09-01 23:00:32,410 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-09-01 23:00:32,412 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-09-01 23:00:32,414 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:32,418 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-09-01 23:00:32,420 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-09-01 23:00:32,421 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-09-01 23:00:32,432 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-09-01 23:00:32,433 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-09-01 23:00:32,714 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-09-01 23:00:32,732 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-09-01 23:00:32,742 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-09-01 23:00:32,756 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-09-01 23:00:32,806 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-09-01 23:00:32,842 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=1, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-09-01 23:00:33,225 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand starts
+2022-09-01 23:00:33,226 DEBUG c.g.f.w.c.i.ShowResultPageCommand [main] ShowResultPageCommand finish
+2022-09-01 23:00:33,338 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 23:00:33,342 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-09-01 23:00:33,365 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 23:00:33,367 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-01 23:00:33,384 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-09-01 23:00:33,672 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand starts
+2022-09-01 23:00:33,673 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:33,673 TRACE c.g.f.w.c.i.LogoutCommand [main] referPage --> header
+2022-09-01 23:00:33,674 TRACE c.g.f.w.c.i.LogoutCommand [main] Session is --> session
+2022-09-01 23:00:33,682 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand finish
+2022-09-01 23:00:33,732 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-09-01 23:00:33,734 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-09-01 23:00:33,736 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:33,737 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-09-01 23:00:33,739 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-09-01 23:00:33,760 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-09-01 23:00:33,767 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-09-01 23:00:33,776 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-09-01 23:00:33,841 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-09-01 23:00:33,853 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-09-01 23:00:33,862 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-09-01 23:00:33,917 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-09-01 23:00:33,934 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-09-01 23:00:33,945 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-09-01 23:00:33,955 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-09-01 23:00:35,388 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-09-01 23:00:35,390 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-09-01 23:00:35,391 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-09-01 23:00:35,392 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-09-01 23:00:35,393 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-09-01 23:00:36,199 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-09-01 23:00:36,225 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-09-01 23:00:36,225 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-09-01 23:00:36,226 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:36,226 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-09-01 23:00:36,226 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-09-01 23:00:36,261 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 23:00:36,262 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,303 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 23:00:36,303 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,316 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 23:00:36,317 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,325 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-01 23:00:36,326 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,341 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-09-01 23:00:36,341 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:36,342 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-09-01 23:00:36,342 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-09-01 23:00:36,343 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-09-01 23:00:36,374 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,379 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,394 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 23:00:36,394 TRACE c.g.f.w.u.HttpUtil [main] Header page --> fail_header
+2022-09-01 23:00:36,396 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> fail_header
+2022-09-01 23:00:36,397 TRACE c.g.f.w.c.i.RegisterCommand [main] RegisterCommand final failed!
+2022-09-01 23:00:36,400 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-01 23:00:36,401 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /register
+2022-09-01 23:00:36,401 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> /register
+2022-09-01 23:00:36,404 TRACE c.g.f.w.c.i.RegisterCommand [main] Path to controller --> null/controller/home
+2022-09-01 23:00:36,404 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand finish successfully!
+2022-09-01 23:00:36,419 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-09-01 23:00:36,452 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-09-01 23:00:36,470 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-09-01 23:00:36,485 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-09-01 23:00:36,485 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-09-01 23:00:36,505 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-09-01 23:00:36,506 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-09-01 23:00:36,507 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:36,507 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-09-01 23:00:36,537 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 23:00:36,539 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-01 23:00:36,564 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-09-01 23:00:36,574 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-01 23:00:36,575 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-01 23:00:36,592 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-09-01 23:00:36,608 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-09-01 23:00:36,636 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-09-01 23:00:36,640 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-09-01 23:00:36,676 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,680 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-01 23:00:36,704 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-09-01 23:00:36,710 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-09-01 23:00:36,710 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-09-01 23:00:36,713 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-09-01 23:00:36,715 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-01 23:00:36,716 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-09-01 23:00:36,717 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-09-01 23:00:36,729 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-09-01 23:00:36,734 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-09-01 23:00:36,741 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-09-01 23:00:36,753 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-09-01 23:00:36,760 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-09-01 23:00:36,774 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-09-01 23:00:36,793 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-09-01 23:00:36,800 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-09-01 23:00:36,806 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-09-01 23:00:36,811 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-09-01 23:00:36,820 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-09-01 23:00:36,821 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-09-01 23:00:36,823 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-09-01 23:59:30,126 DEBUG c.g.f.w.c.i.ShowIssueFileCommand [main] ShowIssueCommand starts
+2022-09-01 23:59:30,146 TRACE c.g.f.w.c.i.ShowIssueFileCommand [main] Issue ID --> 1
+2022-09-01 23:59:58,550 DEBUG c.g.f.w.c.i.ShowIssueFileCommand [main] ShowIssueCommand starts
+2022-09-01 23:59:58,570 TRACE c.g.f.w.c.i.ShowIssueFileCommand [main] Issue ID --> 1

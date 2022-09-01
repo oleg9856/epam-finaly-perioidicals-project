@@ -57,7 +57,7 @@ public class ShowIssuesCommand implements Command {
 			request.setAttribute(REQUEST_ATTR_ISSUES, issues);
 			request.setAttribute(REQUEST_ATTR_PUBLICATION, publication);
 			LOG.debug("ShowIssuesCommand finish success!");
-			return SEND_TO_FORWARD+VIEW_AVALIABLE_ISSUES;
+			return SEND_TO_FORWARD+ VIEW_AVAILABLE_ISSUES;
 		} catch (ServiceException e) {
 			LOG.error("Exception showing issues", e);
 			return SEND_TO_FORWARD+VIEW_503_ERROR;

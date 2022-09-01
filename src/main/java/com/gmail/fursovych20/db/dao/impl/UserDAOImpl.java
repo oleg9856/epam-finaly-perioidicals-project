@@ -17,6 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * UserDAO implementation for manipulating of users in the database
+ *
+ * @author O. Fursovych
+ */
 public class UserDAOImpl implements UserDAO {
 
     public static final Logger LOG = LogManager.getLogger(UserDAOImpl.class);

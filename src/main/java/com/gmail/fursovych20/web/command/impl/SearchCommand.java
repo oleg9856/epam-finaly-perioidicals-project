@@ -25,6 +25,9 @@ import java.util.Map;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ *
+ */
 public class SearchCommand implements Command {
     private static final Logger LOG = LogManager.getLogger(SearchCommand.class);
 
@@ -51,7 +54,7 @@ public class SearchCommand implements Command {
         LocaleType localeType = HttpUtil.getLocale(request);
         LOG.trace("Locale --> {}",localeType);
         try {
-            String name = request.getParameter("publication_name");
+            String name = request.getParameter(REQUEST_PARAM_PUBLICATION_NAME);
             PublicationSearchCriteriaDTO criteria = getSearchCriteria(request);
             List<Publication> publications = publicationService.findPublicationsByNameAndCriteria(criteria, name);
             List<Theme> themes = themeService.findAllThemeByLocaleType(localeType);

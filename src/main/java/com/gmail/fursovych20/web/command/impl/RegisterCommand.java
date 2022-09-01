@@ -75,10 +75,11 @@ public class RegisterCommand implements Command {
 			}
 			
 			catch (ServiceException e) {
-				LOG.error("Exception registrating user", e);
+				LOG.error("Exception registering user", e);
 				return SEND_TO_FORWARD+VIEW_ERROR;
 			}	
 		} else {
+			LOG.trace("RegisterCommand final failed!");
 			return SEND_TO_FORWARD+VIEW_REGISTER;
 		}
 	}

@@ -21,6 +21,11 @@ import org.apache.logging.log4j.Logger;
 
 import javax.sql.DataSource;
 
+/**
+ * ThemeDAO implementation for manipulating themes in the database
+ *
+ * @author O. Fursovych
+ */
 public class ThemeDAOImpl implements ThemeDAO {
 
     private static final Logger LOG = LogManager.getLogger(ThemeDAOImpl.class);

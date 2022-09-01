@@ -20,7 +20,7 @@ public final class WebConstantDeclaration {
 	public static final String VIEW_EDIT_THEMES = "/WEB-INF/jsp/admin/edit_themes.jsp";
 	public static final String VIEW_EDIT_TYPES = "/WEB-INF/jsp/admin/edit_types.jsp";
 	public static final String VIEW_ALL_USERS = "/WEB-INF/jsp/admin/change_user_role.jsp";
-	public static final String VIEW_AVALIABLE_ISSUES = "/WEB-INF/jsp/user/avaliable_issues.jsp";
+	public static final String VIEW_AVAILABLE_ISSUES = "/WEB-INF/jsp/user/avaliable_issues.jsp";
 	public static final String VIEW_RESULT_PAGE = "/WEB-INF/jsp/result_page.jsp";
 
 	public static final String REQUEST_PARAM_LOGIN_OR_EMAIL = "login_or_email";
@@ -45,8 +45,8 @@ public final class WebConstantDeclaration {
 	public static final String REQUEST_PARAM_ISSUE_ID_OF_PUBLICATION = "publication_id";
 	public static final String REQUEST_PARAM_REVIEW_ID = "review_id";
 	public static final String REQUEST_PARAM_SUM_FOR_REPLENISHMENT = "sum";
+	public static final String REQUEST_PARAM_PUBLICATION_NAME = "publication_name";
 	public static final String REQUEST_PARAM_ISSUE_ID = "issue_id";
-	public static final String REQUEST_PARAM_ISSUE_DATE_OF_PUBLICATION = "date_of_publication";
 	public static final String REQUEST_PARAM_ISSUE_DESCRIPTION = "description";
 	public static final String REQUEST_PARAM_ISSUE_FILE = "issue_file";
 	public static final String REQUEST_PARAM_START_DATA = "start_date";
@@ -66,8 +66,6 @@ public final class WebConstantDeclaration {
 	public static final String SESSION_ATTR_USER_ROLE = "userRole";
 
 	public static final String REQUEST_HEADER_REFER_PAGE = "referer";
-
-	public static final String REQUEST_ATTR_MSG_LOGIN_FAIL = "loginFailedMsg";
 	public static final String REQUEST_ATTR_PUBLICATION_LIST = "publications";
 	public static final String REQUEST_ATTR_PUBLICATION_NAMES = "publicationNames";
 	public static final String REQUEST_ATTR_ACTIVE_SUBSCRIPTION_LIST = "active_subscriptions";
@@ -123,18 +121,15 @@ public final class WebConstantDeclaration {
 	public static final String COMMAND_EDIT_TYPES = "/admin/edit-types";
 	public static final String COMMAND_UPDATE_TYPE = "/admin/update-type";
 	public static final String COMMAND_ADD_TYPE = "/admin/add-type";
-	public static final String COMMAND_ADD_ISSUE = "/admin/add-issue";
 	public static final String COMMAND_UPLOAD_ISSUE = "/admin/upload-issue";
 	public static final String COMMAND_UPDATE_PUBLICATION = "/admin/update-publication";
 	public static final String COMMAND_SUBSCRIBE = "/user/subscribe";
 
 	public static final String FAIL_MESSAGE_ADD_PUBLICATION = "publication_fail_message";
-	public static final String FAIL_MESSAGE_ADD_ISSUE = "issue_fail_message";
 	public static final String FAIL_MESSAGE_UPDATE_THEME = "theme_fail_message";
 	public static final String FAIL_MESSAGE_ADD_THEME = "theme_fail_message";
 	public static final String FAIL_MESSAGE_ADD_TYPE = "type_fail_message";
 	public static final String FAIL_MESSAGE_UPDATE_TYPE = "type_fail_message";
-	public static final String FAIL_MESSAGE_UPDATE_REVIEW = "review_fail_message";
 	public static final String FAIL_MESSAGE_REGISTER = "register_fail_message";
 	public static final String FAIL_MESSAGE_SUBSCRIPTION = "subscription_fail_message";
 	public static final String FAIL_MESSAGE_LOGIN = "login_fail_message";

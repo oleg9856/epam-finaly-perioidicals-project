@@ -7,24 +7,24 @@ import java.sql.Connection;
 import java.util.List;
 
 /**
- *An interface that provides methods for BalanceOperation and also performs
- *operations on the user's account
+ * An interface that provides methods for {@code balanceOperation} and also performs
+ * operations on the user's account
  *
  * @author O.Fursovych
  */
 public interface BalanceOperationDAO {
 
 	/**
-	 *A method that finds a user's balance operations by user ID.
+	 * The method that finds a user's balance operations by user ID.
 	 *
-	 * @param userID user id parameter that is passed to the constructor
-	 * @return List balance operations
+	 * @param userID {@code userId} parameter that is passed to the constructor
+	 * @return List {@code BalanceOperation}
 	 * @throws DAOException throws an exception
 	 */
 	List<BalanceOperation> findBalanceOperationUserByUserId(int userID) throws DAOException;
 
 	/**
-	 * A method that create balance operation
+	 * The method that {@code create} balance operation
 	 *
 	 * @param balanceOperation that is created by the user and passed to the constructor
 	 * @return boolean true, or false dependency of logic
@@ -33,7 +33,7 @@ public interface BalanceOperationDAO {
 	boolean create(BalanceOperation balanceOperation) throws DAOException;
 
 	/**
-	 * A method that create transaction for user using connection
+	 * The method that create transaction for user using connection for transaction
 	 * in layer UserDAO
 	 *
 	 * @param balanceOperation that is created by the user and passed to the constructor

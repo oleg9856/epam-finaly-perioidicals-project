@@ -34,11 +34,13 @@ public class LoginCommandTest {
     @InjectMocks
     private LoginCommand loginCommand;
 
-    private static final String HEADER = "header";
+    private static final String HEADER = "/login";
+
+    private static final String HEADER_FAIL = "fail_header";
     private static final String CODE_RECAPTCHA = "6Ld367khAAAAAN77biIpSCDVo_SbexYV_nIDUtxl";
 
     @Test
-    public void testSuccessExecute() throws CommandExeption {
+    public void testSuccessIfUserNullExecute() throws CommandExeption {
         when(request.getSession()).thenReturn(session);
         when(request.getHeader(REQUEST_HEADER_REFER_PAGE)).thenReturn(HEADER);
         when(request.getParameter(REQUEST_PARAM_RECAPTCHA_NAME)).thenReturn(CODE_RECAPTCHA);
@@ -48,7 +50,7 @@ public class LoginCommandTest {
     @Test
     public void testValidationFailedExecute() throws CommandExeption {
         when(request.getSession()).thenReturn(session);
-        when(request.getHeader(REQUEST_HEADER_REFER_PAGE)).thenReturn(HEADER);
+        when(request.getHeader(REQUEST_HEADER_REFER_PAGE)).thenReturn(HEADER_FAIL);
         assertNotNull(loginCommand.execute(request, response));
     }
 }

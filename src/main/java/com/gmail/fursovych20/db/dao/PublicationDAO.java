@@ -16,74 +16,77 @@ import java.util.List;
 public interface PublicationDAO {
 
 	/**
-	 * A method that searches for a publication by id and locale
+	 * The method that searches for a {@code publication} by {@code id} and {@code locale}
 	 *
-	 * @param id publication id
-	 * @param locale locale, which will be searched
-	 * @return publication
-	 * @throws DAOException throws exception in DAO
+	 * @param id {@code publicationId}
+	 * @param locale {@code locale}, which will be searched
+	 * @return {@code publication}
+	 * @throws DAOException throws exception
 	 */
 	Publication findPublicationByIdAndLocale(int id, LocaleType locale) throws DAOException;
 
 	/**
-	 * A method that searches for publications based on a certain search criterion
+	 * The method that searches for publications based on a certain search {@code criteria}
 	 *
-	 * @param criteria criteria, which will be searched
-	 * @return list publication which found
-	 * @throws DAOException throws exception in DAO
+	 * @param criteria parameter, which will be searched
+	 * @return list {@code publication} which found
+	 * @throws DAOException throws exception
 	 */
 	List<Publication> findAllPublicationByCriteria(PublicationSearchCriteriaDTO criteria) throws DAOException;
 
 	/**
-	 *A method that searches for publications by a certain search criteria and name
+	 * The method that searches for publications by a certain search {@code criteria} and {@code name}
 	 *
-	 * @param criteria criteria, which will be searched
-	 * @param name search name of publication
+	 * @param criteria param, which will be searched
+	 * @param name search {@code name} of {@code publication}
 	 * @return list of publication
-	 * @throws DAOException throws exception in DAO
+	 * @throws DAOException throws exception
 	 */
 	List<Publication> findPublicationsByNameAndCriteria(PublicationSearchCriteriaDTO criteria, String name) throws DAOException;
 
 	/**
-	 * Method for creating a new publication
+	 * The method for creating a new {@code publication}
 	 *
-	 * @param localizedPublicationDTO localizedPublicationDTO is localized publication for creating full publication
+	 * @param localizedPublicationDTO parameter is localized publication for creating full {@code publication}
 	 * @return boolean true, or false dependency of logic
-	 * @throws DAOException throws exception in DAO
+	 * @throws DAOException throws exception
 	 */
 	boolean create(LocalizedPublicationDTO localizedPublicationDTO) throws DAOException;
 
 	/**
-	 * A method to update an existing post
+	 * The method to {@code update} an existing publication
 	 *
-	 * @param localizedPublicationDTO localizedPublicationDTO is localized publication for update full publication
+	 * @param localizedPublicationDTO parameter is localized publication for update full publication
 	 * @return boolean true, or false dependency of logic
-	 * @throws DAOException throws exception in DAO
+	 * @throws DAOException throws exception
 	 */
 	boolean update(LocalizedPublicationDTO localizedPublicationDTO) throws DAOException;
 
 	/**
-	 * A method to delete an existing post
+	 * The method to {@code delete} an existing publication
 	 *
-	 * @param id publication id for deleting
+	 * @param id {@code publicationId} for deleting
 	 * @return boolean true, or false dependency of logic
-	 * @throws DAOException throws exception in DAO
+	 * @throws DAOException throws exception
 	 */
 	boolean delete(int id) throws DAOException;
 
 	/**
-	 * @param id publication id for reading
+	 * The method that provide read publication
+	 *
+	 * @param id {@code publicationId} for reading
 	 * @return found localized publication
-	 * @throws DAOException throws exception in DAO
+	 * @throws DAOException throws exception
 	 */
 	LocalizedPublicationDTO readLocalized(int id) throws DAOException;
 
 	/**
-	 * A method which found count by criteria
+	 * The method which found count by {@code criteria} in
+	 * publication
 	 *
-	 * @param criteria criteria, which will be searched
-	 * @return total count publication
-	 * @throws DAOException throws exception in DAO
+	 * @param criteria param, which will be searched
+	 * @return {@code totalCount} publication
+	 * @throws DAOException throws exception
 	 */
 	int getTotalCount(PublicationSearchCriteriaDTO criteria) throws DAOException;
 

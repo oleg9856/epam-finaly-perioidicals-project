@@ -21,7 +21,11 @@ import org.apache.logging.log4j.Logger;
 
 import javax.sql.DataSource;
 
-
+/**
+ * TypeDAO implementation for manipulating types in the database
+ *
+ * @author O. Fursovych
+ */
 public class TypeDAOImpl implements TypeDAO {
 
     private static final Logger LOG = LogManager.getLogger(TypeDAOImpl.class);
