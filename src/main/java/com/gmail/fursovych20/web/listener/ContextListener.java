@@ -38,6 +38,7 @@ public class ContextListener implements ServletContextListener {
      * Initializes command container
      */
     private void initCommands() {
+        LOG.info("Commands start init...");
         DataSource dataSource = JDBCManager.getInstance().getDataSource();
         CommandContainer commandContainer = new CommandContainer();
         BalanceOperationDAO balanceOperationDAO = new BalanceOperationDAOImpl(dataSource);
@@ -65,6 +66,7 @@ public class ContextListener implements ServletContextListener {
         commandContainer.setTypeService(typeService);
         IssueService issueService = new IssueServiceImpl(issueDAO,userService, publicationService);
         commandContainer.setIssueService(issueService);
+        LOG.info("Commands was init!");
 
         commandContainer.putCommands();
     }

@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/periodicals_website</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="testdb" uuid="97405e5a-390f-48ae-a6d1-4e87c7138afa">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:/Users/lenovo/IdeaProjects/periodicals-epam/src/test/resources/database/testdb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
