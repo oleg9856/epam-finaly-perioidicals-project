@@ -5,14 +5,13 @@ import com.gmail.fursovych20.entity.LocaleType;
 import com.gmail.fursovych20.entity.User;
 import com.gmail.fursovych20.entity.dto.LocalizedPublicationDTO;
 
-import javax.mail.Authenticator;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
+import com.gmail.fursovych20.web.util.MessageResolver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,10 +29,12 @@ public class MailSender {
     private static final String AUTH_PASSWORD = "auth.password";
     private static final String AUTH_PROPERTIES = "mail_authentication";
     private static final String FROM_HEADER = "periodicials.site@gmail.com";
-    private static final String SUBJECT_HEADER = "New issue on the Periodicals site";
-
-    private static final String MESSAGE_TEXT = " Hello, %s %s!\n\n"
-            + "We have a new issue of the %s - %s\n\n";
+    private static final String SUBJECT_HEADER = "message.subject_header";
+    private static final String GREETING = "message.hello";
+    private static final String NEW_PUBLICATION = "message.new_issue";
+    private static final String ADDED = "message.added";
+    private static final String VISIT_SITE = "message.visit";
+    private static final String PUBLICATION = "message.new_publication";
 
     private MailSender() {
     }
@@ -48,7 +49,7 @@ public class MailSender {
         }
     }
 
-    public static void sendNotifications(List<User> users, Issue issue, LocalizedPublicationDTO localizedPublicationDTO) {
+    public static void sendNotifications(List<User> users, Issue issue, LocalizedPublicationDTO localizedPublicationDTO, LocaleType locale) {
         ResourceBundle authData = ResourceBundle.getBundle(AUTH_PROPERTIES);
         // Rest of the imports
 
@@ -61,7 +62,7 @@ public class MailSender {
 
         try {
             for (User user : users) {
-                MimeMessage message = formMessage(authenticator, user, issue, localizedPublicationDTO);
+                MimeMessage message = formMessage(authenticator, user, issue, localizedPublicationDTO, locale);
                 Transport.send(message);
             }
         } catch (MessagingException e) {
@@ -70,17 +71,36 @@ public class MailSender {
 
     }
 
-    private static MimeMessage formMessage(Authenticator authenticator, User user, Issue issue, LocalizedPublicationDTO localizedPublicationDTO) throws MessagingException {
+    private static MimeMessage formMessage(Authenticator authenticator, User user, Issue issue, LocalizedPublicationDTO localizedPublicationDTO, LocaleType locale) throws MessagingException {
         Session session = Session.getDefaultInstance(props, authenticator);
         MimeMessage message = new MimeMessage(session);
 
         message.setFrom(FROM_HEADER);
         message.setRecipient(TO, new InternetAddress(user.getEmail()));
-        message.setSubject(SUBJECT_HEADER);
-        message.setText(String.format(MESSAGE_TEXT, user.getName(),
-                user.getSurName(),
-                localizedPublicationDTO.getNames().get(LocaleType.en_US),
-                issue.getDescription()));
+        message.setSubject(MessageResolver.getMessage(SUBJECT_HEADER, locale));
+
+        MimeBodyPart mimeBodyPart = new MimeBodyPart();
+        mimeBodyPart.setContent(
+                "<div style=\"background: rgba(220,240,246,0.37) \">\n" +
+                        "<div style=\"text-align: center;font-style: italic; text-decoration: dashed\">\n" +
+                        "    "+MessageResolver.getMessage(GREETING, locale)+" "+user.getName()+" "+user.getSurName()+"\n" +
+                        "</div>\n" +
+                        "    <div>\n" +
+                        "        <div>\n" +
+                        "            <h5 style=\"text-align: center;font-style: oblique\" >"+MessageResolver.getMessage(PUBLICATION, locale)+"</h5>\n" +
+                        "            <p>"+MessageResolver.getMessage(NEW_PUBLICATION, locale)+" "+localizedPublicationDTO.getNames().get(locale)
+                        +" "+MessageResolver.getMessage(ADDED, locale)+" "+localizedPublicationDTO.getNames().get(locale)+" - "+issue.getDescription()+"</p>\n" +
+                        "            <a href=\"http://127.0.0.1:8080/periodicals_epam_war_exploded/\">"+MessageResolver.getMessage(VISIT_SITE, locale)+"</a>\n" +
+                        "        </div>\n" +
+                        "    </div>\n" +
+                        "</div>"
+                , "text/html; charset=utf-8");
+
+
+        Multipart multipart = new MimeMultipart();
+        multipart.addBodyPart(mimeBodyPart);
+
+        message.setContent(multipart);
 
         return message;
     }

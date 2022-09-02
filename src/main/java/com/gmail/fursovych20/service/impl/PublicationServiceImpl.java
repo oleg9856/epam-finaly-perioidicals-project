@@ -83,6 +83,15 @@ public class PublicationServiceImpl implements PublicationService {
     }
 
     @Override
+    public LocalizedPublicationDTO readLocalizedWithLocalized(int id, LocaleType local) throws ServiceException {
+        try {
+            return publicationDao.readLocalizedWithLocalization(id, local);
+        } catch (DAOException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
     public boolean deletePublication(int id) throws ServiceException {
         try {
             if (id != 0) {

@@ -20,22 +20,22 @@ public interface SubscriptionDAO {
 	 *
 	 * @param subscription parameter, subscription entity create in {@code command}
 	 * @param balanceOperation parameter, which using for create subscription balance
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws exception in DAO
 	 */
 	boolean create(Subscription subscription, BalanceOperation balanceOperation) throws DAOException;
 
 	/**
-	 * The method that {@code update} subscription using other object subscription
+	 * A method that {@code update} subscription using other object subscription
 	 *
 	 * @param subscription parameter, which is the object to update
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException  throws exception in DAO
 	 */
 	boolean update(Subscription subscription) throws DAOException;
 
 	/**
-	 * The method that {@code read} subscription by {@code subscriptionId}
+	 * A method that {@code read} subscription by {@code subscriptionId}
 	 *
 	 * @param subscriptionId parameter, which is {@code id} to search in method
 	 * @return subscription which found with this parameters
@@ -44,7 +44,7 @@ public interface SubscriptionDAO {
 	Subscription findSubscriptionById(int subscriptionId) throws DAOException;
 
 	/**
-	 * The method that {@code read} subscription by the user ID of the active subscription
+	 * A method that {@code read} subscription by the user ID of the active subscription
 	 *
 	 * @param userId parameter, which using to find object
 	 * @return subscription which found with this parameters
@@ -53,7 +53,7 @@ public interface SubscriptionDAO {
 	List<Subscription> findActiveUserSubscriptionsByUserId(int userId) throws DAOException;
 
 	/**
-	 * The method that {@code read} all subscription by the user ID
+	 * A method that {@code read} all subscription by the user ID
 	 *
 	 * @param userId parameter, which using to find object
 	 * @return subscription which found with this parameters
@@ -67,7 +67,7 @@ public interface SubscriptionDAO {
 	 *
 	 * @param subscription parameter, which is the object to using in terminate operation
 	 * @param balanceOperation balance operation in this operation
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws exception
 	 */
 	boolean terminateSubscription(Subscription subscription, BalanceOperation balanceOperation) throws DAOException;

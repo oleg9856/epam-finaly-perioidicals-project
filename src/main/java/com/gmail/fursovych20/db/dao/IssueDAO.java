@@ -14,17 +14,17 @@ import java.util.List;
 public interface IssueDAO {
 
 	/**
-	 * The method that {@code create} the issue using
+	 * A method that {@code create} the issue using
 	 * exits issue.
 	 *
 	 * @param issue parameter, that is passed to the constructor
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws an exception
 	 */
 	boolean create(Issue issue) throws DAOException;
 
 	/**
-	 * The method that find an {@code issue} by {@code Id}.
+	 * A method that find an {@code issue} by {@code Id}.
 	 *
 	 * @param id {@code issueId} parameter that is passed to the constructor
 	 * @return {@code issue} which found
@@ -33,7 +33,7 @@ public interface IssueDAO {
 	Issue findIssueByID(int id) throws DAOException;
 
 	/**
-	 * The method that finds a post between dates by according to external data
+	 * A method that finds a post between dates by according to external data
 	 *
 	 * @param publicationId parameter that is passed to the constructor
 	 * @param startDate parameter in constructor start date

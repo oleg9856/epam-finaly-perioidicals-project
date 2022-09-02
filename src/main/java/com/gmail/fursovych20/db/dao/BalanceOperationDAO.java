@@ -15,7 +15,7 @@ import java.util.List;
 public interface BalanceOperationDAO {
 
 	/**
-	 * The method that finds a user's balance operations by user ID.
+	 * A method that finds a user's balance operations by user ID.
 	 *
 	 * @param userID {@code userId} parameter that is passed to the constructor
 	 * @return List {@code BalanceOperation}
@@ -24,21 +24,21 @@ public interface BalanceOperationDAO {
 	List<BalanceOperation> findBalanceOperationUserByUserId(int userID) throws DAOException;
 
 	/**
-	 * The method that {@code create} balance operation
+	 * A method that {@code create} balance operation
 	 *
 	 * @param balanceOperation that is created by the user and passed to the constructor
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws an exception
 	 */
 	boolean create(BalanceOperation balanceOperation) throws DAOException;
 
 	/**
-	 * The method that create transaction for user using connection for transaction
+	 * A method that create transaction for user using connection for transaction
 	 * in layer UserDAO
 	 *
 	 * @param balanceOperation that is created by the user and passed to the constructor
 	 * @param connection parameter that is passed to the constructor
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws an exception
 	 */
 	boolean createTransaction(BalanceOperation balanceOperation, Connection connection) throws DAOException;

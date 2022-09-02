@@ -15,7 +15,7 @@ import java.util.List;
 public interface TypeDAO {
 
 	/**
-	 * The method which return all type by locale
+	 * A method which return all type by locale
 	 *
 	 * @param locale the locale for which sampling takes place
 	 * @return all type by locale
@@ -24,7 +24,7 @@ public interface TypeDAO {
 	List<Type> findAllType(LocaleType locale) throws DAOException;
 
 	/**
-	 * The method which return type by {@code id} and locale
+	 * A method which return type by {@code id} and locale
 	 *
 	 * @param id param by which the search is performed
 	 * @param locale the locale for which sampling takes place
@@ -34,7 +34,7 @@ public interface TypeDAO {
 	Type findTypeById(Integer id, LocaleType locale) throws DAOException;
 
 	/**
-	 * The method which return all types
+	 * A method which return all types
 	 *
 	 * @return all types with all locales
 	 * @throws DAOException throws exception
@@ -42,19 +42,19 @@ public interface TypeDAO {
 	List<LocalizedTypeDTO> findAllLocalizedTypes() throws DAOException;
 
 	/**
-	 * The method that {@code update} {@code localizedTypeDTO} using other object type localized
+	 * A method that {@code update} {@code localizedTypeDTO} using other object type localized
 	 *
 	 * @param localizedTypeDTO parameter entity which using for update
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws exception
 	 */
 	boolean update(LocalizedTypeDTO localizedTypeDTO) throws DAOException;
 
 	/**
-	 * The method that {@code create} {@code localizedTypeDTO} using object type localized
+	 * A method that {@code create} {@code localizedTypeDTO} using object type localized
 	 *
 	 * @param localizedTypeDTO parameter entity which using for create
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws exception
 	 */
 	boolean create(LocalizedTypeDTO localizedTypeDTO)  throws DAOException;

@@ -3,6 +3,7 @@ package com.gmail.fursovych20.service.impl;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.IssueDAO;
 import com.gmail.fursovych20.entity.Issue;
+import com.gmail.fursovych20.entity.LocaleType;
 import com.gmail.fursovych20.entity.Subscription;
 import com.gmail.fursovych20.entity.User;
 import com.gmail.fursovych20.entity.dto.LocalizedPublicationDTO;
@@ -45,15 +46,15 @@ public class IssueServiceImpl implements IssueService {
 	}
 
 	@Override
-	public boolean create(Issue issue) throws ServiceException {
+	public boolean create(Issue issue, LocaleType locale) throws ServiceException {
 		boolean isCreated;
 		try {
 			isCreated = issueDao.create(issue);
 			
 			List<User> users = userService.usersHavingSubscription(issue.getPublicationId(), issue.getLocalDateOfPublication());
-			LocalizedPublicationDTO localizedPublicationDTO = publicationService.readLocalized(issue.getPublicationId());
+			LocalizedPublicationDTO localizedPublicationDTO = publicationService.readLocalizedWithLocalized(issue.getPublicationId(), locale);
 
-			MailSender.sendNotifications(users, issue, localizedPublicationDTO);
+			MailSender.sendNotifications(users, issue, localizedPublicationDTO, locale);
 			return isCreated;
 		} catch (DAOException e) {
 			throw new ServiceException(e);

@@ -59,8 +59,8 @@
             <img src="<c:url value="/resources/img/${publication.picturePath}" />" id="picture" alt=""/>
             <div id="description">
                 <p><strong>${publication_header}:<br/> </strong>${publication.name}, ${publication.id}</p>
-                <p>${theme_header}: <strong>${theme.name}</strong></p>
-                <p>${type_header}: <strong>${type.name}</strong></p>
+                <p><strong>${theme_header}: </strong>${theme.name}</p>
+                <p><strong>${type_header}: </strong>${type.name}</p>
                 <p>${publication.description} </p>
                 <p><strong>${price_header}: </strong>${publication.price} ${money_per_month}</p>
             </div>

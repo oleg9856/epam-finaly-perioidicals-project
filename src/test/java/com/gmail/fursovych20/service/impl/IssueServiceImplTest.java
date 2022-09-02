@@ -3,6 +3,7 @@ package com.gmail.fursovych20.service.impl;
 import com.gmail.fursovych20.db.dao.IssueDAO;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.entity.Issue;
+import com.gmail.fursovych20.entity.LocaleType;
 import com.gmail.fursovych20.entity.Subscription;
 import com.gmail.fursovych20.entity.SubscriptionStatus;
 import com.gmail.fursovych20.service.exception.ServiceException;
@@ -44,6 +45,8 @@ public class IssueServiceImplTest {
     private static final LocalDate START_DATE = LocalDate.now();
     private static final LocalDate END_DATE = LocalDate.of(Year.now().getValue(), START_DATE.getMonthValue()+2, START_DATE.getDayOfMonth());
     private static final double PRICE = 56.5;
+    private static final  LocaleType UK_UA = LocaleType.uk_UA;
+
     private static final SubscriptionStatus STATUS = SubscriptionStatus.ACTIVE;
 
     private final Issue issue  = new Issue(ID, DATE_OF_PUBLICATION.toLocalDate(), PUBLICATION_ID, DESCRIPTION, FILE);
@@ -78,12 +81,12 @@ public class IssueServiceImplTest {
     @Test
     public void testSuccessCreate() throws DAOException, ServiceException {
         when(issueDAO.create(issue)).thenReturn(true);
-        assertTrue(issueService.create(issue));
+        assertTrue(issueService.create(issue, UK_UA));
     }
 
     @Test(expected = ServiceException.class)
     public void testThrowExceptionCreate() throws DAOException, ServiceException {
         when(issueDAO.create(issue)).thenThrow(new DAOException());
-        issueService.create(issue);
+        issueService.create(issue, UK_UA);
     }
 }

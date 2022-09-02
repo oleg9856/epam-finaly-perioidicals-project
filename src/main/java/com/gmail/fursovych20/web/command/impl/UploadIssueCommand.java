@@ -38,7 +38,7 @@ public class UploadIssueCommand implements Command {
 		LocaleType locale = HttpUtil.getLocale(request);
 		try {			
 			Issue issue = getIssue(request);
-			issueService.create(issue);
+			issueService.create(issue, locale);
 
 			String message = MessageResolver.getMessage(SUCCESS_MESSAGE_KEY, locale);
 			String returnPage = HttpUtil.getReferPage(request);

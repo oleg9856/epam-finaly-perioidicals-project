@@ -16,7 +16,7 @@ import java.util.List;
 public interface ThemeDAO {
 
 	/**
-	 * The method which provide found all themes by {@code local}
+	 * A method which provide found all themes by {@code local}
 	 *
 	 * @param locale parameter locale in search
 	 * @return List themes which found with this parameters
@@ -25,7 +25,7 @@ public interface ThemeDAO {
 	List<Theme> findAll(LocaleType locale) throws DAOException;
 
 	/**
-	 * The method which provide found theme by {@code id} and {@code local}
+	 * A method which provide found theme by {@code id} and {@code local}
 	 *
 	 * @param id param, by which the search is performed
 	 * @param locale the locale for which sampling takes place
@@ -35,7 +35,7 @@ public interface ThemeDAO {
 	Theme findThemeById(Integer id, LocaleType locale) throws DAOException;
 
 	/**
-	 * The method which find all themes with locales
+	 * A method which find all themes with locales
 	 *
 	 * @return all locale themes with database
 	 * @throws DAOException throws exception
@@ -43,19 +43,19 @@ public interface ThemeDAO {
 	List<LocalizedThemeDTO> findAllLocalized() throws DAOException;
 
 	/**
-	 * The method that {@code update} {@code localizedThemesDTO} using other object theme localized
+	 * A method that {@code update} {@code localizedThemesDTO} using other object theme localized
 	 *
 	 * @param localizedThemeDTO parameter entity which using for update
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws exception
 	 */
 	boolean update(LocalizedThemeDTO localizedThemeDTO) throws DAOException;
 
 	/**
-	 * The method that {@code create} {@code localizedThemesDTO} using object theme localized
+	 * A method that {@code create} {@code localizedThemesDTO} using object theme localized
 	 *
 	 * @param localizedThemeDTO parameter entity which using for create
-	 * @return boolean true, or false dependency of logic
+	 * @return boolean true, or false dependency of parameters
 	 * @throws DAOException throws exception
 	 */
 	boolean create(LocalizedThemeDTO localizedThemeDTO)  throws DAOException;

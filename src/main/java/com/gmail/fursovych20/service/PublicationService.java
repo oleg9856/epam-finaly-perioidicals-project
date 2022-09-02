@@ -21,6 +21,8 @@ public interface PublicationService {
 	boolean deletePublication(int id) throws ServiceException;
 	
 	LocalizedPublicationDTO readLocalized(int id) throws ServiceException;
+
+	LocalizedPublicationDTO readLocalizedWithLocalized(int id, LocaleType local) throws ServiceException;
 	
 	boolean update(LocalizedPublicationDTO localizedPublicationDTO) throws ServiceException;
 

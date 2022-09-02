@@ -34,6 +34,7 @@ public class PublicationDAOImpl implements PublicationDAO {
     private static final Logger LOG = LogManager.getLogger(PublicationDAOImpl.class);
     private final DataSource dataSource;
     private static final String READ_BY_ID_AND_LOCALE = "SELECT id, name, description, id_theme, id_type, price, picture_path FROM publications JOIN publications_local ON publications_local.id_publication = publications.id WHERE id = ? AND locale = ?";
+    private static final String READ_LOCALIZED_BY_ID_AND_LOCALE = "SELECT id, name, description, id_theme, id_type, price, picture_path, locale FROM publications JOIN publications_local ON publications_local.id_publication = publications.id WHERE id = ? AND locale = ?";
     private static final String READ_BY_ID = "SELECT id, name, description, id_theme, id_type, price, picture_path, locale FROM publications JOIN publications_local ON publications_local.id_publication = publications.id WHERE id = ?";
     private static final String DELETE_FROM_PERIODICALS = "DELETE FROM periodicals_website.publications WHERE `id`=?";
     private static final String DELETE_FROM_PERIODICALS_LOCAL = "DELETE FROM periodicals_website.publications_local WHERE `id_publication`=?";
@@ -242,6 +243,27 @@ public class PublicationDAOImpl implements PublicationDAO {
                         localizedPublicationDTO = formLocalizedPublication(resultSet);
                     }
                     LOG.info("Read localized publication by Id successfully --> {}", id);
+                    return localizedPublicationDTO;
+                }
+            }
+        } catch (SQLException e) {
+            LOG.info("Can`t reading localized publication!");
+            throw new DAOException("Exception reading localized publication", e);
+        }
+    }
+
+    @Override
+    public LocalizedPublicationDTO readLocalizedWithLocalization(int id, LocaleType localeType) throws DAOException {
+        try (Connection connection = getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(READ_LOCALIZED_BY_ID_AND_LOCALE)) {
+                LocalizedPublicationDTO localizedPublicationDTO = null;
+                ps.setInt(1, id);
+                ps.setString(2, localeType.name());
+                try (ResultSet resultSet = ps.executeQuery()) {
+                    if (resultSet.next()) {
+                        localizedPublicationDTO = formLocalizedPublication(resultSet);
+                    }
+                    LOG.info("Read localized publication by Id and locale successfully --> {}", id);
                     return localizedPublicationDTO;
                 }
             }
