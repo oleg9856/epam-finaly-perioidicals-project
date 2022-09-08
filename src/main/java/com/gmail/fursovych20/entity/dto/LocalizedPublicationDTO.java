@@ -15,19 +15,59 @@ public class LocalizedPublicationDTO {
 	private double price;
 	private String picturePath;
 
-	public LocalizedPublicationDTO(int id, Map<LocaleType, String> names, Map<LocaleType, String> descriptions, short themeId, short typeID, double price, String picturePath) {
-		super();
-		this.id = id;
-		this.names = names;
-		this.descriptions = descriptions;
-		this.themeId = themeId;
-		this.typeID = typeID;
-		this.price = price;
-		this.picturePath = picturePath;
-	}
-
 	public LocalizedPublicationDTO() {
 		super();
+	}
+
+	/**
+	 * Builder for build publication
+	 */
+	public static class Builder{
+		private final LocalizedPublicationDTO localizedPublicationDTO;
+
+		public Builder() {
+			this.localizedPublicationDTO = new LocalizedPublicationDTO();
+		}
+
+		public LocalizedPublicationDTO.Builder setId(int id){
+			localizedPublicationDTO.setId(id);
+			return this;
+		}
+
+		public LocalizedPublicationDTO.Builder setNames(Map<LocaleType, String> names){
+			localizedPublicationDTO.setNames(names);
+			return this;
+		}
+
+		public LocalizedPublicationDTO.Builder setDescriptions(Map<LocaleType, String> descriptions){
+			localizedPublicationDTO.setDescriptions(descriptions);
+			return this;
+		}
+
+		public LocalizedPublicationDTO.Builder setThemeId(short themeId){
+			localizedPublicationDTO.setThemeId(themeId);
+			return this;
+		}
+
+		public LocalizedPublicationDTO.Builder setTypeID(short typeID){
+			localizedPublicationDTO.setTypeID(typeID);
+			return this;
+		}
+
+		public LocalizedPublicationDTO.Builder setPrice(double price){
+			localizedPublicationDTO.setPrice(price);
+			return this;
+		}
+
+		public LocalizedPublicationDTO.Builder setPicturePath(String picturePath){
+			localizedPublicationDTO.setPicturePath(picturePath);
+			return this;
+		}
+
+		public LocalizedPublicationDTO build(){
+			return localizedPublicationDTO;
+		}
+
 	}
 
 	public int getId() {

@@ -15,6 +15,10 @@ import java.time.LocalDate;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements add review command
+ */
 public class AddReviewCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(AddReviewCommand.class);

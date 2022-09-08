@@ -18,6 +18,10 @@ import java.util.Map;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements home command
+ */
 public class HomeCommand implements Command {
 
     private static final int THEME_DEFAULT = 0;

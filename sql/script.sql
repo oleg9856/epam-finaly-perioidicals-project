@@ -352,7 +352,6 @@ START TRANSACTION;
 USE `periodicals_website`;
 INSERT INTO `periodicals_website`.`reviews` (`id`, `id_user`, `id_publication`, `date_of_publication`, `text`, `mark`) VALUES (DEFAULT, 6, 63109, '2018-03-01 14:24:38', 'Добре!', 5);
 INSERT INTO `periodicals_website`.`reviews` (`id`, `id_user`, `id_publication`, `date_of_publication`, `text`, `mark`) VALUES (DEFAULT, 6, 63109, '2018-03-01 14:24:38', 'Добре!', 4);
-INSERT INTO `periodicals_website`.`reviews` (`id`, `id_user`, `id_publication`, `date_of_publication`, `text`, `mark`) VALUES (DEFAULT, 6, 64121, '2018-03-01 14:24:38', 'Добре!', 3);
 
 COMMIT;
 

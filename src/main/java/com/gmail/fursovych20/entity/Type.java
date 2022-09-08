@@ -9,14 +9,35 @@ public class Type implements Serializable{
 	private short id;
 	private String name;
 
-	public Type(short id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
-	}
-
 	public Type() {
 		super();
+	}
+
+	/**
+	 * Builder for build theme
+	 */
+	public static class Builder{
+
+		private final Type type;
+
+		public Builder() {
+			this.type = new Type();
+		}
+
+		public Type.Builder setId(short id) {
+			type.setId(id);
+			return this;
+		}
+
+		public Type.Builder setName(String name) {
+			type.setName(name);
+			return this;
+		}
+
+		public Type build() {
+			return type;
+		}
+
 	}
 	public short getId() {
 		return id;

@@ -13,7 +13,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
-
+/**
+ * A class which implements interface Command <br/>
+ * and implements terminate subscription command
+ */
 public class TerminateSubscriptionCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(TerminateSubscriptionCommand.class);

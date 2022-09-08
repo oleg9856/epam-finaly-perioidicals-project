@@ -27,13 +27,11 @@ public class ReviewServiceImplTest {
     private ReviewServiceImpl reviewService;
 
     private static final int ID = 1;
-    private static final int USER_ID = 1;
-    private static final int PUBLICATION_ID = 1;
     private static final LocalDate DATE_OF_PUBLICATION = LocalDate.now();
     private static final String TEXT = "SOME TEXT";
     private static final byte MARK = 3;
 
-    private static final Review REVIEW = new Review(ID, USER_ID, PUBLICATION_ID, DATE_OF_PUBLICATION, TEXT, MARK);
+    private static final Review REVIEW = getReview();
     private static final List<Review> REVIEWS = new ArrayList<>(List.of(REVIEW));
 
     @Test
@@ -96,5 +94,16 @@ public class ReviewServiceImplTest {
     public void testThrowsExceptionFindReviewById() throws DAOException, ServiceException {
         when(reviewDAO.findReviewById(ID)).thenThrow(new DAOException());
         reviewService.findReviewById(ID);
+    }
+
+    private static Review getReview() {
+        return new Review.Builder()
+                .setId(ID)
+                .setUserId(ID)
+                .setPublicationId(ID)
+                .setDateOfPublication(DATE_OF_PUBLICATION)
+                .setMark(MARK)
+                .setText(TEXT)
+                .build();
     }
 }

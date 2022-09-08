@@ -43,8 +43,7 @@ public class UserDAOImplTest {
     private static final String USER_EMAIL = "user@exaple.com";
     private static final BigDecimal USER_BALANCE = new BigDecimal("400.0");
     private static final Role USER_ROLE = Role.CUSTOMER;
-    private static final User user = new User(USER_ID, USER_LOGIN, USER_PASS, USER_NAME,
-            USER_SURNAME, USER_EMAIL, USER_BALANCE, USER_ROLE);
+    private static final User user = getUser();
 
 
     @Before
@@ -64,8 +63,7 @@ public class UserDAOImplTest {
 
     @Test
     public void testSuccessFindUserById() throws SQLException, DAOException {
-        User user = new User(USER_ID, USER_LOGIN, USER_PASS, USER_NAME,
-                USER_SURNAME, USER_EMAIL, USER_BALANCE, USER_ROLE);
+        User user = getUser();
        when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
        when(preparedStatement.executeQuery()).thenReturn(resultSet);
        when(resultSet.next()).thenReturn(true);
@@ -184,5 +182,18 @@ public class UserDAOImplTest {
         when(resultSet.getString("email")).thenReturn(USER_EMAIL);
         when(resultSet.getBigDecimal("balance")).thenReturn(USER_BALANCE);
         when(resultSet.getString("role")).thenReturn(USER_ROLE.name());
+    }
+
+    private static User getUser() {
+        return new User.Builder()
+                .setId(USER_ID)
+                .setLogin(USER_LOGIN)
+                .setPassword(USER_PASS)
+                .setName(USER_NAME)
+                .setSetSurName(USER_SURNAME)
+                .setEmail(USER_EMAIL)
+                .setBalance(USER_BALANCE)
+                .setRole(USER_ROLE)
+                .build();
     }
 }

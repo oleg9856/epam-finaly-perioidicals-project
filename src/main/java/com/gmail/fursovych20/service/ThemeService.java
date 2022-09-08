@@ -7,6 +7,9 @@ import com.gmail.fursovych20.service.exception.ServiceException;
 
 import java.util.List;
 
+/**
+ * An interface that provides methods for working with themes at the dao level
+ */
 public interface ThemeService {
 	
 	List<Theme> findAllThemeByLocaleType(LocaleType locale) throws ServiceException;

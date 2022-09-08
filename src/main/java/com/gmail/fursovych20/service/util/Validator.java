@@ -44,7 +44,7 @@ public class Validator {
     private static final int PRICE_MIN = 1;
 
     /** Constant max price */
-    private static final int PRICE_MAX = 10000;
+    private static final int PRICE_MAX = 100000;
 
     private Validator() {
     }
@@ -52,7 +52,7 @@ public class Validator {
     /**
      * Validate login.
      *
-     * @param enterLogin the enter login
+     * @param enterLogin to enter login
      * @return true, if successful
      */
     public static boolean validateLogin(String enterLogin) {
@@ -64,7 +64,7 @@ public class Validator {
     /**
      * Validate password.
      *
-     * @param enterPass the enter pass
+     * @param enterPass to enter pass
      * @return true, if successful
      */
     public static boolean validatePass(String enterPass) {
@@ -76,7 +76,7 @@ public class Validator {
     /**
      * Validate email.
      *
-     * @param enterEmail the enter email
+     * @param enterEmail to enter email
      * @return true, if successful
      */
     public static boolean validateEmail(String enterEmail) {
@@ -88,7 +88,7 @@ public class Validator {
     /**
      * Validate name.
      *
-     * @param enterName the enter name
+     * @param enterName to enter name
      * @return true, if successful
      */
     public static boolean validateName(String enterName) {
@@ -100,7 +100,7 @@ public class Validator {
     /**
      * Validate surname.
      *
-     * @param enterSurname the enter surname
+     * @param enterSurname to enter surname
      * @return true, if successful
      */
     public static boolean validateSurname(String enterSurname) {
@@ -112,7 +112,7 @@ public class Validator {
     /**
      * Validate name tour.
      *
-     * @param enterText the enter name tour
+     * @param enterText to enter name tour
      * @return true, if successful
      */
     public static boolean validateTextPublication(String enterText) {
@@ -124,7 +124,7 @@ public class Validator {
     /**
      * Validate country or city name.
      *
-     * @param enterTitle the enter name
+     * @param enterTitle to enter name
      * @return true, if successful
      */
     public static boolean validateNamePublication(String enterTitle) {
@@ -136,7 +136,7 @@ public class Validator {
     /**
      * Validate price.
      *
-     * @param enterPrice the enter price
+     * @param enterPrice to enter price
      * @return true, if successful
      */
     public static boolean validatePrice(double enterPrice) {
@@ -151,7 +151,7 @@ public class Validator {
     /**
      * Validate string.
      *
-     * @param enterStrings the enter strings
+     * @param enterStrings to enter strings
      * @return true, if successful
      */
     public static boolean validateStrings(String... enterStrings) {
@@ -163,19 +163,43 @@ public class Validator {
         return true;
     }
 
+    /**
+     * Validate user using other method in this class
+     *
+     * @param user to enter object
+     * @return true, if successful
+     */
     public static boolean userIsValid(User user) {
         return validateLogin(user.getLogin()) && validateName(user.getName()) && validateEmail(user.getEmail()) &&
                 validateSurname(user.getSurName()) && validatePass(user.getPassword());
     }
 
+    /**
+     * Validate balance operation sing other method in this class
+     *
+     * @param balanceOperation to enter object
+     * @return true, if successful
+     */
     public static boolean balanceOperationIsValid(BalanceOperation balanceOperation) {
         return balanceOperation.getLocalDate() != null && validatePrice(balanceOperation.getSum().doubleValue());
     }
 
+    /**
+     * Validate review using other method in this class
+     *
+     * @param review  to enter object
+     * @return true, if successful
+     */
     public static boolean reviewIsValid(Review review) {
         return validateStrings(review.getText()) && review.getDateOfPublication() != null;
     }
 
+    /**
+     * Validate review using other method in this class
+     *
+     * @param publication to enter object
+     * @return true, if successful
+     */
     public static boolean localizedPublicationIsValid(LocalizedPublicationDTO publication) {
         for (String description : publication.getDescriptions().values()) {
             if (description == null || description.isEmpty() || !validateTextPublication(description)) {
@@ -190,6 +214,12 @@ public class Validator {
         return publication.getPicturePath() == null || publication.getPicturePath().isEmpty();
     }
 
+    /**
+     * Validate localized theme
+     *
+     * @param theme to enter object
+     * @return true, if successful
+     */
     public static boolean localizedThemeIsValid(LocalizedThemeDTO theme) {
         if (theme.getDefaultName() == null || theme.getDefaultName().isEmpty()) {
             return true;
@@ -202,6 +232,12 @@ public class Validator {
         return false;
     }
 
+    /**
+     * Validate localized types using other method in this class
+     *
+     * @param type to enter object
+     * @return true, if successful
+     */
     public static boolean localizedTypeIsValid(LocalizedTypeDTO type) {
         if (type.getDefaultName() == null || type.getDefaultName().isEmpty()) {
             return true;

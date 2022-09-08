@@ -26,7 +26,8 @@ import java.util.Map;
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
 /**
- *
+ * A class which implements interface Command <br/>
+ * and implements search command
  */
 public class SearchCommand implements Command {
     private static final Logger LOG = LogManager.getLogger(SearchCommand.class);

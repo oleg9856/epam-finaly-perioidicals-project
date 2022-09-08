@@ -42,7 +42,7 @@ public class IssueDAOImplTest {
     private static final LocalDate START_DATE = LocalDate.now();
     private static final LocalDate END_DATE = LocalDate.of(2022, 10, START_DATE.getDayOfMonth());
 
-    private final Issue issue  = new Issue(ID, DATE_OF_PUBLICATION.toLocalDate(), PUBLICATION_ID, DESCRIPTION, FILE);
+    private final Issue issue = getIssue();
 
     @Before
     public void getConnection() throws SQLException {
@@ -98,5 +98,15 @@ public class IssueDAOImplTest {
         when(resultSet.getInt("publication_id")).thenReturn(PUBLICATION_ID);
         when(resultSet.getString("description")).thenReturn(DESCRIPTION);
         when(resultSet.getString("file")).thenReturn(FILE);
+    }
+
+    private Issue getIssue() {
+        return new Issue.Builder()
+                .setId(ID)
+                .setPublicationId(ID)
+                .setDescription(DESCRIPTION)
+                .setLocalDateOfPublication(DATE_OF_PUBLICATION.toLocalDate())
+                .setFile(FILE)
+                .build();
     }
 }

@@ -1,6 +1,6 @@
 package com.gmail.fursovych20.db.dao.impl;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.UserDAO;
 import com.gmail.fursovych20.entity.Role;
@@ -70,7 +70,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Cannot create user --> ", e);
             throw new DAOException("Exception creating user", e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
     }
 
@@ -93,7 +93,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Cannot find password by login or email", e);
             throw new DAOException(EXCEPTION_READING_USER,e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return Optional.empty();
     }
@@ -118,7 +118,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Cannot find user by ID", e);
             throw new DAOException(EXCEPTION_READING_USER, e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return user;
     }
@@ -144,7 +144,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Cannot find user by login or email", e);
             throw new DAOException(EXCEPTION_READING_USER, e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return user;
     }
@@ -195,7 +195,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Exception finding login", e);
             throw new DAOException("Exception finding login", e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return false;
     }
@@ -218,7 +218,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Exception finding email", e);
             throw new DAOException("Exception finding email", e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return false;
     }
@@ -276,7 +276,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Cannot find users which having subscription");
             throw new DAOException(EXCEPTION_READING_USER, e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return users;
     }
@@ -301,7 +301,7 @@ public class UserDAOImpl implements UserDAO {
             LOG.error("(SQLException) Cannot received balance by userId ", e);
             throw new DAOException(EXCEPTION_READING_USER, e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return balance;
     }

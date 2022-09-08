@@ -20,6 +20,10 @@ import java.time.LocalDate;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements update issue command
+ */
 public class UploadIssueCommand implements Command {
 	
 	private static final Logger LOG = LogManager.getLogger(UploadIssueCommand.class);

@@ -14,18 +14,58 @@ public class Publication implements Serializable{
 	private double price;
 	private String picturePath;
 
-	public Publication(int id, String name, String description, short themeId, short typeId, double price, String picturePath) {
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.themeId = themeId;
-		this.typeId = typeId;
-		this.price = price;
-		this.picturePath = picturePath;
-	}
-
 	public Publication() {
 		super();
+	}
+
+	/**
+	 * Builder for build publication
+	 */
+	public static class Builder{
+		private final Publication publication;
+
+		public Builder() {
+			this.publication = new Publication();
+		}
+
+		public Publication.Builder setId(int id){
+			publication.setId(id);
+			return this;
+		}
+
+		public Publication.Builder setName(String name){
+			publication.setName(name);
+			return this;
+		}
+
+		public Publication.Builder setDescription(String description){
+			publication.setDescription(description);
+			return this;
+		}
+
+		public Publication.Builder setThemeId(short themeId){
+			publication.setThemeId(themeId);
+			return this;
+		}
+
+		public Publication.Builder setTypeId(short typeId) {
+			publication.setTypeId(typeId);
+			return this;
+		}
+
+		public Publication.Builder setPrice(double price) {
+			publication.setPrice(price);
+			return this;
+		}
+
+		public Publication.Builder setPicturePath(String picturePath) {
+			publication.setPicturePath(picturePath);
+			return this;
+		}
+
+		public Publication build(){
+			return publication;
+		}
 	}
 
 	public int getId() {

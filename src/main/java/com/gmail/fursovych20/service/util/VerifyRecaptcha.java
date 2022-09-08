@@ -10,6 +10,9 @@ import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.URL;
 
+/**
+ * The Class VerifyRecaptcha which check keys reCAPTCHA
+ */
 public class VerifyRecaptcha {
     public static final String url = "https://www.google.com/recaptcha/api/siteverify";
     public static final String secret = "6Ld367khAAAAAN77biIpSCDVo_SbexYV_nIDUtxl";

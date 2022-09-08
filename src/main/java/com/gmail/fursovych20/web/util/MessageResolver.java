@@ -4,6 +4,11 @@ import com.gmail.fursovych20.entity.LocaleType;
 
 import java.util.ResourceBundle;
 
+/**
+ * Bundle message resolver
+ *
+ * @author O.Fursovych
+ */
 public final class MessageResolver {
 	
 	private MessageResolver() {}

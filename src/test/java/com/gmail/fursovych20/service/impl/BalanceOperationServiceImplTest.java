@@ -32,25 +32,24 @@ public class BalanceOperationServiceImplTest {
     private static final int USER_ID = 1;
     private static final BigDecimal SUM = new BigDecimal("450.6");
     private static final String TYPE = "BALANCE_REPLENISHMENT";
-    private final BalanceOperation balanceOperation = new BalanceOperation(ID, USER_ID, LocalDate.now(), SUM,
-            BalanceOperationType.valueOf(TYPE));
+    private static final BalanceOperation BALANCE_OPERATION = getBalanceOperation();
 
     @Test
     public void testSuccessCreate() throws DAOException, ServiceException {
-        when(balanceOperationDAO.create(balanceOperation)).thenReturn(true);
-        assertTrue(balanceOperationServiceImpl.create(balanceOperation));
+        when(balanceOperationDAO.create(BALANCE_OPERATION)).thenReturn(true);
+        assertTrue(balanceOperationServiceImpl.create(BALANCE_OPERATION));
     }
 
     @Test(expected = ServiceException.class)
     public void testThrowExceptionCreate() throws DAOException, ServiceException {
-        when(balanceOperationDAO.create(balanceOperation)).thenThrow(new DAOException());
-        balanceOperationServiceImpl.create(balanceOperation);
+        when(balanceOperationDAO.create(BALANCE_OPERATION)).thenThrow(new DAOException());
+        balanceOperationServiceImpl.create(BALANCE_OPERATION);
     }
 
     @Test
     public void testSuccessFindBalanceOperationUserByUserId() throws DAOException, ServiceException {
         List<BalanceOperation> balanceOperations = new ArrayList<>();
-        balanceOperations.add(balanceOperation);
+        balanceOperations.add(BALANCE_OPERATION);
         when(balanceOperationDAO.findBalanceOperationUserByUserId(ID)).thenReturn(balanceOperations);
         assertEquals(balanceOperations, balanceOperationServiceImpl.findBalanceOperationUserByUserId(ID));
     }
@@ -59,5 +58,15 @@ public class BalanceOperationServiceImplTest {
     public void testThrowsExceptionFindBalanceOperationUserByUserId() throws DAOException, ServiceException {
         when(balanceOperationDAO.findBalanceOperationUserByUserId(ID)).thenThrow(new DAOException());
         balanceOperationServiceImpl.findBalanceOperationUserByUserId(ID);
+    }
+
+    private static BalanceOperation getBalanceOperation() {
+        return new BalanceOperation.Builder()
+                .setId(ID)
+                .setIdUser(ID)
+                .setSum(SUM)
+                .setLocalDate(LocalDate.now())
+                .setType(BalanceOperationType.valueOf(TYPE))
+                .build();
     }
 }

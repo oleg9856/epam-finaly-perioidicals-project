@@ -14,8 +14,12 @@ import java.util.List;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements edit user command
+ */
 public class EditUserCommand implements Command {
-    private static final Logger LOG = LogManager.getLogger(ShowResultPageCommand.class);
+    private static final Logger LOG = LogManager.getLogger(EditUserCommand.class);
 
     private final UserService userService;
 

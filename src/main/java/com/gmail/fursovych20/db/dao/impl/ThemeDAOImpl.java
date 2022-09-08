@@ -10,7 +10,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.ThemeDAO;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.entity.LocaleType;
@@ -138,10 +138,10 @@ public class ThemeDAOImpl implements ThemeDAO {
             connection.commit();
         } catch (SQLException e) {
             LOG.error("(SQLException)Can`t update theme!");
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception updating theme", e);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional);
+            DBManager.close(connection, psMain, psAdditional);
         }
         return resultUpdate != 0;
     }
@@ -178,10 +178,10 @@ public class ThemeDAOImpl implements ThemeDAO {
             connection.commit();
         } catch (SQLException e) {
             LOG.error("(SQLException)Can`t create theme");
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception  theme", e);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional);
+            DBManager.close(connection, psMain, psAdditional);
         }
         return resultUpdate != 0;
     }

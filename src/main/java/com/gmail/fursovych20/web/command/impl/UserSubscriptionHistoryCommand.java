@@ -20,6 +20,10 @@ import java.util.Map;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements user subscription history command
+ */
 public class UserSubscriptionHistoryCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(UserSubscriptionHistoryCommand.class);

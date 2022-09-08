@@ -1,5 +1,10 @@
 package com.gmail.fursovych20.web.util;
 
+/**
+ * Holder for constant
+ *
+ * @author O.Fursovych
+ */
 public final class WebConstantDeclaration {
 
     private WebConstantDeclaration() {}

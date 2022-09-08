@@ -14,6 +14,10 @@ import java.util.List;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements update balance operation command
+ */
 public class UserBalanceOperationCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(UserBalanceOperationCommand.class);

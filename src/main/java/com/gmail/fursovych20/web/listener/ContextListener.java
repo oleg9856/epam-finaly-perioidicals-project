@@ -5,7 +5,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.*;
 import com.gmail.fursovych20.db.dao.impl.*;
 import com.gmail.fursovych20.service.*;
@@ -14,6 +14,11 @@ import com.gmail.fursovych20.web.command.CommandContainer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * ContextListener which initialized different source
+ *
+ * @author O.Fursovych
+ */
 @WebListener
 public class ContextListener implements ServletContextListener {
 
@@ -39,7 +44,7 @@ public class ContextListener implements ServletContextListener {
      */
     private void initCommands() {
         LOG.info("Commands start init...");
-        DataSource dataSource = JDBCManager.getInstance().getDataSource();
+        DataSource dataSource = DBManager.getInstance().getDataSource();
         CommandContainer commandContainer = new CommandContainer();
         BalanceOperationDAO balanceOperationDAO = new BalanceOperationDAOImpl(dataSource);
         IssueDAO issueDAO = new IssueDAOImpl(dataSource);

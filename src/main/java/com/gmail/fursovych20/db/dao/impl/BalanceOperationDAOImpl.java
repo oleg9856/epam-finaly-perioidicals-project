@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.BalanceOperationDAO;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.UserDAO;
@@ -86,10 +86,10 @@ public class BalanceOperationDAOImpl implements BalanceOperationDAO {
             LOG.info("Balance operation created successfully!");
         } catch (SQLException e) {
             LOG.error("Balance transaction error!");
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception creating balance operation", e);
         } finally {
-            JDBCManager.close(connection, ps);
+            DBManager.close(connection, ps);
         }
         return resultUpdate != 0;
     }
@@ -122,7 +122,7 @@ public class BalanceOperationDAOImpl implements BalanceOperationDAO {
             LOG.info("Exception creating balance operation transaction", e);
             throw new DAOException("Exception creating balance operation transaction", e);
         }finally {
-            JDBCManager.close(ps, resultSet);
+            DBManager.close(ps, resultSet);
         }
         return resultUpdate != 0;
     }

@@ -14,18 +14,51 @@ public class BalanceOperation implements Serializable{
 	private BigDecimal sum;
 	private BalanceOperationType type;
 
-	public BalanceOperation(int id, int idUser, LocalDate localDate, BigDecimal sum, BalanceOperationType type) {
-		super();
-		this.id = id;
-		this.idUser = idUser;
-		this.localDate = localDate;
-		this.sum = sum;
-		this.type = type;
-	}
-
 	public BalanceOperation() {
 		super();
 	}
+
+	/**
+	 * Builder for build balance operation
+	 */
+	public static class Builder{
+		private final BalanceOperation balanceOperation;
+
+		public Builder() {
+			this.balanceOperation = new BalanceOperation();
+		}
+
+		public BalanceOperation.Builder setId(int id) {
+			balanceOperation.setId(id);
+			return this;
+		}
+
+		public BalanceOperation.Builder setIdUser(int idUser) {
+			balanceOperation.setIdUser(idUser);
+			return this;
+		}
+
+		public BalanceOperation.Builder setLocalDate(LocalDate date) {
+			balanceOperation.setLocalDate(date);
+			return this;
+		}
+
+		public BalanceOperation.Builder setSum(BigDecimal sum) {
+			balanceOperation.setSum(sum);
+			return this;
+		}
+
+		public BalanceOperation.Builder setType(BalanceOperationType type) {
+			balanceOperation.setType(type);
+			return this;
+		}
+
+		public BalanceOperation build(){
+			return balanceOperation;
+		}
+
+	}
+
 	public int getId() {
 		return id;
 	}

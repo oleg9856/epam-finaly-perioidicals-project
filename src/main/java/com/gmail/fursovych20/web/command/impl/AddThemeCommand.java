@@ -19,6 +19,10 @@ import java.util.Map;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements add theme command
+ */
 public class AddThemeCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(AddThemeCommand.class);

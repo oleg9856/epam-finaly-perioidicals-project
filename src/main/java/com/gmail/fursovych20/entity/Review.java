@@ -13,19 +13,55 @@ public class Review implements Serializable{
 	private LocalDate dateOfPublication;
 	private String text;
 	private byte mark;
-	
-	public Review(int id, int userId, int publicationId, LocalDate dateOfPublication, String text, byte mark) {
-		super();
-		this.id = id;
-		this.userId = userId;
-		this.publicationId = publicationId;
-		this.dateOfPublication = dateOfPublication;
-		this.text = text;
-		this.mark = mark;
-	}
 
 	public Review() {
 		super();
+	}
+
+	/**
+	 * Builder for build review
+	 */
+	public static class Builder{
+		private final Review review;
+
+		public Builder() {
+			this.review = new Review();
+		}
+
+		public Review.Builder setId(int id){
+			review.setId(id);
+			return this;
+		}
+
+		public Review.Builder setUserId(int id){
+			review.setUserId(id);
+			return this;
+		}
+
+		public Review.Builder setPublicationId(int publicationId){
+			review.setPublicationId(publicationId);
+			return this;
+		}
+
+		public Review.Builder setDateOfPublication(LocalDate dateOfPublication){
+			review.setDateOfPublication(dateOfPublication);
+			return this;
+		}
+
+		public Review.Builder setText(String text){
+			review.setText(text);
+			return this;
+		}
+
+		public Review.Builder setMark(byte mark){
+			review.setMark(mark);
+			return this;
+		}
+
+		public Review build(){
+			return review;
+		}
+
 	}
 
 	public int getId() {
@@ -103,9 +139,7 @@ public class Review implements Serializable{
 				return false;
 		} else if (!text.equals(other.text))
 			return false;
-		if (userId != other.userId)
-			return false;
-		return true;
+		return userId == other.userId;
 	}
 
 	@Override

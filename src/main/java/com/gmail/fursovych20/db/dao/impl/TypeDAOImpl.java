@@ -10,7 +10,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.TypeDAO;
 import com.gmail.fursovych20.entity.LocaleType;
@@ -138,9 +138,9 @@ public class TypeDAOImpl implements TypeDAO {
             connection.commit();
         } catch (SQLException e) {
             LOG.error("(SQLException)Can`t update localizedType!");
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional);
+            DBManager.close(connection, psMain, psAdditional);
         }
         return resultUpdate != 0;
     }
@@ -177,10 +177,10 @@ public class TypeDAOImpl implements TypeDAO {
             connection.commit();
         } catch (SQLException e) {
             LOG.error("(SQLException)Can`t create localized type");
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception creating type", e);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional, resultSet);
+            DBManager.close(connection, psMain, psAdditional, resultSet);
         }
         return resultUpdate != 0;
     }

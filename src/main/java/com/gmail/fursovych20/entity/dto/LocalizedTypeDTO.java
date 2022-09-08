@@ -16,11 +16,35 @@ public class LocalizedTypeDTO {
 		super();
 	}
 
-	public LocalizedTypeDTO(int id, String defaultName, Map<LocaleType, String> localizedNames) {
-		super();
-		this.id = id;
-		this.defaultName = defaultName;
-		this.localizedNames = localizedNames;
+	/**
+	 * Builder for build locale type
+	 */
+	public static class Builder{
+		private final LocalizedTypeDTO localizedTypeDTO;
+
+		public Builder() {
+			this.localizedTypeDTO = new LocalizedTypeDTO();
+		}
+
+		public LocalizedTypeDTO.Builder setId(int id){
+			localizedTypeDTO.setId(id);
+			return this;
+		}
+
+		public LocalizedTypeDTO.Builder setDefaultName(String defaultName){
+			localizedTypeDTO.setDefaultName(defaultName);
+			return this;
+		}
+
+		public LocalizedTypeDTO.Builder setLocalizedNames(Map<LocaleType, String> localizedNames) {
+			localizedTypeDTO.setLocalizedNames(localizedNames);
+			return this;
+		}
+
+		public LocalizedTypeDTO build(){
+			return localizedTypeDTO;
+		}
+
 	}
 
 	public int getId() {

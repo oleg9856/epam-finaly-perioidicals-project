@@ -13,20 +13,62 @@ public class Subscription implements Serializable{
 	private LocalDate startLocaleDate;
 	private LocalDate endLocaleDate;
 	private double price;
-	private SubscriptionStatus status;
-
-	public Subscription(int id, int userId, int publicationId, LocalDate startLocaleDate, LocalDate endLocaleDate, double price, SubscriptionStatus status) {
-		this.id = id;
-		this.userId = userId;
-		this.publicationId = publicationId;
-		this.startLocaleDate = startLocaleDate;
-		this.endLocaleDate = endLocaleDate;
-		this.price = price;
-		this.status = status;
-	}
 
 	public Subscription() {
 		super();
+	}
+	private SubscriptionStatus status;
+
+	/**
+	 * Builder for build subscription
+	 */
+	public static class Builder{
+
+		private final Subscription subscription;
+
+		public Builder() {
+			this.subscription = new Subscription();
+		}
+
+		public Subscription.Builder setId(int id){
+			subscription.setId(id);
+			return this;
+		}
+
+		public Subscription.Builder setUserId(int userId){
+			subscription.setUserId(userId);
+			return this;
+		}
+
+		public Subscription.Builder setPublicationId(int publicationId){
+			subscription.setPublicationId(publicationId);
+			return this;
+		}
+
+		public Subscription.Builder setStartLocalDate(LocalDate startDate){
+			subscription.setStartLocalDate(startDate);
+			return this;
+		}
+
+		public Subscription.Builder setEndLocalDate(LocalDate endDate){
+			subscription.setEndLocalDate(endDate);
+			return this;
+		}
+
+		public Subscription.Builder setPrice(double price){
+			subscription.setPrice(price);
+			return this;
+		}
+
+		public Subscription.Builder setStatus(SubscriptionStatus status){
+			subscription.setStatus(status);
+			return this;
+		}
+
+		public Subscription build(){
+			return subscription;
+		}
+
 	}
 
 	public int getId() {

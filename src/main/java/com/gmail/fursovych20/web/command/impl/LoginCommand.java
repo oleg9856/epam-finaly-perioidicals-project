@@ -18,6 +18,10 @@ import org.apache.logging.log4j.Logger;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements login command
+ */
 public class LoginCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(LoginCommand.class);

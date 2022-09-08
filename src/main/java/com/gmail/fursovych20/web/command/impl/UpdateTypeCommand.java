@@ -19,6 +19,10 @@ import java.util.Map;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements update type command
+ */
 public class UpdateTypeCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(UpdateTypeCommand.class);

@@ -49,8 +49,8 @@ public class IssueServiceImplTest {
 
     private static final SubscriptionStatus STATUS = SubscriptionStatus.ACTIVE;
 
-    private final Issue issue  = new Issue(ID, DATE_OF_PUBLICATION.toLocalDate(), PUBLICATION_ID, DESCRIPTION, FILE);
-    private final Subscription subscription = new Subscription(ID, ID, ID, START_DATE, END_DATE, PRICE, STATUS);
+    private final Issue issue  = getIssue();
+    private final Subscription subscription = getSubscription();
     private final List<Issue> issues = new ArrayList<>(List.of(issue));
 
 
@@ -88,5 +88,27 @@ public class IssueServiceImplTest {
     public void testThrowExceptionCreate() throws DAOException, ServiceException {
         when(issueDAO.create(issue)).thenThrow(new DAOException());
         issueService.create(issue, UK_UA);
+    }
+
+    private static Subscription getSubscription() {
+        return new Subscription.Builder()
+                .setId(ID)
+                .setUserId(ID)
+                .setStatus(STATUS)
+                .setPublicationId(PUBLICATION_ID)
+                .setStartLocalDate(START_DATE)
+                .setEndLocalDate(END_DATE)
+                .setPrice(PRICE)
+                .build();
+    }
+
+    private Issue getIssue() {
+        return new Issue.Builder()
+                .setId(ID)
+                .setPublicationId(ID)
+                .setDescription(DESCRIPTION)
+                .setLocalDateOfPublication(DATE_OF_PUBLICATION.toLocalDate())
+                .setFile(FILE)
+                .build();
     }
 }

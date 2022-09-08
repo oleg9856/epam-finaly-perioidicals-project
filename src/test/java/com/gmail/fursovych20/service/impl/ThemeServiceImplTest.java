@@ -31,9 +31,9 @@ public class ThemeServiceImplTest {
     private static final short ID = 1;
     private static final String NAME = "themeName";
     private static final LocaleType LOCALE = LocaleType.en_US;
-    private static final Theme THEME = new Theme(ID, NAME);
+    private static final Theme THEME = getTheme();
 
-    private static final LocalizedThemeDTO LOCALIZED_THEME = new LocalizedThemeDTO(ID, NAME, new EnumMap<>(Map.of(LOCALE, NAME)));
+    private static final LocalizedThemeDTO LOCALIZED_THEME = getLocalizedThemeDTO();
     private static final List<Theme> THEMES = new ArrayList<>(List.of(THEME));
     private static final List<LocalizedThemeDTO> LOCALIZED_THEMES = List.of(LOCALIZED_THEME);
 
@@ -65,5 +65,19 @@ public class ThemeServiceImplTest {
     public void testSuccessUpdate() throws DAOException, ServiceException {
         when(themeDAO.update(LOCALIZED_THEME)).thenReturn(true);
         assertTrue(themeService.update(LOCALIZED_THEME));
+    }
+    private static Theme getTheme() {
+        return new Theme.Builder()
+                .setId(ID)
+                .setName(NAME)
+                .build();
+    }
+
+    private static LocalizedThemeDTO getLocalizedThemeDTO() {
+        return new LocalizedThemeDTO.Builder()
+                .setId(ID)
+                .setDefaultName(NAME)
+                .setLocalizedNames(new EnumMap<>(Map.of(LOCALE, NAME)))
+                .build();
     }
 }

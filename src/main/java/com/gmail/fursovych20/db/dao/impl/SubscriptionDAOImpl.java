@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.BalanceOperationDAO;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.SubscriptionDAO;
@@ -75,10 +75,10 @@ public class SubscriptionDAOImpl implements SubscriptionDAO {
             connection.commit();
         } catch (SQLException | DAOException e) {
             LOG.error("(SQLException) Can`t create sub", e);
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception creating subscription", e);
         } finally {
-            JDBCManager.close(connection, ps);
+            DBManager.close(connection, ps);
         }
         return (resultUpdate != 0);
     }
@@ -189,10 +189,10 @@ public class SubscriptionDAOImpl implements SubscriptionDAO {
             connection.commit();
         } catch (SQLException | DAOException e) {
             LOG.error("(SQLException)Can`t terminate subscription", e);
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception terminating subscription", e);
         } finally {
-            JDBCManager.close(connection, ps);
+            DBManager.close(connection, ps);
         }
         return (resultUpdate != 0);
     }

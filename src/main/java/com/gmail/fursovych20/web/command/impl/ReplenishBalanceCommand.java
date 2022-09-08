@@ -18,6 +18,10 @@ import java.time.LocalDate;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements replenish balance command
+ */
 public class ReplenishBalanceCommand implements Command {
 	
 	private static final Logger LOG = LogManager.getLogger(ReplenishBalanceCommand.class);

@@ -10,6 +10,10 @@ import org.apache.logging.log4j.Logger;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements show result page command
+ */
 public class ShowResultPageCommand implements Command{
 
 	private static final Logger LOG = LogManager.getLogger(ShowResultPageCommand.class);

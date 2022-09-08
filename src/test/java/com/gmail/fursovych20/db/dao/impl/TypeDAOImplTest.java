@@ -47,8 +47,8 @@ public class TypeDAOImplTest {
     private static final String DEFAULT_NAME = "defaultName";
     private static final short ID = 1;
 
-    private static final Type TYPE = new Type(ID, NAME);
-    private static final LocalizedTypeDTO LOCALIZED_TYPE = new LocalizedTypeDTO(ID, DEFAULT_NAME,new EnumMap<>(Map.of(LOCALE, NAME)));
+    private static final Type TYPE = getType();
+    private static final LocalizedTypeDTO LOCALIZED_TYPE = getLocalizedTypeDTO();
 
     @Before
     public void getConnection() throws SQLException {
@@ -127,5 +127,20 @@ public class TypeDAOImplTest {
         when(resultSet.getString("default_name")).thenReturn(DEFAULT_NAME);
         when(resultSet.getString("locale")).thenReturn(LOCALE.name());
         when(resultSet.getString("name")).thenReturn(NAME);
+    }
+
+    private static Type getType() {
+        return new Type.Builder()
+                .setId(ID)
+                .setName(NAME)
+                .build();
+    }
+
+    private static LocalizedTypeDTO getLocalizedTypeDTO() {
+        return new LocalizedTypeDTO.Builder()
+                .setId(ID)
+                .setDefaultName(DEFAULT_NAME)
+                .setLocalizedNames(new EnumMap<>(Map.of(LOCALE, NAME)))
+                .build();
     }
 }

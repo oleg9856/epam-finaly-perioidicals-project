@@ -9,10 +9,29 @@ public class Theme implements Serializable{
 	private short id;
 	private String name;
 
-	public Theme(short id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
+	/**
+	 * Builder for build theme
+	 */
+	public static class Builder{
+		private final Theme theme;
+
+		public Builder() {
+			this.theme = new Theme();
+		}
+
+		public Theme.Builder setId(short id) {
+			theme.setId(id);
+			return this;
+		}
+
+		public Theme.Builder setName(String name) {
+			theme.setName(name);
+			return this;
+		}
+
+		public Theme build() {
+			return theme;
+		}
 	}
 
 	public Theme() {
@@ -52,11 +71,8 @@ public class Theme implements Serializable{
 		if (id != other.id)
 			return false;
 		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
+			return other.name == null;
+		} else return name.equals(other.name);
 	}
 	
 	@Override

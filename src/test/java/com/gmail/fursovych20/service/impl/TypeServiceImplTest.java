@@ -34,11 +34,12 @@ public class TypeServiceImplTest {
     private static final short ID = 1;
     private static final LocaleType LOCAL = LocaleType.uk_UA;
 
-    private static final Type TYPE = new Type(ID, NAME);
-    private static final LocalizedTypeDTO LOCALIZED_TYPE = new LocalizedTypeDTO(ID, DEFAULT_NAME,new EnumMap<>(Map.of(LOCAL, NAME)));
+    private static final Type TYPE = getType();
+
+    private static final LocalizedTypeDTO LOCALIZED_TYPE = getLocalizedTypeDTO();
+
     private static final List<Type> TYPES = new ArrayList<>();
     private static final List<LocalizedTypeDTO> LOCALIZED_TYPES  = new ArrayList<>(List.of(LOCALIZED_TYPE));
-
     @Test
     public void testSuccessFindAllTypeServiceByLocaleType() throws DAOException, ServiceException {
         when(typeDAO.findAllType(LOCAL)).thenReturn(TYPES);
@@ -67,5 +68,21 @@ public class TypeServiceImplTest {
     public void testSuccessUpdate() throws DAOException, ServiceException {
         when(typeDAO.update(LOCALIZED_TYPE)).thenReturn(true);
         assertTrue(typeService.update(LOCALIZED_TYPE));
+    }
+
+
+    private static Type getType() {
+        return new Type.Builder()
+                .setId(ID)
+                .setName(NAME)
+                .build();
+    }
+
+    private static LocalizedTypeDTO getLocalizedTypeDTO() {
+        return new LocalizedTypeDTO.Builder()
+                .setId(ID)
+                .setDefaultName(DEFAULT_NAME)
+                .setLocalizedNames(new EnumMap<>(Map.of(LOCAL, NAME)))
+                .build();
     }
 }

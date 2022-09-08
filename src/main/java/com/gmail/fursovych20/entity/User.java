@@ -19,18 +19,60 @@ public class User implements Serializable{
 	public User() {
 		super();
 	}
+	
+	/**
+	 * Builder for build user
+	 */
+	public static class Builder {
+		private final User user;
 
-	public User(Integer id, String login, String password, String name, String surName, String email, BigDecimal balance,
-			Role role) {
-		super();
-		this.id = id;
-		this.login = login;
-		this.password = password;
-		this.name = name;
-		this.surName = surName;
-		this.email = email;
-		this.balance = balance;
-		this.role = role;
+		public Builder() {
+			this.user = new User();
+		}
+
+		public Builder setId(Integer id) {
+			user.setId(id);
+			return this;
+		}
+
+		public Builder setLogin(String login) {
+			user.setLogin(login);
+			return this;
+		}
+
+		public Builder setPassword(String password) {
+			user.setPassword(password);
+			return this;
+		}
+
+		public Builder setName(String name) {
+			user.setName(name);
+			return this;
+		}
+
+		public Builder setSetSurName(String surName) {
+			user.setSurName(surName);
+			return this;
+		}
+
+		public Builder setEmail(String email) {
+			user.setEmail(email);
+			return this;
+		}
+
+		public Builder setBalance(BigDecimal balance) {
+			user.setBalance(balance);
+			return this;
+		}
+
+		public Builder setRole(Role role) {
+			user.setRole(role);
+			return this;
+		}
+
+		public User build() {
+			return user;
+		}
 	}
 
 	public Integer getId() {

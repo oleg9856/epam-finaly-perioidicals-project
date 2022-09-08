@@ -16,6 +16,10 @@ import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements change user role command
+ */
 public class ChangeUserRoleCommand implements Command {
     private static final Logger LOG = LogManager.getLogger(ChangeUserRoleCommand.class);
     private static final String SUCCESS_CHANGED_ROLE = "user.change_role_success";

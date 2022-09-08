@@ -36,8 +36,6 @@ public class ReviewDAOImplTest {
     private static final String SQL_TEST_ONE = "INSERT INTO `periodicals_website`.`reviews` (`id_user`, `id_publication`, `date_of_publication`, `text`, `mark`) VALUES (?, ?, ?, ?, ?);";
 
     private static final int ID = 1;
-    private static final int USER_ID = 1;
-    private static final int PUBLICATION_ID = 1;
     private static final LocalDate DATE_OF_PUBLICATION = LocalDate.now();
     private static final String TEXT = "SOME TEXT";
     private static final byte MARK = 3;
@@ -49,13 +47,13 @@ public class ReviewDAOImplTest {
 
     @Test
     public void findReviewByPublicationId() throws SQLException, DAOException {
-        Review review = new Review(ID, USER_ID, PUBLICATION_ID, DATE_OF_PUBLICATION, TEXT, MARK);
+        Review review = getReview();
         when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, false);
         setReview();
 
-        List<Review> reviewFind = reviewDAO.findReviewByPublicationId(PUBLICATION_ID);
+        List<Review> reviewFind = reviewDAO.findReviewByPublicationId(ID);
 
         assertNotNull(reviewFind);
         assertEquals(review, reviewFind.get(0));
@@ -64,7 +62,7 @@ public class ReviewDAOImplTest {
 
     @Test
     public void create() throws SQLException, DAOException {
-        Review REVIEW = new Review(ID, USER_ID, PUBLICATION_ID, DATE_OF_PUBLICATION, TEXT, MARK);
+        Review REVIEW = getReview();
         when(connection.prepareStatement(SQL_TEST_ONE,
                 Statement.RETURN_GENERATED_KEYS)).thenReturn(preparedStatement);
         when(preparedStatement.executeUpdate()).thenReturn(5);
@@ -81,7 +79,7 @@ public class ReviewDAOImplTest {
 
     @Test
     public void update() throws SQLException, DAOException {
-        Review review = new Review(ID, USER_ID, PUBLICATION_ID, DATE_OF_PUBLICATION, TEXT, MARK);
+        Review review = getReview();
         when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
         when(preparedStatement.executeUpdate()).thenReturn(5);
 
@@ -102,7 +100,7 @@ public class ReviewDAOImplTest {
 
     @Test
     public void findReviewById() throws SQLException, DAOException {
-        Review review = new Review(ID, USER_ID, PUBLICATION_ID, DATE_OF_PUBLICATION, TEXT, MARK);
+        Review review = getReview();
         when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true);
@@ -116,10 +114,21 @@ public class ReviewDAOImplTest {
 
     private void setReview() throws SQLException {
         when(resultSet.getInt("id")).thenReturn(ID);
-        when(resultSet.getInt("id_user")).thenReturn(USER_ID);
-        when(resultSet.getInt("id_publication")).thenReturn(PUBLICATION_ID);
+        when(resultSet.getInt("id_user")).thenReturn(ID);
+        when(resultSet.getInt("id_publication")).thenReturn(ID);
         when(resultSet.getTimestamp("date_of_publication")).thenReturn(Timestamp.valueOf(DATE_OF_PUBLICATION.atStartOfDay()));
         when(resultSet.getString("text")).thenReturn(TEXT);
         when(resultSet.getByte("mark")).thenReturn(MARK);
+    }
+
+    private Review getReview() {
+        return new Review.Builder()
+                .setId(ID)
+                .setUserId(ID)
+                .setPublicationId(ID)
+                .setDateOfPublication(DATE_OF_PUBLICATION)
+                .setMark(MARK)
+                .setText(TEXT)
+                .build();
     }
 }

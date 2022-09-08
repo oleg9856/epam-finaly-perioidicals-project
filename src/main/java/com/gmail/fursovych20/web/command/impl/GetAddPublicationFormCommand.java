@@ -18,6 +18,10 @@ import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
 import java.util.List;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements get add publication form command
+ */
 public class GetAddPublicationFormCommand implements Command {
 
     private static final Logger LOG = LogManager.getLogger(GetAddPublicationFormCommand.class);

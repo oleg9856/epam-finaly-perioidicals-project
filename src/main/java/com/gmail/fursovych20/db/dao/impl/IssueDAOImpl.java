@@ -1,6 +1,6 @@
 package com.gmail.fursovych20.db.dao.impl;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.IssueDAO;
 import com.gmail.fursovych20.entity.Issue;
@@ -69,7 +69,7 @@ public class IssueDAOImpl implements IssueDAO {
             LOG.error("Cannot creating issue", e);
             throw new DAOException("Exception creating issue", e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
     }
 
@@ -93,7 +93,7 @@ public class IssueDAOImpl implements IssueDAO {
             LOG.error("Cannot find issue by ID");
             throw new DAOException("Exception reading issue", e);
         } finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return null;
     }
@@ -122,7 +122,7 @@ public class IssueDAOImpl implements IssueDAO {
             LOG.error("Can't find publication between dates", e);
             throw new DAOException("Exception reading issues", e);
         }finally {
-            JDBCManager.close(connection, ps, resultSet);
+            DBManager.close(connection, ps, resultSet);
         }
         return issues;
     }

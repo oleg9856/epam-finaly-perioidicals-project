@@ -49,6 +49,7 @@
             ${balance}: ${user.balance} ${money}<br/>
 
             <div class="modal-body">
+                <div style="color: red">${error_adding_funds}</div>
                 <form action="${pageContext.request.contextPath}/controller/user/replenish-balance" method="post"
                       name="balance" id="balance">
                     <div class="input-group">

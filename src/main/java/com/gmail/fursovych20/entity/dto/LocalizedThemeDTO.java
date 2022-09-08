@@ -15,11 +15,35 @@ public class LocalizedThemeDTO {
 		super();
 	}
 
-	public LocalizedThemeDTO(int id, String defaultName, Map<LocaleType, String> localizedNames) {
-		super();
-		this.id = id;
-		this.defaultName = defaultName;
-		this.localizedNames = localizedNames;
+	/**
+	 * Builder for build locale theme
+	 */
+	public static class Builder{
+		private final LocalizedThemeDTO localizedThemeDTO;
+
+		public Builder() {
+			this.localizedThemeDTO = new LocalizedThemeDTO();
+		}
+
+		public LocalizedThemeDTO.Builder setId(int id){
+			localizedThemeDTO.setId(id);
+			return this;
+		}
+
+		public LocalizedThemeDTO.Builder setDefaultName(String defaultName){
+			localizedThemeDTO.setDefaultName(defaultName);
+			return this;
+		}
+
+		public LocalizedThemeDTO.Builder setLocalizedNames(Map<LocaleType, String> localizedNames){
+			localizedThemeDTO.setLocalizedNames(localizedNames);
+			return this;
+		}
+
+		public LocalizedThemeDTO build(){
+			return localizedThemeDTO;
+		}
+
 	}
 
 	public int getId() {

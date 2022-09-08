@@ -19,7 +19,7 @@ import java.io.IOException;
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
 /**
- * WebController for redirect to the different pages, using
+ * WebController for redirect to the different pages,<br/> using
  * forward and sendRedirect or do nothing.
  *
  * @author O. Fursovych

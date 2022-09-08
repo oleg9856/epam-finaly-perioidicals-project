@@ -53,12 +53,13 @@ public class PublicationDAOImplTest {
     private static final LocaleType LOCALE = LocaleType.uk_UA;
 
     private static final Publication publication =
-            new Publication(ID, NAME, DESCRIPTION, THEME_ID, TYPE_ID, PRICE, PICTURE_PATH);
+            getPublication();
+
     private static final PublicationSearchCriteriaDTO CRITERIA =
-            new PublicationSearchCriteriaDTO(LocaleType.uk_UA, ID, ID, ID, ID, ID, ID);
+            getSearchCriteriaDTO();
+
     private static final LocalizedPublicationDTO LOCALIZED =
-            new LocalizedPublicationDTO(ID, new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationNames")),
-                    new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationText")), THEME_ID, TYPE_ID, PRICE, PICTURE_PATH);
+            getPublicationDTO();
 
     @Before
     public void getConnection() throws SQLException {
@@ -79,7 +80,6 @@ public class PublicationDAOImplTest {
         verify(preparedStatement1).setInt(1, ID);
         verify(preparedStatement1).setString(2, LOCALE.name());
     }
-
     @Test
     public void testSuccessFindAllPublicationByCriteria() throws SQLException, DAOException {
         when(connection.createStatement()).thenReturn(statement);
@@ -174,4 +174,40 @@ public class PublicationDAOImplTest {
         when(resultSet.getString("name")).thenReturn(LOCALIZED.getNames().get(LOCALE));
         when(resultSet.getString("description")).thenReturn(LOCALIZED.getDescriptions().get(LOCALE));
     }
+
+    private static Publication getPublication() {
+        return new Publication.Builder()
+                .setId(ID)
+                .setThemeId(THEME_ID)
+                .setTypeId(TYPE_ID)
+                .setName(NAME)
+                .setDescription(DESCRIPTION)
+                .setPrice(PRICE)
+                .setPicturePath(PICTURE_PATH)
+                .build();
+    }
+
+    private static PublicationSearchCriteriaDTO getSearchCriteriaDTO() {
+        return new PublicationSearchCriteriaDTO.Builder()
+                .setLocale(LocaleType.uk_UA)
+                .setOrderId(ID)
+                .setItemsPerPage(ID)
+                .setCurrentPage(ID)
+                .setTypeId(ID)
+                .setPageCount(ID)
+                .build();
+    }
+
+    private static LocalizedPublicationDTO getPublicationDTO() {
+        return new LocalizedPublicationDTO.Builder()
+                .setId(ID)
+                .setNames(new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationNames")))
+                .setDescriptions(new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationText")))
+                .setTypeID(TYPE_ID)
+                .setThemeId(THEME_ID)
+                .setPrice(PRICE)
+                .setPicturePath(PICTURE_PATH)
+                .build();
+    }
+
 }

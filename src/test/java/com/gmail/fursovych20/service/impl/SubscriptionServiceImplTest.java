@@ -56,14 +56,11 @@ public class SubscriptionServiceImplTest {
     private static final String PICTURE_PATH = "C:/user/periodical/id/2022";
 
 
-    private static final Publication PUBLICATION =
-            new Publication(ID, NAME, DESCRIPTION, THEME_ID, TYPE_ID, PRICE, PICTURE_PATH);
-    private static final Subscription SUBSCRIPTION = new Subscription(ID, ID, ID, START_DATE, END_DATE, PRICE, STATUS);
+    private static final Publication PUBLICATION = getPublication();
+    private static final Subscription SUBSCRIPTION = getSubscription();
     private static final List<Subscription> SUBSCRIPTIONS = new ArrayList<>(List.of(SUBSCRIPTION));
     private static final LocalizedPublicationDTO LOCALIZED =
-            new LocalizedPublicationDTO(ID, new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationNames")),
-                    new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationText")), THEME_ID, TYPE_ID, PRICE, PICTURE_PATH);
-
+           getPublicationDTO();
 
     @Test
     public void testSuccessFindActiveUserSubscriptionsByUserId() throws DAOException, ServiceException {
@@ -122,4 +119,41 @@ public class SubscriptionServiceImplTest {
         when(userDAO.findUserBalance(ID)).thenReturn(SUM.doubleValue()+40);
         subscriptionService.create(ID,ID, START_DATE, ID);
     }
+
+    private static Subscription getSubscription() {
+        return new Subscription.Builder()
+                .setId(ID)
+                .setUserId(ID)
+                .setStatus(STATUS)
+                .setPublicationId(ID)
+                .setStartLocalDate(START_DATE)
+                .setEndLocalDate(END_DATE)
+                .setPrice(PRICE)
+                .build();
+    }
+
+    private static Publication getPublication() {
+        return new Publication.Builder()
+                .setId(ID)
+                .setThemeId(THEME_ID)
+                .setTypeId(TYPE_ID)
+                .setName(NAME)
+                .setDescription(DESCRIPTION)
+                .setPrice(PRICE)
+                .setPicturePath(PICTURE_PATH)
+                .build();
+    }
+
+    private static LocalizedPublicationDTO getPublicationDTO() {
+        return new LocalizedPublicationDTO.Builder()
+                .setId(ID)
+                .setNames(new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationNames")))
+                .setDescriptions(new EnumMap<>(Map.of(LocaleType.uk_UA, "PublicationText")))
+                .setTypeID(TYPE_ID)
+                .setThemeId(THEME_ID)
+                .setPrice(PRICE)
+                .setPicturePath(PICTURE_PATH)
+                .build();
+    }
+
 }

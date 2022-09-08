@@ -5,9 +5,11 @@ import com.gmail.fursovych20.entity.User;
 import com.gmail.fursovych20.service.exception.ServiceException;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
+/**
+ * An interface that provides methods for working with users at the dao level
+ */
 public interface UserService {
 	
 	User findUserByLoginOrEmailAndPassword(String loginOrEmail, String password) throws ServiceException;

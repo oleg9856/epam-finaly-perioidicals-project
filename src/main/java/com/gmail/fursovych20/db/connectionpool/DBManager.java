@@ -1,6 +1,6 @@
 package com.gmail.fursovych20.db.connectionpool;
 
-import com.gmail.fursovych20.db.connectionpool.exception.JDBCException;
+import com.gmail.fursovych20.db.connectionpool.exception.DBException;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -18,17 +18,17 @@ import java.sql.SQLException;
  * @author O.Fursovych
  */
 
-public class JDBCManager {
+public class DBManager {
 
-    private static final Logger LOG = LogManager.getLogger(JDBCManager.class);
+    private static final Logger LOG = LogManager.getLogger(DBManager.class);
 
     private static DataSource ds;
-    private static JDBCManager instance;
+    private static DBManager instance;
 
     // singleton
-    public static synchronized JDBCManager getInstance() {
+    public static synchronized DBManager getInstance() {
         if (instance == null)
-            instance = new JDBCManager();
+            instance = new DBManager();
         return instance;
     }
 
@@ -36,7 +36,7 @@ public class JDBCManager {
      * Public constructor that initializes DataSource
      * with ConnectionPool
      */
-    private JDBCManager() {
+    private DBManager() {
         try {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
@@ -77,7 +77,7 @@ public class JDBCManager {
                 }
             } catch (Exception e) {
                 LOG.error("(SQLException) Error! Cannot close connection", e);
-                throw new JDBCException(e);
+                throw new DBException(e);
             }
         }
     }
@@ -93,7 +93,7 @@ public class JDBCManager {
                 conn.rollback();
             } catch (SQLException e) {
                 LOG.error("(SQLException) Error! Cannot rollback", e);
-                throw new JDBCException(e);
+                throw new DBException(e);
             }
         }
     }

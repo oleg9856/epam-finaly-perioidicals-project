@@ -14,20 +14,61 @@ public class PublicationSearchCriteriaDTO {
 	private int itemsPerPage;
 	private int pageCount;
 
-	public PublicationSearchCriteriaDTO(LocaleType locale, int themeId, int typeId, int orderId, int currentPage, int itemsPerPage, int pageCount) {
-		this.locale = locale;
-		this.themeId = themeId;
-		this.typeId = typeId;
-		this.orderId = orderId;
-		this.currentPage = currentPage;
-		this.itemsPerPage = itemsPerPage;
-		this.pageCount = pageCount;
-	}
-
 	public PublicationSearchCriteriaDTO() {
 		super();
 	}
-	
+
+	/**
+	 * Builder for build publication search by criteria
+	 */
+	public static class Builder{
+
+		private final PublicationSearchCriteriaDTO publicationSearchCriteriaDTO;
+
+		public Builder() {
+			this.publicationSearchCriteriaDTO = new PublicationSearchCriteriaDTO();
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setLocale(LocaleType locale){
+			publicationSearchCriteriaDTO.setLocale(locale);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setThemeId(Integer themeId){
+			publicationSearchCriteriaDTO.setThemeId(themeId);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setOrderId(int orderId){
+			publicationSearchCriteriaDTO.setOrderId(orderId);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setCurrentPage(int currentPage){
+			publicationSearchCriteriaDTO.setCurrentPage(currentPage);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setItemsPerPage(int itemsPerPage){
+			publicationSearchCriteriaDTO.setItemsPerPage(itemsPerPage);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setTypeId(int typeId){
+			publicationSearchCriteriaDTO.setTypeId(typeId);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO.Builder setPageCount(int pageCount){
+			publicationSearchCriteriaDTO.setPageCount(pageCount);
+			return this;
+		}
+
+		public PublicationSearchCriteriaDTO build(){
+			return publicationSearchCriteriaDTO;
+		}
+	}
+
 	public LocaleType getLocale() {
 		return locale;
 	}

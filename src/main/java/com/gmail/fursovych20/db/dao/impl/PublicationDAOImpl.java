@@ -11,7 +11,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import com.gmail.fursovych20.db.connectionpool.JDBCManager;
+import com.gmail.fursovych20.db.connectionpool.DBManager;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
 import com.gmail.fursovych20.db.dao.PublicationDAO;
 import com.gmail.fursovych20.entity.LocaleType;
@@ -164,10 +164,10 @@ public class PublicationDAOImpl implements PublicationDAO {
             connection.commit();
         } catch (SQLException e) {
             LOG.error("(SQLException) Can`t create new publication!");
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception creating publication", e);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional, resultSet);
+            DBManager.close(connection, psMain, psAdditional, resultSet);
         }
         return resultUpdate != 0;
     }
@@ -203,10 +203,10 @@ public class PublicationDAOImpl implements PublicationDAO {
             LOG.info("Update publication successfully!");
             connection.commit();
         } catch (SQLException e) {
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception creating publication", e);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional);
+            DBManager.close(connection, psMain, psAdditional);
         }
         return resultUpdate != 0;
     }
@@ -225,10 +225,10 @@ public class PublicationDAOImpl implements PublicationDAO {
             return psMain.executeUpdate() != 0 && psAdditional.executeUpdate() != 0;
         } catch (SQLException e) {
             LOG.error("Can`t delete publication by id --> {}", id);
-            JDBCManager.rollback(connection);
+            DBManager.rollback(connection);
             throw new DAOException("Exception delete publication by publication id", e);
         } finally {
-            JDBCManager.close(connection, psMain, psAdditional);
+            DBManager.close(connection, psMain, psAdditional);
         }
     }
 

@@ -57,9 +57,9 @@ public class SubscriptionDAOImplTest {
     private static final BigDecimal SUM = new BigDecimal("450.6");
     private static final String TYPE = "BALANCE_REPLENISHMENT";
 
-    private static final Subscription SUBSCRIPTION = new Subscription(ID, USER_ID, PUBLICATION_ID, START_DATE, END_DATE, PRICE, STATUS);
-    private static final BalanceOperation BALANCE_OPERATION = new BalanceOperation(ID, USER_ID, LocalDate.now(), SUM,
-            BalanceOperationType.valueOf(TYPE));
+    private static final Subscription SUBSCRIPTION = getSubscription();
+
+    private static final BalanceOperation BALANCE_OPERATION = getBalanceOperation();
 
     @Before
     public void getConnection() throws SQLException {
@@ -160,5 +160,27 @@ public class SubscriptionDAOImplTest {
         when(resultSet.getTimestamp("end_date")).thenReturn(Timestamp.valueOf(END_DATE.atStartOfDay()));
         when(resultSet.getDouble("price")).thenReturn(PRICE);
         when(resultSet.getString("status")).thenReturn(STATUS.name());
+    }
+
+    private static Subscription getSubscription() {
+        return new Subscription.Builder()
+                .setId(ID)
+                .setUserId(USER_ID)
+                .setStatus(STATUS)
+                .setPublicationId(PUBLICATION_ID)
+                .setStartLocalDate(START_DATE)
+                .setEndLocalDate(END_DATE)
+                .setPrice(PRICE)
+                .build();
+    }
+
+    private static BalanceOperation getBalanceOperation() {
+        return new BalanceOperation.Builder()
+                .setId(ID)
+                .setIdUser(ID)
+                .setSum(SUM)
+                .setLocalDate(LocalDate.now())
+                .setType(BalanceOperationType.valueOf(TYPE))
+                .build();
     }
 }

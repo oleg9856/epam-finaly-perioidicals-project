@@ -18,6 +18,10 @@ import java.util.List;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements edit publication command
+ */
 public class EditPublicationCommand implements Command {
     private static final Logger LOG = LogManager.getLogger(EditPublicationCommand.class);
 

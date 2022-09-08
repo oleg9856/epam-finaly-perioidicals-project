@@ -16,6 +16,10 @@ import java.io.IOException;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class which implements interface Command <br/>
+ * and implements show issue file balance command
+ */
 public class ShowIssueFileCommand implements Command {
 	
 	private static final Logger LOG = LogManager.getLogger(ShowIssueFileCommand.class);

@@ -13,17 +13,49 @@ public class Issue implements Serializable{
 	private String description;
 	private String file;
 
-	public Issue(int id, LocalDate localDateOfPublication, int publicationId, String description, String file) {
-		super();
-		this.id = id;
-		this.localDateOfPublication = localDateOfPublication;
-		this.publicationId = publicationId;
-		this.description = description;
-		this.file = file;
-	}
-
 	public Issue() {
 		super();
+	}
+
+	/**
+	 * Builder for build issue
+	 */
+	public static class Builder{
+		private final Issue issue;
+
+		public Builder() {
+			this.issue = new Issue();
+		}
+
+		public Issue.Builder setId(int id){
+			issue.setId(id);
+			return this;
+		}
+
+		public Issue.Builder setLocalDateOfPublication(LocalDate dateOfPublication){
+			issue.setLocalDateOfPublication(dateOfPublication);
+			return this;
+		}
+
+		public Issue.Builder setPublicationId(int publicationId){
+			issue.setPublicationId(publicationId);
+			return this;
+		}
+
+		public Issue.Builder setFile(String file){
+			issue.setFile(file);
+			return this;
+		}
+
+		public Issue.Builder setDescription(String description) {
+			issue.setDescription(description);
+			return this;
+		}
+
+		public Issue build(){
+			return issue;
+		}
+
 	}
 
 	public int getId() {

@@ -2,7 +2,6 @@ package com.gmail.fursovych20.service.impl;
 
 import com.gmail.fursovych20.db.dao.UserDAO;
 import com.gmail.fursovych20.db.dao.exception.DAOException;
-import com.gmail.fursovych20.entity.LocaleType;
 import com.gmail.fursovych20.entity.Role;
 import com.gmail.fursovych20.entity.User;
 import com.gmail.fursovych20.service.exception.ServiceException;
@@ -40,8 +39,7 @@ public class UserServiceImplTest {
     private static final String USER_EMAIL = "user@exaple.com";
     private static final BigDecimal USER_BALANCE = new BigDecimal("400.0");
     private static final Role USER_ROLE = Role.CUSTOMER;
-    private static final User USER = new User(USER_ID, USER_LOGIN, USER_PASS, USER_NAME,
-            USER_SURNAME, USER_EMAIL, USER_BALANCE, USER_ROLE);
+    private static final User USER = getUser();
     private static final List<User> USERS = new ArrayList<>(List.of(USER));
 
     @Test
@@ -78,5 +76,18 @@ public class UserServiceImplTest {
     public void testSuccessUsersHavingSubscription() throws DAOException, ServiceException {
         when(userDAO.findUsersHavingSubscription(USER_ID, LocalDate.now())).thenReturn(USERS);
         assertEquals(USERS, userService.usersHavingSubscription(USER_ID, LocalDate.now()));
+    }
+
+    private static User getUser() {
+        return new User.Builder()
+                .setId(USER_ID)
+                .setLogin(USER_LOGIN)
+                .setPassword(USER_PASS)
+                .setName(USER_NAME)
+                .setSetSurName(USER_SURNAME)
+                .setEmail(USER_EMAIL)
+                .setBalance(USER_BALANCE)
+                .setRole(USER_ROLE)
+                .build();
     }
 }
