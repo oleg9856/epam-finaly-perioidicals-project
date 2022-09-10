@@ -53,14 +53,13 @@ public class ReplenishBalanceCommand implements Command {
 		LOG.trace("UserID --> {}",userID);
 		double sum = Double.parseDouble(request.getParameter(REQUEST_PARAM_SUM_FOR_REPLENISHMENT));
 		LOG.trace("Sum --> {}",sum);
-
-		BalanceOperation balanceOperation = new BalanceOperation();
-		balanceOperation.setIdUser(userID);
-		balanceOperation.setSum(BigDecimal.valueOf(sum));
-		balanceOperation.setType(BalanceOperationType.BALANCE_REPLENISHMENT);
-		balanceOperation.setLocalDate(LocalDate.now());
 		
-		return balanceOperation;
+		return new BalanceOperation.Builder()
+				.setIdUser(userID)
+				.setSum(BigDecimal.valueOf(sum))
+				.setType(BalanceOperationType.BALANCE_REPLENISHMENT)
+				.setLocalDate(LocalDate.now())
+				.build();
 	}
 	
 	

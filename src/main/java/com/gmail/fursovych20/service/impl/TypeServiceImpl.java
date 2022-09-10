@@ -12,6 +12,11 @@ import com.gmail.fursovych20.service.util.Validator;
 
 import java.util.List;
 
+/**
+ * TypeServiceImpl implementation for manipulating dao layer
+ *
+ * @author O. Fursovych
+ */
 public class TypeServiceImpl implements TypeService {
 	
 	private final TypeDAO typeDao;

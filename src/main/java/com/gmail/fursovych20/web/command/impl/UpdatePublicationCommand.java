@@ -67,7 +67,6 @@ public class UpdatePublicationCommand implements Command {
     }
 
     private LocalizedPublicationDTO getLocalizedPublication(HttpServletRequest request) throws ServletException, IOException {
-        LocalizedPublicationDTO localizedPublicationDTO = new LocalizedPublicationDTO();
         int publicationID = Integer.parseInt(request.getParameter(REQUEST_PARAM_PUBLICATION_ID));
         short themeId = Short.parseShort(request.getParameter(REQUEST_PARAM_THEME_ID));
         short typeId = Short.parseShort(request.getParameter(REQUEST_PARAM_TYPE_ID));
@@ -85,13 +84,14 @@ public class UpdatePublicationCommand implements Command {
 
         String pathToPicture = HttpUtil.uploadPublicationPicture(request);
 
-        localizedPublicationDTO.setId(publicationID);
-        localizedPublicationDTO.setThemeId(themeId);
-        localizedPublicationDTO.setTypeID(typeId);
-        localizedPublicationDTO.setNames(names);
-        localizedPublicationDTO.setDescriptions(descriptions);
-        localizedPublicationDTO.setPrice(price);
-        localizedPublicationDTO.setPicturePath(pathToPicture);
-        return localizedPublicationDTO;
+        return new LocalizedPublicationDTO.Builder()
+                .setId(publicationID)
+                .setThemeId(themeId)
+                .setTypeID(typeId)
+                .setNames(names)
+                .setDescriptions(descriptions)
+                .setPrice(price)
+                .setPicturePath(pathToPicture)
+                .build();
     }
 }

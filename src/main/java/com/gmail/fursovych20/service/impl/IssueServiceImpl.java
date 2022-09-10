@@ -15,6 +15,11 @@ import com.gmail.fursovych20.service.util.MailSender;
 
 import java.util.List;
 
+/**
+ * IssueServiceImpl implementation for manipulating dao layer
+ *
+ * @author O. Fursovych
+ */
 public class IssueServiceImpl implements IssueService {
 	
 	private final IssueDAO issueDao;

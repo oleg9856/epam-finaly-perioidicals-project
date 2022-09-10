@@ -198,15 +198,15 @@ public class SubscriptionDAOImpl implements SubscriptionDAO {
     }
 
     private Subscription formSubscription(ResultSet resultSet) throws SQLException {
-        Subscription subscription = new Subscription();
-        subscription.setId(resultSet.getInt(ID));
-        subscription.setUserId(resultSet.getInt(USER_ID));
-        subscription.setPublicationId(resultSet.getInt(PUBLICATION_ID));
-        subscription.setStartLocalDate(resultSet.getTimestamp(START_DATE).toLocalDateTime().toLocalDate());
-        subscription.setEndLocalDate(resultSet.getTimestamp(END_DATE).toLocalDateTime().toLocalDate());
-        subscription.setPrice(resultSet.getDouble(PRICE));
-        subscription.setStatus(SubscriptionStatus.valueOf(resultSet.getString(STATUS)));
-        return subscription;
+        return new Subscription.Builder()
+                .setId(resultSet.getInt(ID))
+                .setUserId(resultSet.getInt(USER_ID))
+                .setPublicationId(resultSet.getInt(PUBLICATION_ID))
+                .setStartLocalDate(resultSet.getTimestamp(START_DATE).toLocalDateTime().toLocalDate())
+                .setEndLocalDate(resultSet.getTimestamp(END_DATE).toLocalDateTime().toLocalDate())
+                .setPrice(resultSet.getDouble(PRICE))
+                .setStatus(SubscriptionStatus.valueOf(resultSet.getString(STATUS)))
+                .build();
     }
 
     private Connection getConnection() throws SQLException {

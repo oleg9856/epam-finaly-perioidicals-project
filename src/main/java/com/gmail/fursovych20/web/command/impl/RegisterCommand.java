@@ -89,13 +89,13 @@ public class RegisterCommand implements Command {
 	}
 	
 	private User getUser(HttpServletRequest request) {
-		User user = new User();
-		user.setLogin(request.getParameter(REQUEST_PARAM_LOGIN));
-		user.setPassword(request.getParameter(REQUEST_PARAM_PASSWORD));
-		user.setName(request.getParameter(REQUEST_PARAM_NAME));
-		user.setSurName(request.getParameter(REQUEST_PARAM_SURNAME));
-		user.setEmail(request.getParameter(REQUEST_PARAM_EMAIL));
-		return user;
+		return new User.Builder()
+				.setLogin(request.getParameter(REQUEST_PARAM_LOGIN))
+				.setPassword(request.getParameter(REQUEST_PARAM_PASSWORD))
+				.setName(request.getParameter(REQUEST_PARAM_NAME))
+				.setSetSurName(request.getParameter(REQUEST_PARAM_SURNAME))
+				.setEmail(request.getParameter(REQUEST_PARAM_EMAIL))
+				.build();
 	}
 	
 }

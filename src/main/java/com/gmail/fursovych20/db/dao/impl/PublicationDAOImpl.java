@@ -291,26 +291,18 @@ public class PublicationDAOImpl implements PublicationDAO {
     }
 
     private Publication formPublication(ResultSet resultSet) throws SQLException {
-        Publication publication = new Publication();
-        publication.setId(resultSet.getInt(ID));
-        publication.setName(resultSet.getString(NAME));
-        publication.setDescription(resultSet.getString(DESCRIPTION));
-        publication.setThemeId(resultSet.getShort(ID_THEME));
-        publication.setTypeId(resultSet.getShort(ID_TYPE));
-        publication.setPrice(resultSet.getDouble(PRICE));
-        publication.setPicturePath(resultSet.getString(PICTURE_PATH));
-        return publication;
+        return new Publication.Builder()
+                .setId(resultSet.getInt(ID))
+                .setName(resultSet.getString(NAME))
+                .setDescription(resultSet.getString(DESCRIPTION))
+                .setThemeId(resultSet.getShort(ID_THEME))
+                .setTypeId(resultSet.getShort(ID_TYPE))
+                .setPrice(resultSet.getDouble(PRICE))
+                .setPicturePath(resultSet.getString(PICTURE_PATH))
+                .build();
     }
 
     private LocalizedPublicationDTO formLocalizedPublication(ResultSet resultSet) throws SQLException {
-        LocalizedPublicationDTO localizedPublicationDTO = new LocalizedPublicationDTO();
-
-        localizedPublicationDTO.setId(resultSet.getInt(ID));
-        localizedPublicationDTO.setThemeId(resultSet.getShort(ID_THEME));
-        localizedPublicationDTO.setTypeID(resultSet.getShort(ID_TYPE));
-        localizedPublicationDTO.setPrice(resultSet.getDouble(PRICE));
-        localizedPublicationDTO.setPicturePath(resultSet.getString(PICTURE_PATH));
-
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         Map<LocaleType, String> descriptions = new EnumMap<>(LocaleType.class);
         do {
@@ -320,10 +312,16 @@ public class PublicationDAOImpl implements PublicationDAO {
             names.put(locale, name);
             descriptions.put(locale, description);
         } while (resultSet.next());
-        localizedPublicationDTO.setNames(names);
-        localizedPublicationDTO.setDescriptions(descriptions);
 
-        return localizedPublicationDTO;
+        return new LocalizedPublicationDTO.Builder()
+                .setId(resultSet.getInt(ID))
+                .setThemeId(resultSet.getShort(ID_THEME))
+                .setTypeID(resultSet.getShort(ID_TYPE))
+                .setPrice(resultSet.getDouble(PRICE))
+                .setPicturePath(resultSet.getString(PICTURE_PATH))
+                .setNames(names)
+                .setDescriptions(descriptions)
+                .build();
     }
 
     private String formQuery(PublicationSearchCriteriaDTO criteria) {

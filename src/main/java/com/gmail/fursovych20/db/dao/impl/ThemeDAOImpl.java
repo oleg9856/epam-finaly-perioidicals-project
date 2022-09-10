@@ -187,19 +187,14 @@ public class ThemeDAOImpl implements ThemeDAO {
     }
 
     private Theme formTheme(ResultSet resultSet) throws SQLException {
-        Theme theme = new Theme();
-        theme.setId(resultSet.getShort(ID));
-        theme.setName(resultSet.getString(NAME));
-        return theme;
+        return new Theme.Builder()
+                .setId(resultSet.getShort(ID))
+                .setName(resultSet.getString(NAME))
+                .build();
     }
 
     private LocalizedThemeDTO formLocalisedTheme(ResultSet resultSet) throws SQLException {
-        LocalizedThemeDTO localizedThemeDTO = new LocalizedThemeDTO();
-
         short id = resultSet.getShort(ID);
-        localizedThemeDTO.setId(id);
-        localizedThemeDTO.setDefaultName(resultSet.getString(DEFAULT_NAME));
-
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         LocaleType locale = LocaleType.valueOf(resultSet.getString(LOCALE));
         String name = resultSet.getString(NAME);
@@ -217,8 +212,11 @@ public class ThemeDAOImpl implements ThemeDAO {
             }
         }
 
-        localizedThemeDTO.setLocalizedNames(names);
-        return localizedThemeDTO;
+        return new LocalizedThemeDTO.Builder()
+                .setId(id)
+                .setDefaultName(resultSet.getString(DEFAULT_NAME))
+                .setLocalizedNames(names)
+                .build();
     }
 
     private Connection getConnection() throws SQLException {

@@ -86,7 +86,6 @@ public class SearchCommand implements Command {
     }
     private PublicationSearchCriteriaDTO getSearchCriteria(HttpServletRequest request) {
         LOG.debug("getSearchCriteria starts");
-        PublicationSearchCriteriaDTO criteria = new PublicationSearchCriteriaDTO();
         LocaleType localeType = HttpUtil.getLocale(request);
 
         int themeId;
@@ -109,14 +108,14 @@ public class SearchCommand implements Command {
             itemsPage = ITEMS_PER_PAGE_DEFAULT;
         }
 
-        criteria.setLocale(localeType);
-        criteria.setThemeId(themeId);
-        criteria.setTypeId(typeId);
-        criteria.setOrderId(sortId);
-        criteria.setCurrentPage(currentPage);
-        criteria.setItemsPerPage(itemsPage);
-
         LOG.debug("getSearchCriteria finally success!");
-        return criteria;
+        return new PublicationSearchCriteriaDTO.Builder()
+                .setLocale(localeType)
+                .setThemeId(themeId)
+                .setTypeId(typeId)
+                .setOrderId(sortId)
+                .setCurrentPage(currentPage)
+                .setItemsPerPage(itemsPage)
+                .build();
     }
 }

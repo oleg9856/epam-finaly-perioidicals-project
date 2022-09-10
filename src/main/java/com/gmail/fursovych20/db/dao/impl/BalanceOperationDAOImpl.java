@@ -128,15 +128,13 @@ public class BalanceOperationDAOImpl implements BalanceOperationDAO {
     }
 
     private BalanceOperation getBalanceOperation(ResultSet resultSet) throws SQLException {
-        BalanceOperation balanceOperation = new BalanceOperation();
-
-        balanceOperation.setId(resultSet.getInt(ID));
-        balanceOperation.setIdUser(resultSet.getInt(USER_ID));
-        balanceOperation.setLocalDate(resultSet.getDate(DATE).toLocalDate());
-        balanceOperation.setSum(resultSet.getBigDecimal(SUM));
-        balanceOperation.setType(BalanceOperationType.valueOf(resultSet.getString(TYPE)));
-
-        return balanceOperation;
+        return new BalanceOperation.Builder()
+                .setId(resultSet.getInt(ID))
+                .setIdUser(resultSet.getInt(USER_ID))
+                .setLocalDate(resultSet.getDate(DATE).toLocalDate())
+                .setSum(resultSet.getBigDecimal(SUM))
+                .setType(BalanceOperationType.valueOf(resultSet.getString(TYPE)))
+                .build();
     }
 
     private Connection getConnection() throws SQLException {

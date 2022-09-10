@@ -23,6 +23,11 @@ import java.util.regex.Pattern;
 
 import static com.gmail.fursovych20.web.util.WebConstantDeclaration.*;
 
+/**
+ * A class for working with Http
+ *
+ * @author O.Fursovych
+ */
 public final class HttpUtil {
 	
 	private HttpUtil() {}
@@ -35,8 +40,14 @@ public final class HttpUtil {
 	private static final String ISSUE_FILE_BASE_PATH = "/WEB-INF/issues/";
 	private static final String PIC_EXTENSION_REG_EX = "(.[a-z\\d]{3,})$";
 	private static final String PIC_EXTENSION_DEFAULT = ".jpg";
-	
-	
+
+
+	/**
+	 * A method that gets the link page for the command
+	 *
+	 * @param request param which using for manipulating data
+	 * @return refer page
+	 */
 	public static String getReferPage(HttpServletRequest request) {
 		String page = request.getHeader(REQUEST_HEADER_REFER_PAGE);
 		LOG.trace("Header page --> {}",page);
@@ -45,7 +56,13 @@ public final class HttpUtil {
 		}
 		return page;
 	}
-	
+
+	/**
+	 * A method that gets the locale for the command
+	 *
+	 * @param request param which using for manipulating data
+	 * @return locale
+	 */
 	public static LocaleType getLocale(HttpServletRequest request) {
 		String localeName = (String) request.getSession().getAttribute(SESSION_ATTR_LOCALE);
 		if (localeName == null) {
@@ -57,7 +74,14 @@ public final class HttpUtil {
 			return LocaleType.en_US;
 		}
 	}
-	
+
+	/**
+	 * A method which form redirect url
+	 *
+	 * @param request param which using for manipulating data
+	 * @param command the name of the command
+	 * @return redirect url
+	 */
 	public static String formRedirectUrl(HttpServletRequest request, String command) {
 		return request.getContextPath() + CONTROLLER_PATTERN + command;
 	}

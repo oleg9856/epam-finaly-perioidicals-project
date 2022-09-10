@@ -10,6 +10,11 @@ import com.gmail.fursovych20.service.util.Validator;
 
 import java.util.List;
 
+/**
+ * ReviewServiceImpl implementation for manipulating dao layer
+ *
+ * @author O. Fursovych
+ */
 public class ReviewServiceImpl implements ReviewService {
 
     private final ReviewDAO reviewDao;

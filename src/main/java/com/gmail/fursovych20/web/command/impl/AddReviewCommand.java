@@ -49,11 +49,11 @@ public class AddReviewCommand implements Command {
     }
 
     private Review getReview(HttpServletRequest request) {
-        Review review = new Review();
-        review.setDateOfPublication(LocalDate.now());
-        review.setText(request.getParameter(REQUEST_PARAM_REVIEW_TEXT));
-        review.setMark(Byte.parseByte(request.getParameter(REQUEST_PARAM_REVIEW_MARK)));
-        review.setPublicationId(Integer.parseInt(request.getParameter(REQUEST_PARAM_REVIEW_ID_OF_PUBLICATION)));
-        return review;
+        return new Review.Builder()
+                .setDateOfPublication(LocalDate.now())
+                .setText(request.getParameter(REQUEST_PARAM_REVIEW_TEXT))
+                .setMark(Byte.parseByte(request.getParameter(REQUEST_PARAM_REVIEW_MARK)))
+                .setPublicationId(Integer.parseInt(request.getParameter(REQUEST_PARAM_REVIEW_ID_OF_PUBLICATION)))
+                .build();
     }
 }

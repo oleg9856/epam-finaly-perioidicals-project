@@ -307,16 +307,16 @@ public class UserDAOImpl implements UserDAO {
     }
 
     private User createUser(ResultSet resultSet) throws SQLException {
-        User user = new User();
-        user.setId(resultSet.getInt("id"));
-        user.setLogin(resultSet.getString("login"));
-        user.setPassword(resultSet.getString("password"));
-        user.setName(resultSet.getString("name"));
-        user.setSurName(resultSet.getString("surname"));
-        user.setEmail(resultSet.getString("email"));
-        user.setBalance(resultSet.getBigDecimal("balance"));
-        user.setRole(Role.valueOf(resultSet.getString("role")));
-        return user;
+        return new User.Builder()
+                .setId(resultSet.getInt("id"))
+                .setLogin(resultSet.getString("login"))
+                .setPassword(resultSet.getString("password"))
+                .setName(resultSet.getString("name"))
+                .setSetSurName(resultSet.getString("surname"))
+                .setEmail(resultSet.getString("email"))
+                .setBalance(resultSet.getBigDecimal("balance"))
+                .setRole(Role.valueOf(resultSet.getString("role")))
+                .build();
     }
 
     private Connection getConnection() throws SQLException {

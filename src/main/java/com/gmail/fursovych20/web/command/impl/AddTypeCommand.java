@@ -64,16 +64,16 @@ public class AddTypeCommand implements Command {
 
     private LocalizedTypeDTO getLocalizedType(HttpServletRequest request) {
         LOG.debug("getLocalizedTheme starts");
-        LocalizedTypeDTO localizedTypeDTO = new LocalizedTypeDTO();
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         String nameUa = request.getParameter(REQUEST_PARAM_NAME_UA);
         String nameEn = request.getParameter(REQUEST_PARAM_NAME_UA);
         names.put(LocaleType.uk_UA, nameUa);
         names.put(LocaleType.en_US, nameEn);
 
-        localizedTypeDTO.setDefaultName(nameEn);
-        localizedTypeDTO.setLocalizedNames(names);
         LOG.debug("getLocalizedTheme finish successfully!");
-        return localizedTypeDTO;
+        return new LocalizedTypeDTO.Builder()
+                .setDefaultName(nameEn)
+                .setLocalizedNames(names)
+                .build();
     }
 }

@@ -142,16 +142,14 @@ public class ReviewDAOImpl implements ReviewDAO {
 	}
 
 	private Review getReview(ResultSet resultSet) throws SQLException {
-		Review review = new Review();
-		
-		review.setId(resultSet.getInt(ID));
-		review.setUserId(resultSet.getInt(ID_USER));
-		review.setPublicationId(resultSet.getInt(ID_PUBLICATION));
-		review.setDateOfPublication(resultSet.getTimestamp(DATE_OF_PUBLICATION).toLocalDateTime().toLocalDate());
-		review.setText(resultSet.getString(TEXT));
-		review.setMark(resultSet.getByte(MARK));
-		
-		return review;
+		return new Review.Builder()
+				.setId(resultSet.getInt(ID))
+				.setUserId(resultSet.getInt(ID_USER))
+				.setPublicationId(resultSet.getInt(ID_PUBLICATION))
+				.setDateOfPublication(resultSet.getTimestamp(DATE_OF_PUBLICATION).toLocalDateTime().toLocalDate())
+				.setText(resultSet.getString(TEXT))
+				.setMark(resultSet.getByte(MARK))
+				.build();
 	}
 
 	private Connection getConnection() throws SQLException {

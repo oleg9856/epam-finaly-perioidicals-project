@@ -58,7 +58,6 @@ public class UpdateThemeCommand implements Command {
     }
 
     private LocalizedThemeDTO getLocalizedTheme(HttpServletRequest request) {
-        LocalizedThemeDTO theme = new LocalizedThemeDTO();
         int themeID = Integer.parseInt(request.getParameter(REQUEST_PARAM_THEME_ID));
         LOG.trace("Theme ID --> {}", themeID);
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
@@ -67,9 +66,10 @@ public class UpdateThemeCommand implements Command {
         names.put(LocaleType.uk_UA, nameUA);
         names.put(LocaleType.en_US, nameEN);
 
-        theme.setId(themeID);
-        theme.setDefaultName(nameEN);
-        theme.setLocalizedNames(names);
-        return theme;
+        return new LocalizedThemeDTO.Builder()
+                .setId(themeID)
+                .setDefaultName(nameEN)
+                .setLocalizedNames(names)
+                .build();
     }
 }

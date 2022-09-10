@@ -18,6 +18,11 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.function.Function;
 
+/**
+ * UserServiceImpl implementation for manipulating dao layer
+ *
+ * @author O. Fursovych
+ */
 public class UserServiceImpl implements UserService {
 
     private static final Logger LOG = LogManager.getLogger(UserServiceImpl.class);

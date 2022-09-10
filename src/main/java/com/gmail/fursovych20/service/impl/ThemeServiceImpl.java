@@ -12,6 +12,11 @@ import com.gmail.fursovych20.service.util.Validator;
 
 import java.util.List;
 
+/**
+ * ThemeServiceImpl implementation for manipulating dao layer
+ *
+ * @author O. Fursovych
+ */
 public class ThemeServiceImpl implements ThemeService {
 	
 	private final ThemeDAO themeDao;

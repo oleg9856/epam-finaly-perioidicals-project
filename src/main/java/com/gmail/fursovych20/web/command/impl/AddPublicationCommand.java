@@ -9,9 +9,11 @@ import com.gmail.fursovych20.web.command.Command;
 import com.gmail.fursovych20.web.command.exception.CommandExeption;
 import com.gmail.fursovych20.web.util.HttpUtil;
 import com.gmail.fursovych20.web.util.MessageResolver;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,34 +41,33 @@ public class AddPublicationCommand implements Command {
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandExeption{
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandExeption {
         LOG.debug("AddPublicationCommand starts");
         LocaleType locale = HttpUtil.getLocale(request);
-        LOG.trace("Locale --> {}",locale);
+        LOG.trace("Locale --> {}", locale);
         try {
             LocalizedPublicationDTO localizedPublicationDTO = getLocalizedPublication(request);
             publicationService.addPublication(localizedPublicationDTO);
-            String message = MessageResolver.getMessage(SUCCESS_MESSAGE_KEY,locale);
+            String message = MessageResolver.getMessage(SUCCESS_MESSAGE_KEY, locale);
             String referPage = HttpUtil.getReferPage(request);
-            LOG.trace("referPage --> {}",referPage);
-            String path = HttpUtil.formRedirectUrl(request,COMMAND_SHOW_RESULT_PAGE);
+            LOG.trace("referPage --> {}", referPage);
+            String path = HttpUtil.formRedirectUrl(request, COMMAND_SHOW_RESULT_PAGE);
             path = HttpUtil.addParamToPath(path, REQUEST_ATTR_MESSAGE, message);
             path = HttpUtil.addParamToPath(path, REQUEST_ATTR_RETURN_PAGE, referPage);
             LOG.trace("AddPublicationCommand finish successfully!");
-            return SEND_TO_REDIRECT+path;
-        }catch (ValidationException e) {
+            return SEND_TO_REDIRECT + path;
+        } catch (ValidationException e) {
             LOG.warn("Invalid data");
             String message = MessageResolver.getMessage(FAIL_MESSAGE_KEY, locale);
             request.setAttribute(FAIL_MESSAGE_ADD_PUBLICATION, message);
-            return SEND_TO_FORWARD+VIEW_ADD_PUBLICATION_FORM;
+            return SEND_TO_FORWARD + VIEW_ADD_PUBLICATION_FORM;
         } catch (ServletException | IOException | ServiceException e) {
             LOG.error("Exception adding publication", e);
-            return SEND_TO_FORWARD+VIEW_503_ERROR;
+            return SEND_TO_FORWARD + VIEW_503_ERROR;
         }
     }
 
     private LocalizedPublicationDTO getLocalizedPublication(HttpServletRequest request) throws ServletException, IOException {
-        LocalizedPublicationDTO localizedPublicationDTO = new LocalizedPublicationDTO();
         short themeId = Short.parseShort(request.getParameter(REQUEST_PARAM_THEME_ID));
         short typeId = Short.parseShort(request.getParameter(REQUEST_PARAM_TYPE_ID));
         String nameUA = request.getParameter(REQUEST_PARAM_NAME_UA);
@@ -77,20 +78,20 @@ public class AddPublicationCommand implements Command {
 
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         Map<LocaleType, String> descriptions = new EnumMap<>(LocaleType.class);
-        names.put(LocaleType.uk_UA,nameUA);
+        names.put(LocaleType.uk_UA, nameUA);
         names.put(LocaleType.en_US, nameEN);
-        descriptions.put(LocaleType.uk_UA,descriptionUA);
-        descriptions.put(LocaleType.en_US,descriptionEN);
+        descriptions.put(LocaleType.uk_UA, descriptionUA);
+        descriptions.put(LocaleType.en_US, descriptionEN);
 
         String pathToPicture = HttpUtil.uploadPublicationPicture(request);
 
-        localizedPublicationDTO.setThemeId(themeId);
-        localizedPublicationDTO.setTypeID(typeId);
-        localizedPublicationDTO.setNames(names);
-        localizedPublicationDTO.setDescriptions(descriptions);
-        localizedPublicationDTO.setPrice(price);
-        localizedPublicationDTO.setPicturePath(pathToPicture);
-
-        return localizedPublicationDTO;
+        return new LocalizedPublicationDTO.Builder()
+                .setThemeId(themeId)
+                .setTypeID(typeId)
+                .setNames(names)
+                .setDescriptions(descriptions)
+                .setPrice(price)
+                .setPicturePath(pathToPicture)
+                .build();
     }
 }

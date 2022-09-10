@@ -63,15 +63,15 @@ public class AddThemeCommand implements Command {
     }
 
     private LocalizedThemeDTO getLocalizedTheme(HttpServletRequest request) {
-        LocalizedThemeDTO localizedThemeDTO = new LocalizedThemeDTO();
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
-        String nameRu = request.getParameter(REQUEST_PARAM_NAME_UA);
+        String nameUa = request.getParameter(REQUEST_PARAM_NAME_UA);
         String nameEn = request.getParameter(REQUEST_PARAM_NAME_EN);
-        names.put(LocaleType.uk_UA, nameRu);
+        names.put(LocaleType.uk_UA, nameUa);
         names.put(LocaleType.en_US, nameEn);
 
-        localizedThemeDTO.setDefaultName(nameEn);
-        localizedThemeDTO.setLocalizedNames(names);
-        return localizedThemeDTO;
+        return new LocalizedThemeDTO.Builder()
+                .setDefaultName(nameEn)
+                .setLocalizedNames(names)
+                .build();
     }
 }

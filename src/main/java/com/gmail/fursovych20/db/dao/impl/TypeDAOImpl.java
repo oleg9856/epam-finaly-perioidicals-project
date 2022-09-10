@@ -186,18 +186,14 @@ public class TypeDAOImpl implements TypeDAO {
     }
 
     private Type formType(ResultSet resultSet) throws SQLException {
-        Type type = new Type();
-        type.setId(resultSet.getShort(ID));
-        type.setName(resultSet.getString(NAME));
-        return type;
+        return new Type.Builder()
+                .setId(resultSet.getShort(ID))
+                .setName(resultSet.getString(NAME))
+                .build();
     }
 
     private LocalizedTypeDTO formLocalisedType(ResultSet resultSet) throws SQLException {
-        LocalizedTypeDTO localizedTypeDTO = new LocalizedTypeDTO();
-
         short id = resultSet.getShort(ID);
-        localizedTypeDTO.setId(id);
-        localizedTypeDTO.setDefaultName(resultSet.getString(DEFAULT_NAME));
 
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         LocaleType locale = LocaleType.valueOf(resultSet.getString(LOCALE));
@@ -216,8 +212,11 @@ public class TypeDAOImpl implements TypeDAO {
             }
         }
 
-        localizedTypeDTO.setLocalizedNames(names);
-        return localizedTypeDTO;
+        return new LocalizedTypeDTO.Builder()
+                .setId(id)
+                .setDefaultName(resultSet.getString(DEFAULT_NAME))
+                .setLocalizedNames(names)
+                .build();
     }
 
     private Connection getConnection() throws SQLException {

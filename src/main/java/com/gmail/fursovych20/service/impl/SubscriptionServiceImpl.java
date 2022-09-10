@@ -16,6 +16,11 @@ import java.time.Month;
 import java.time.Year;
 import java.util.*;
 
+/**
+ * SubscriptionServiceImpl implementation for manipulating dao layer
+ *
+ * @author O. Fursovych
+ */
 public class SubscriptionServiceImpl implements SubscriptionService {
 
 	private final SubscriptionDAO subscriptionDao;

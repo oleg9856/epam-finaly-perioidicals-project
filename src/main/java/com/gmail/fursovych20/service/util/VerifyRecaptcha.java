@@ -22,6 +22,12 @@ public class VerifyRecaptcha {
     private VerifyRecaptcha() {
     }
 
+    /**
+     * A method which verify reCAPTCHA
+     *
+     * @param gRecaptchaResponse public key for verify reCAPTCHA
+     * @return true or false, dependency of verify reCAPTCHA
+     */
     public static boolean verify(String gRecaptchaResponse) {
         if(secret.equals(gRecaptchaResponse)){
             return true;

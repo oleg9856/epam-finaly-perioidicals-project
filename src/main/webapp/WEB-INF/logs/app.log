@@ -5893,3 +5893,1036 @@ com.gmail.fursovych20.service.exception.LoginAlreadyExistsException: Login alrea
 2022-09-08 20:16:04,064 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
 2022-09-08 20:16:04,065 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
 2022-09-08 20:16:04,066 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-09-08 23:49:17,288 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands start init...
+2022-09-08 23:49:17,317 DEBUG c.g.f.d.c.DBManager [RMI TCP Connection(3)-127.0.0.1] DataSource is initialize
+2022-09-08 23:49:17,376 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands was init!
+2022-09-08 23:49:17,471 TRACE c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Number of commands --> 34
+2022-09-08 23:49:17,471 DEBUG c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Command container was successfully initialized
+2022-09-08 23:49:20,833 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-08 23:49:20,833 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-08 23:49:20,834 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /home
+2022-09-08 23:49:20,834 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-08 23:49:20,834 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand starts
+2022-09-08 23:49:20,848 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Locale --> en_US
+2022-09-08 23:49:20,849 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria starts
+2022-09-08 23:49:20,855 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria finally success!
+2022-09-08 23:49:21,887 ERROR c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Could not find publications
+2022-09-08 23:49:21,889 WARN c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Exception showing home page
+com.gmail.fursovych20.service.exception.ServiceException: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:32) ~[classes/:?]
+	at com.gmail.fursovych20.web.command.impl.HomeCommand.execute(HomeCommand.java:51) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.process(FontController.java:72) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.doGet(FontController.java:43) ~[classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-websocket.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at com.gmail.fursovych20.web.filter.EncodingFilter.doFilter(EncodingFilter.java:34) ~[classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[catalina.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-util.jar:9.0.64]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:107) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+2022-09-08 23:49:21,924 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:49:21,924 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:49:21,926 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/503-error.jsp
+2022-09-08 23:49:22,609 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-08 23:49:24,664 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet starts
+2022-09-08 23:49:24,665 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller starts
+2022-09-08 23:49:24,666 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Request parameter: command --> /home
+2022-09-08 23:49:24,667 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-08 23:49:24,667 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] HomeCommand starts
+2022-09-08 23:49:24,668 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] Locale --> en_US
+2022-09-08 23:49:24,668 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] getSearchCriteria starts
+2022-09-08 23:49:24,668 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] getSearchCriteria finally success!
+2022-09-08 23:49:24,676 ERROR c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-6] Could not find publications
+2022-09-08 23:49:24,677 WARN c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] Exception showing home page
+com.gmail.fursovych20.service.exception.ServiceException: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:32) ~[classes/:?]
+	at com.gmail.fursovych20.web.command.impl.HomeCommand.execute(HomeCommand.java:51) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.process(FontController.java:72) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.doGet(FontController.java:43) ~[classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-websocket.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at com.gmail.fursovych20.web.filter.EncodingFilter.doFilter(EncodingFilter.java:34) ~[classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[catalina.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-util.jar:9.0.64]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:107) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+2022-09-08 23:49:24,684 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Forward address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:49:24,685 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller finished, now go to address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:49:24,685 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Send to forward --> /WEB-INF/jsp/503-error.jsp
+2022-09-08 23:49:24,686 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet finished
+2022-09-08 23:50:35,140 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands start init...
+2022-09-08 23:50:35,172 DEBUG c.g.f.d.c.DBManager [RMI TCP Connection(3)-127.0.0.1] DataSource is initialize
+2022-09-08 23:50:35,255 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands was init!
+2022-09-08 23:50:35,365 TRACE c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Number of commands --> 34
+2022-09-08 23:50:35,365 DEBUG c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Command container was successfully initialized
+2022-09-08 23:50:37,799 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-08 23:50:37,800 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-08 23:50:37,800 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /home
+2022-09-08 23:50:37,800 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@1e104ba5
+2022-09-08 23:50:37,800 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand starts
+2022-09-08 23:50:37,809 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Locale --> en_US
+2022-09-08 23:50:37,809 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria starts
+2022-09-08 23:50:37,812 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria finally success!
+2022-09-08 23:50:38,585 ERROR c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Could not find publications
+2022-09-08 23:50:38,587 WARN c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Exception showing home page
+com.gmail.fursovych20.service.exception.ServiceException: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:32) ~[classes/:?]
+	at com.gmail.fursovych20.web.command.impl.HomeCommand.execute(HomeCommand.java:51) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.process(FontController.java:72) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.doGet(FontController.java:43) ~[classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-websocket.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at com.gmail.fursovych20.web.filter.EncodingFilter.doFilter(EncodingFilter.java:34) ~[classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[catalina.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-util.jar:9.0.64]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:107) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+2022-09-08 23:50:38,636 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:50:38,637 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:50:38,637 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/503-error.jsp
+2022-09-08 23:50:39,246 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-08 23:50:40,966 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-08 23:50:40,967 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-08 23:50:40,967 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /home
+2022-09-08 23:50:40,967 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@1e104ba5
+2022-09-08 23:50:40,967 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] HomeCommand starts
+2022-09-08 23:50:40,967 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] Locale --> en_US
+2022-09-08 23:50:40,968 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] getSearchCriteria starts
+2022-09-08 23:50:40,968 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] getSearchCriteria finally success!
+2022-09-08 23:50:40,973 ERROR c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-5] Could not find publications
+2022-09-08 23:50:40,973 WARN c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] Exception showing home page
+com.gmail.fursovych20.service.exception.ServiceException: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:32) ~[classes/:?]
+	at com.gmail.fursovych20.web.command.impl.HomeCommand.execute(HomeCommand.java:51) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.process(FontController.java:72) ~[classes/:?]
+	at com.gmail.fursovych20.web.FontController.doGet(FontController.java:43) ~[classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-websocket.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at com.gmail.fursovych20.web.filter.EncodingFilter.doFilter(EncodingFilter.java:34) ~[classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[catalina.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[catalina.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-coyote.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-util.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-util.jar:9.0.64]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: com.gmail.fursovych20.db.dao.exception.DAOException: Exception reading publications
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:107) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1433) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532) ~[tomcat-dbcp.jar:9.0.64]
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731) ~[tomcat-dbcp.jar:9.0.64]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.getConnection(PublicationDAOImpl.java:381) ~[classes/:?]
+	at com.gmail.fursovych20.db.dao.impl.PublicationDAOImpl.findAllPublicationByCriteria(PublicationDAOImpl.java:95) ~[classes/:?]
+	at com.gmail.fursovych20.service.impl.PublicationServiceImpl.findAllPublicationByCriteria(PublicationServiceImpl.java:28) ~[classes/:?]
+	... 30 more
+2022-09-08 23:50:40,985 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:50:40,985 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/503-error.jsp
+2022-09-08 23:50:40,985 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/503-error.jsp
+2022-09-08 23:50:40,986 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-08 23:52:44,051 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands start init...
+2022-09-08 23:52:44,078 DEBUG c.g.f.d.c.DBManager [RMI TCP Connection(3)-127.0.0.1] DataSource is initialize
+2022-09-08 23:52:44,134 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands was init!
+2022-09-08 23:52:44,234 TRACE c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Number of commands --> 34
+2022-09-08 23:52:44,234 DEBUG c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Command container was successfully initialized
+2022-09-08 23:52:47,164 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-08 23:52:47,165 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-08 23:52:47,166 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /home
+2022-09-08 23:52:47,166 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@78619d32
+2022-09-08 23:52:47,166 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand starts
+2022-09-08 23:52:47,181 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Locale --> en_US
+2022-09-08 23:52:47,182 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria starts
+2022-09-08 23:52:47,188 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria finally success!
+2022-09-08 23:52:48,189 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:52:48,208 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:52:48,245 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-2] Find all theme successfully!
+2022-09-08 23:52:48,263 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-2] Find all type successfully --> en_US
+2022-09-08 23:52:48,264 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand finish
+2022-09-08 23:52:48,264 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:52:48,264 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:52:48,265 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-08 23:52:50,450 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-08 23:52:52,364 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet starts
+2022-09-08 23:52:52,364 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller starts
+2022-09-08 23:52:52,365 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Request parameter: command --> /home
+2022-09-08 23:52:52,365 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@78619d32
+2022-09-08 23:52:52,365 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] HomeCommand starts
+2022-09-08 23:52:52,366 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] Locale --> en_US
+2022-09-08 23:52:52,366 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] getSearchCriteria starts
+2022-09-08 23:52:52,367 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] getSearchCriteria finally success!
+2022-09-08 23:52:52,374 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-6] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:52:52,376 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-6] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:52:52,380 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-6] Find all theme successfully!
+2022-09-08 23:52:52,382 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-6] Find all type successfully --> en_US
+2022-09-08 23:52:52,382 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-6] HomeCommand finish
+2022-09-08 23:52:52,382 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:52:52,383 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:52:52,383 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-08 23:52:52,402 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet finished
+2022-09-08 23:52:58,730 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-08 23:52:58,730 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-08 23:52:58,731 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /login
+2022-09-08 23:52:58,731 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@61ba25ff
+2022-09-08 23:52:58,732 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-10] LoginCommand starts
+2022-09-08 23:52:58,733 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-10] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-08 23:52:58,744 WARN c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-10] Validation failed!
+2022-09-08 23:52:58,827 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-08 23:52:58,828 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-08 23:52:58,828 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to forward --> /WEB-INF/jsp/login.jsp
+2022-09-08 23:53:00,270 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-08 23:53:04,063 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-08 23:53:04,064 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-08 23:53:04,065 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /change-locale
+2022-09-08 23:53:04,069 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.ChangeLocaleCommand@627eaf70
+2022-09-08 23:53:04,073 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-4] ChangeLocaleCommand starts
+2022-09-08 23:53:04,074 TRACE c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-4] Locale --> uk_UA
+2022-09-08 23:53:04,074 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-4] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-08 23:53:04,076 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-4] ChangeLocaleCommand finish!
+2022-09-08 23:53:04,079 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-08 23:53:04,079 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-08 23:53:04,079 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-08 23:53:04,080 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
+2022-09-08 23:53:04,106 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet starts
+2022-09-08 23:53:04,106 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller starts
+2022-09-08 23:53:04,107 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Request parameter: command --> /login
+2022-09-08 23:53:04,107 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@61ba25ff
+2022-09-08 23:53:04,107 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-3] LoginCommand starts
+2022-09-08 23:53:04,107 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-3] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-08 23:53:04,107 WARN c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-3] Validation failed!
+2022-09-08 23:53:04,107 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Forward address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-08 23:53:04,108 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller finished, now go to address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-08 23:53:04,108 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Send to forward --> /WEB-INF/jsp/login.jsp
+2022-09-08 23:53:04,115 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet finished
+2022-09-08 23:53:07,790 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller#doGPost starts
+2022-09-08 23:53:07,791 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller starts
+2022-09-08 23:53:07,791 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Request parameter: command --> /login
+2022-09-08 23:53:07,791 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@61ba25ff
+2022-09-08 23:53:07,791 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-7] LoginCommand starts
+2022-09-08 23:53:07,792 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-7] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-08 23:53:08,592 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-7] Sending 'POST' request to URL : https://www.google.com/recaptcha/api/siteverify
+2022-09-08 23:53:08,593 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-7] Post parameters : secret=6Ld367khAAAAAN77biIpSCDVo_SbexYV_nIDUtxl&response=03ANYolquSNvnuTIHZJwErjcJNhY84Ta66q4wE5Ofcb_1aCFTrT4UXAKi9sjUOJeEkLJtCelWjaRhRLKdvO6VlvrYWYVq393_OyS8sC6nCqgRvBb78fyAfn9kb8eFZfaVuwR7Kor_HLq6OJ00GZ_qLo7km-JL59RiaGaUOMgjtxy2AWW91RdIRQ_GL8cKaEP9n9hHppCkwURf9LCaWHHJLxXp8WciCI8zTf7H7FoBtIWWGDuj0BrbBrTzq-MZJaC5NJ78mP2lVxoZoS_LuSwvOPNC6ZQbxtI3qgK2TQ13GVeUmOCl0INW5teAJNhruX1RMuxtau6Ao_cNJkrf5QRzZpU65-fe8ad0WEvwS5fFqNsjzV4A2ooRS9faNhZ4nP1GHTsjQmVau2eQn2Cd2_K1iBig_z7Qm2iDktjHPK0um9HX7xErqcJJijvsL7NrTGz4Q6pu22Elo4wS_cFP_wZIfvmPbZcm76721ivlJ0_QHN5xJSiVFtyeVrEuGYHeqeF6Ey-V7xnwW3slj
+2022-09-08 23:53:08,593 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-7] Response Code : 200
+2022-09-08 23:53:08,596 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-7] {  "success": true,  "challenge_ts": "2022-09-08T20:53:04Z",  "hostname": "127.0.0.1"}
+2022-09-08 23:53:08,739 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-7] Find password successfully by --> oleg
+2022-09-08 23:53:08,995 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-7] User find by email or login --> oleg
+2022-09-08 23:53:08,995 TRACE c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-7] User find is system successfully --> oleg
+2022-09-08 23:53:08,996 TRACE c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-7] Path to send redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-08 23:53:08,996 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-7] LoginCommand finish successfully!
+2022-09-08 23:53:08,996 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Forward address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-08 23:53:08,996 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller finished, now go to address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-08 23:53:08,996 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Send to redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-08 23:53:08,997 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller#doGPost finished
+2022-09-08 23:53:09,009 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-08 23:53:09,009 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-08 23:53:09,010 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /home
+2022-09-08 23:53:09,010 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@78619d32
+2022-09-08 23:53:09,010 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand starts
+2022-09-08 23:53:09,010 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] Locale --> uk_UA
+2022-09-08 23:53:09,010 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria starts
+2022-09-08 23:53:09,011 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria finally success!
+2022-09-08 23:53:09,014 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:53:09,017 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:53:09,019 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-9] Find all theme successfully!
+2022-09-08 23:53:09,021 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-9] Find all type successfully --> uk_UA
+2022-09-08 23:53:09,021 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand finish
+2022-09-08 23:53:09,021 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:53:09,021 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:53:09,021 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-08 23:53:09,042 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-08 23:53:12,548 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet starts
+2022-09-08 23:53:12,551 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-08 23:53:12,554 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /user/profile
+2022-09-08 23:53:12,556 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.UserProfileCommand@51eaa5d3
+2022-09-08 23:53:12,556 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-8] UserProfileCommand starts
+2022-09-08 23:53:12,557 TRACE c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-8] User ID --> 8
+2022-09-08 23:53:12,562 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-8] User by ID is find --> 8
+2022-09-08 23:53:12,562 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-8] UserProfileCommand finish success!
+2022-09-08 23:53:12,563 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:12,564 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:12,564 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to forward --> /WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:13,504 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet finished
+2022-09-08 23:53:16,615 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-08 23:53:16,616 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-08 23:53:16,616 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /user/subscriptions
+2022-09-08 23:53:16,617 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.UserActiveSubscriptionsCommand@71a863b7
+2022-09-08 23:53:16,618 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-10] UserActiveSubscriptionCommand starts
+2022-09-08 23:53:16,618 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-10] Locale --> uk_UA
+2022-09-08 23:53:16,624 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-10] User ID --> 8
+2022-09-08 23:53:16,635 INFO c.g.f.d.d.i.SubscriptionDAOImpl [http-nio-8080-exec-10] Find active subscription by user id --> 8
+2022-09-08 23:53:16,635 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-10] UserActiveSubscriptionCommand finish success!
+2022-09-08 23:53:16,635 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> forward->/WEB-INF/jsp/user/subscriptions.jsp
+2022-09-08 23:53:16,635 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/subscriptions.jsp
+2022-09-08 23:53:16,636 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to forward --> /WEB-INF/jsp/user/subscriptions.jsp
+2022-09-08 23:53:17,671 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-08 23:53:19,640 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-08 23:53:19,640 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-08 23:53:19,640 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /user/subscription-history
+2022-09-08 23:53:19,641 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.UserSubscriptionHistoryCommand@2e7de1b0
+2022-09-08 23:53:19,642 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-2] UserSubscriptionHistoryCommand starts
+2022-09-08 23:53:19,647 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-2] Locale --> uk_UA
+2022-09-08 23:53:19,650 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-2] User ID --> 8
+2022-09-08 23:53:19,652 INFO c.g.f.d.d.i.SubscriptionDAOImpl [http-nio-8080-exec-2] Find all subscription by user id --> 8
+2022-09-08 23:53:19,653 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-2] UserSubscriptionHistoryCommand finish success!
+2022-09-08 23:53:19,653 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/user/subscription_history.jsp
+2022-09-08 23:53:19,653 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/subscription_history.jsp
+2022-09-08 23:53:19,654 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/user/subscription_history.jsp
+2022-09-08 23:53:20,804 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-08 23:53:22,165 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-08 23:53:22,166 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-08 23:53:22,166 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /user/balance-operation-history
+2022-09-08 23:53:22,166 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.UserBalanceOperationCommand@6cb94d4f
+2022-09-08 23:53:22,168 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-4] BalanceOperation starts
+2022-09-08 23:53:22,168 TRACE c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-4] User ID --> 8
+2022-09-08 23:53:22,176 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [http-nio-8080-exec-4] Find balance operation for user by userId is successfully
+2022-09-08 23:53:22,177 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-4] BalanceOperationCommand finish successfully!
+2022-09-08 23:53:22,177 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> forward->/WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-08 23:53:22,178 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-08 23:53:22,180 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to forward --> /WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-08 23:53:22,826 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
+2022-09-08 23:53:25,598 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet starts
+2022-09-08 23:53:25,598 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller starts
+2022-09-08 23:53:25,598 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Request parameter: command --> /user/profile
+2022-09-08 23:53:25,598 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Obtain key --> com.gmail.fursovych20.web.command.impl.UserProfileCommand@51eaa5d3
+2022-09-08 23:53:25,598 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-3] UserProfileCommand starts
+2022-09-08 23:53:25,598 TRACE c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-3] User ID --> 8
+2022-09-08 23:53:25,601 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-3] User by ID is find --> 8
+2022-09-08 23:53:25,604 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-3] UserProfileCommand finish success!
+2022-09-08 23:53:25,604 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Forward address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:25,604 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:25,605 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Send to forward --> /WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:25,621 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet finished
+2022-09-08 23:53:51,306 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller#doGet starts
+2022-09-08 23:53:51,307 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller starts
+2022-09-08 23:53:51,307 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Request parameter: command --> /user/subscriptions
+2022-09-08 23:53:51,307 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Obtain key --> com.gmail.fursovych20.web.command.impl.UserActiveSubscriptionsCommand@71a863b7
+2022-09-08 23:53:51,307 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-7] UserActiveSubscriptionCommand starts
+2022-09-08 23:53:51,307 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-7] Locale --> uk_UA
+2022-09-08 23:53:51,307 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-7] User ID --> 8
+2022-09-08 23:53:51,310 INFO c.g.f.d.d.i.SubscriptionDAOImpl [http-nio-8080-exec-7] Find active subscription by user id --> 8
+2022-09-08 23:53:51,310 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-7] UserActiveSubscriptionCommand finish success!
+2022-09-08 23:53:51,311 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Forward address --> forward->/WEB-INF/jsp/user/subscriptions.jsp
+2022-09-08 23:53:51,311 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/subscriptions.jsp
+2022-09-08 23:53:51,311 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Send to forward --> /WEB-INF/jsp/user/subscriptions.jsp
+2022-09-08 23:53:51,331 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller#doGet finished
+2022-09-08 23:53:53,048 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-08 23:53:53,048 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-08 23:53:53,049 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /user/subscription-history
+2022-09-08 23:53:53,054 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.UserSubscriptionHistoryCommand@2e7de1b0
+2022-09-08 23:53:53,056 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-9] UserSubscriptionHistoryCommand starts
+2022-09-08 23:53:53,056 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-9] Locale --> uk_UA
+2022-09-08 23:53:53,056 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-9] User ID --> 8
+2022-09-08 23:53:53,061 INFO c.g.f.d.d.i.SubscriptionDAOImpl [http-nio-8080-exec-9] Find all subscription by user id --> 8
+2022-09-08 23:53:53,062 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-9] UserSubscriptionHistoryCommand finish success!
+2022-09-08 23:53:53,063 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/user/subscription_history.jsp
+2022-09-08 23:53:53,064 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/subscription_history.jsp
+2022-09-08 23:53:53,065 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/user/subscription_history.jsp
+2022-09-08 23:53:53,080 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-08 23:53:54,243 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet starts
+2022-09-08 23:53:54,244 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-08 23:53:54,247 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /user/balance-operation-history
+2022-09-08 23:53:54,248 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.UserBalanceOperationCommand@6cb94d4f
+2022-09-08 23:53:54,248 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-8] BalanceOperation starts
+2022-09-08 23:53:54,250 TRACE c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-8] User ID --> 8
+2022-09-08 23:53:54,255 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [http-nio-8080-exec-8] Find balance operation for user by userId is successfully
+2022-09-08 23:53:54,255 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-8] BalanceOperationCommand finish successfully!
+2022-09-08 23:53:54,255 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> forward->/WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-08 23:53:54,255 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-08 23:53:54,255 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to forward --> /WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-08 23:53:54,274 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet finished
+2022-09-08 23:53:56,182 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGet starts
+2022-09-08 23:53:56,182 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller starts
+2022-09-08 23:53:56,182 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Request parameter: command --> /user/profile
+2022-09-08 23:53:56,182 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Obtain key --> com.gmail.fursovych20.web.command.impl.UserProfileCommand@51eaa5d3
+2022-09-08 23:53:56,183 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-1] UserProfileCommand starts
+2022-09-08 23:53:56,183 TRACE c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-1] User ID --> 8
+2022-09-08 23:53:56,193 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-1] User by ID is find --> 8
+2022-09-08 23:53:56,194 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-1] UserProfileCommand finish success!
+2022-09-08 23:53:56,194 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Forward address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:56,195 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:56,195 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Send to forward --> /WEB-INF/jsp/user/profile.jsp
+2022-09-08 23:53:56,211 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGet finished
+2022-09-08 23:53:57,154 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-08 23:53:57,155 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-08 23:53:57,155 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /home
+2022-09-08 23:53:57,156 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@78619d32
+2022-09-08 23:53:57,156 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] HomeCommand starts
+2022-09-08 23:53:57,156 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] Locale --> uk_UA
+2022-09-08 23:53:57,156 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] getSearchCriteria starts
+2022-09-08 23:53:57,156 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] getSearchCriteria finally success!
+2022-09-08 23:53:57,162 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-10] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:53:57,164 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-10] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-08 23:53:57,167 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-10] Find all theme successfully!
+2022-09-08 23:53:57,175 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-10] Find all type successfully --> uk_UA
+2022-09-08 23:53:57,175 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] HomeCommand finish
+2022-09-08 23:53:57,175 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:53:57,176 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-08 23:53:57,176 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-08 23:53:57,196 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-09 17:20:32,631 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-09 17:20:32,663 TRACE c.g.f.w.u.HttpUtil [main] Header page --> fail_header
+2022-09-09 17:20:32,664 WARN c.g.f.w.c.i.LoginCommand [main] Validation failed!
+2022-09-09 17:20:32,702 DEBUG c.g.f.w.c.i.LoginCommand [main] LoginCommand starts
+2022-09-09 17:20:32,704 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /login
+2022-09-09 17:20:32,705 TRACE c.g.f.w.c.i.LoginCommand [main] User is not find is system
+2022-09-09 17:20:33,986 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Create review successfully!
+2022-09-09 17:20:34,025 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Delete review by ID successfully --> 1
+2022-09-09 17:20:34,031 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Update review successfully!
+2022-09-09 17:20:34,052 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by publicationID --> 1
+2022-09-09 17:20:34,066 INFO c.g.f.d.d.i.ReviewDAOImpl [main] Find review by ID successfully --> 1
+2022-09-09 17:20:34,118 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand starts
+2022-09-09 17:20:34,120 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Locale --> en_US
+2022-09-09 17:20:34,120 TRACE c.g.f.w.c.i.DeletePublicationCommand [main] Publication id --> 1
+2022-09-09 17:20:34,164 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:34,196 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21
+2022-09-09 17:20:34,220 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Publication+deleted+successfully%21&return_page=header
+2022-09-09 17:20:34,221 DEBUG c.g.f.w.c.i.DeletePublicationCommand [main] DeletePublicationCommand finish
+2022-09-09 17:20:34,337 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand starts
+2022-09-09 17:20:34,338 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [main] Locale --> en_US
+2022-09-09 17:20:34,350 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [main] GetAddPublicationFormCommand finish success!
+2022-09-09 17:20:34,384 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand starts
+2022-09-09 17:20:34,387 DEBUG c.g.f.w.c.i.EditThemeCommand [main] EditThemeCommand finish success!
+2022-09-09 17:20:34,402 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand starts
+2022-09-09 17:20:34,404 TRACE c.g.f.w.c.i.HomeCommand [main] Locale --> en_US
+2022-09-09 17:20:34,404 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria starts
+2022-09-09 17:20:34,407 DEBUG c.g.f.w.c.i.HomeCommand [main] getSearchCriteria finally success!
+2022-09-09 17:20:34,410 DEBUG c.g.f.w.c.i.HomeCommand [main] HomeCommand finish
+2022-09-09 17:20:34,428 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand starts
+2022-09-09 17:20:34,429 TRACE c.g.f.w.c.i.SearchCommand [main] Locale --> en_US
+2022-09-09 17:20:34,430 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria starts
+2022-09-09 17:20:34,431 DEBUG c.g.f.w.c.i.SearchCommand [main] getSearchCriteria finally success!
+2022-09-09 17:20:34,433 DEBUG c.g.f.w.c.i.SearchCommand [main] SearchCommand finish
+2022-09-09 17:20:34,486 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand starts
+2022-09-09 17:20:34,487 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] UserID --> 1
+2022-09-09 17:20:34,491 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Sum --> 450.67
+2022-09-09 17:20:34,495 TRACE c.g.f.w.c.i.ReplenishBalanceCommand [main] Refer page --> null/controller/user/profile
+2022-09-09 17:20:34,496 DEBUG c.g.f.w.c.i.ReplenishBalanceCommand [main] ReplenishBalanceCommand finish success!
+2022-09-09 17:20:34,506 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand starts
+2022-09-09 17:20:34,507 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Locale --> en_US
+2022-09-09 17:20:34,508 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] User id is --> 1
+2022-09-09 17:20:34,509 TRACE c.g.f.w.c.i.ChangeUserRoleCommand [main] Role is --> CUSTOMER
+2022-09-09 17:20:34,550 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:34,551 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21
+2022-09-09 17:20:34,553 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Changed+user+role+successfully%21&return_page=header
+2022-09-09 17:20:34,554 DEBUG c.g.f.w.c.i.ChangeUserRoleCommand [main] ChangeUserRoleCommand finish successfully
+2022-09-09 17:20:34,557 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand starts
+2022-09-09 17:20:34,559 DEBUG c.g.f.w.c.i.EditTypeCommand [main] EditTypeCommand finish success!
+2022-09-09 17:20:34,884 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Create publication successfully!
+2022-09-09 17:20:34,900 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find a publication by ID: 1, and LocalType: uk_UA
+2022-09-09 17:20:34,929 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Update publication successfully!
+2022-09-09 17:20:34,954 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-09-09 17:20:35,069 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Read localized publication by Id successfully --> 1
+2022-09-09 17:20:35,099 INFO c.g.f.d.d.i.PublicationDAOImpl [main] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=1, orderId=1, currentPage=1, itemsPerPage=1, pageCount=1}
+2022-09-09 17:20:35,326 DEBUG c.g.f.w.c.i.EditUserCommand [main] ShowResultPageCommand starts
+2022-09-09 17:20:35,335 DEBUG c.g.f.w.c.i.EditUserCommand [main] ShowResultPageCommand finish
+2022-09-09 17:20:35,366 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-09 17:20:35,369 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Balance operation created successfully!
+2022-09-09 17:20:35,385 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-09 17:20:35,386 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-09 17:20:35,419 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Find balance operation for user by userId is successfully
+2022-09-09 17:20:35,755 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand starts
+2022-09-09 17:20:35,755 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:35,755 TRACE c.g.f.w.c.i.LogoutCommand [main] referPage --> header
+2022-09-09 17:20:35,756 TRACE c.g.f.w.c.i.LogoutCommand [main] Session is --> session
+2022-09-09 17:20:35,762 DEBUG c.g.f.w.c.i.LogoutCommand [main] LogoutCommand finish
+2022-09-09 17:20:35,767 DEBUG c.g.f.w.c.i.AddThemeCommand [main] AddThemeCommand starts
+2022-09-09 17:20:35,768 TRACE c.g.f.w.c.i.AddThemeCommand [main] Locale is --> en_US
+2022-09-09 17:20:35,769 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:35,770 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21
+2022-09-09 17:20:35,771 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Theme+added+successfully%21&return_page=header
+2022-09-09 17:20:35,790 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Create theme successfully!
+2022-09-09 17:20:35,801 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all theme successfully!
+2022-09-09 17:20:35,813 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Update theme successfully!
+2022-09-09 17:20:35,824 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find all localized successfully!
+2022-09-09 17:20:35,865 INFO c.g.f.d.d.i.ThemeDAOImpl [main] Find theme by id successfully --> 1
+2022-09-09 17:20:35,896 INFO c.g.f.d.d.i.TypeDAOImpl [main] Create localized type successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-09-09 17:20:35,921 INFO c.g.f.d.d.i.TypeDAOImpl [main] Update localizedType successfully --> LocalizedType{id=1, defaultName='defaultName', localizedNames={uk_UA=typesName}}
+2022-09-09 17:20:35,938 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all type successfully --> uk_UA
+2022-09-09 17:20:36,004 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find all localized successfully!
+2022-09-09 17:20:36,032 INFO c.g.f.d.d.i.TypeDAOImpl [main] Find type by id --> 1
+2022-09-09 17:20:37,763 DEBUG c.g.f.s.u.Validator [main] Validate Login: true
+2022-09-09 17:20:37,764 DEBUG c.g.f.s.u.Validator [main] Validate Name: true
+2022-09-09 17:20:37,765 DEBUG c.g.f.s.u.Validator [main] Validate Email: true
+2022-09-09 17:20:37,766 DEBUG c.g.f.s.u.Validator [main] Validate Surname: true
+2022-09-09 17:20:37,767 DEBUG c.g.f.s.u.Validator [main] Validate Password: true
+2022-09-09 17:20:38,456 TRACE c.g.f.s.i.UserServiceImpl [main] verifying oldHash: true, hash upgraded to: null
+2022-09-09 17:20:38,471 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [main] UserSubscriptionHistoryCommand starts
+2022-09-09 17:20:38,472 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [main] Locale --> en_US
+2022-09-09 17:20:38,474 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [main] User ID --> 1
+2022-09-09 17:20:38,478 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [main] UserSubscriptionHistoryCommand finish success!
+2022-09-09 17:20:38,501 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand starts
+2022-09-09 17:20:38,502 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] ReviewID is --> 1
+2022-09-09 17:20:38,504 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:38,505 TRACE c.g.f.w.c.i.DeleteReviewCommand [main] referPage --> header
+2022-09-09 17:20:38,505 DEBUG c.g.f.w.c.i.DeleteReviewCommand [main] DeleteReviewCommand finished successfully!
+2022-09-09 17:20:38,676 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-09 17:20:38,683 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:38,791 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-09 17:20:38,791 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:38,804 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-09 17:20:38,807 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:38,819 DEBUG c.g.f.s.u.Validator [main] Validate TextEdition: true
+2022-09-09 17:20:38,820 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:38,850 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand starts
+2022-09-09 17:20:38,851 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:38,852 TRACE c.g.f.w.c.i.AddReviewCommand [main] referPage --> header
+2022-09-09 17:20:38,852 TRACE c.g.f.w.c.i.AddReviewCommand [main] User ID is --> 1
+2022-09-09 17:20:38,853 DEBUG c.g.f.w.c.i.AddReviewCommand [main] AddReviewCommand finish!
+2022-09-09 17:20:38,863 DEBUG c.g.f.w.c.i.UserProfileCommand [main] UserProfileCommand starts
+2022-09-09 17:20:38,868 TRACE c.g.f.w.c.i.UserProfileCommand [main] User ID --> 1
+2022-09-09 17:20:38,991 DEBUG c.g.f.w.c.i.UserProfileCommand [main] UserProfileCommand finish success!
+2022-09-09 17:20:39,030 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:39,034 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:39,054 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-09 17:20:39,054 TRACE c.g.f.w.u.HttpUtil [main] Header page --> fail_header
+2022-09-09 17:20:39,055 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> fail_header
+2022-09-09 17:20:39,056 TRACE c.g.f.w.c.i.RegisterCommand [main] RegisterCommand final failed!
+2022-09-09 17:20:39,062 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand starts
+2022-09-09 17:20:39,063 TRACE c.g.f.w.u.HttpUtil [main] Header page --> /register
+2022-09-09 17:20:39,063 TRACE c.g.f.w.c.i.RegisterCommand [main] Refer page --> /register
+2022-09-09 17:20:39,065 TRACE c.g.f.w.c.i.RegisterCommand [main] Path to controller --> null/controller/home
+2022-09-09 17:20:39,065 DEBUG c.g.f.w.c.i.RegisterCommand [main] RegisterCommand finish successfully!
+2022-09-09 17:20:39,069 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [main] UserActiveSubscriptionCommand starts
+2022-09-09 17:20:39,070 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [main] Locale --> en_US
+2022-09-09 17:20:39,070 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [main] User ID --> 1
+2022-09-09 17:20:39,071 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [main] UserActiveSubscriptionCommand finish success!
+2022-09-09 17:20:39,088 INFO c.g.f.d.d.i.IssueDAOImpl [main] Issue created successfully!
+2022-09-09 17:20:39,131 INFO c.g.f.d.d.i.IssueDAOImpl [main] Find issue by ID --> 1
+2022-09-09 17:20:39,162 INFO c.g.f.d.d.i.IssueDAOImpl [main] Found a post between dates
+2022-09-09 17:20:39,172 DEBUG c.g.f.w.c.i.AddPublicationCommand [main] AddPublicationCommand starts
+2022-09-09 17:20:39,174 TRACE c.g.f.w.c.i.AddPublicationCommand [main] Locale --> en_US
+2022-09-09 17:20:39,187 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand starts
+2022-09-09 17:20:39,187 TRACE c.g.f.w.c.i.ChangeLocaleCommand [main] Locale --> uk_UA
+2022-09-09 17:20:39,188 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:39,188 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [main] ChangeLocaleCommand finish!
+2022-09-09 17:20:39,300 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [main] BalanceOperation starts
+2022-09-09 17:20:39,301 TRACE c.g.f.w.c.i.UserBalanceOperationCommand [main] User ID --> 1
+2022-09-09 17:20:39,301 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [main] BalanceOperationCommand finish successfully!
+2022-09-09 17:20:39,316 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-09 17:20:39,317 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-09 17:20:39,386 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find active subscription by user id --> 1
+2022-09-09 17:20:39,415 INFO c.g.f.d.d.i.UserDAOImpl [main] Transaction add to balance is successfully sum: 450.6, userID: 1
+2022-09-09 17:20:39,416 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [main] Transaction is created successfully!
+2022-09-09 17:20:39,424 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find all subscription by user id --> 1
+2022-09-09 17:20:39,433 INFO c.g.f.d.d.i.SubscriptionDAOImpl [main] Find subscription by user id --> 1
+2022-09-09 17:20:39,462 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-09-09 17:20:39,464 DEBUG c.g.f.s.u.Validator [main] Validate Price: true
+2022-09-09 17:20:39,558 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:39,565 DEBUG c.g.f.s.u.Validator [main] Validate TitleEdition: true
+2022-09-09 17:20:39,656 DEBUG c.g.f.w.c.i.AddTypeCommand [main] AddType starts
+2022-09-09 17:20:39,656 TRACE c.g.f.w.c.i.AddTypeCommand [main] Locale --> en_US
+2022-09-09 17:20:39,656 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme starts
+2022-09-09 17:20:39,661 DEBUG c.g.f.w.c.i.AddTypeCommand [main] getLocalizedTheme finish successfully!
+2022-09-09 17:20:39,661 TRACE c.g.f.w.u.HttpUtil [main] Header page --> header
+2022-09-09 17:20:39,662 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21
+2022-09-09 17:20:39,664 INFO c.g.f.w.u.HttpUtil [main] null/controller/show-result-page?message=Type+added+successfully%21&return_page=header
+2022-09-09 17:20:39,683 INFO c.g.f.d.d.i.UserDAOImpl [main] Email is not exists --> user@exaple.com
+2022-09-09 17:20:39,688 INFO c.g.f.d.d.i.UserDAOImpl [main] Role is changed successfully on role --> BLOCK
+2022-09-09 17:20:39,702 INFO c.g.f.d.d.i.UserDAOImpl [main] Find password successfully by --> userLogin
+2022-09-09 17:20:39,723 INFO c.g.f.d.d.i.UserDAOImpl [main] User find by email or login --> user@exaple.com
+2022-09-09 17:20:39,729 INFO c.g.f.d.d.i.UserDAOImpl [main] Login is not exists --> userLogin
+2022-09-09 17:20:39,754 INFO c.g.f.d.d.i.UserDAOImpl [main] Users is found in size --> 1
+2022-09-09 17:20:39,768 INFO c.g.f.d.d.i.UserDAOImpl [main] Find users which having subscription
+2022-09-09 17:20:39,784 INFO c.g.f.d.d.i.UserDAOImpl [main] Create user successfully --> userLogin
+2022-09-09 17:20:39,805 INFO c.g.f.d.d.i.UserDAOImpl [main] User by ID is find --> 1
+2022-09-09 17:20:39,820 INFO c.g.f.d.d.i.UserDAOImpl [main] Balance received by userID --> 0.0
+2022-09-09 17:20:39,831 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand starts
+2022-09-09 17:20:39,832 TRACE c.g.f.w.c.i.EditPublicationCommand [main] Locale --> en_US
+2022-09-09 17:20:39,833 DEBUG c.g.f.w.c.i.EditPublicationCommand [main] EditPublicationCommand finish success!
+2022-09-09 17:22:57,978 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(2)-127.0.0.1] Commands start init...
+2022-09-09 17:22:58,149 DEBUG c.g.f.d.c.DBManager [RMI TCP Connection(2)-127.0.0.1] DataSource is initialize
+2022-09-09 17:22:58,394 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(2)-127.0.0.1] Commands was init!
+2022-09-09 17:22:58,698 TRACE c.g.f.w.c.CommandContainer [RMI TCP Connection(2)-127.0.0.1] Number of commands --> 34
+2022-09-09 17:22:58,698 DEBUG c.g.f.w.c.CommandContainer [RMI TCP Connection(2)-127.0.0.1] Command container was successfully initialized
+2022-09-09 17:23:04,795 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet starts
+2022-09-09 17:23:04,795 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller starts
+2022-09-09 17:23:04,796 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Request parameter: command --> /home
+2022-09-09 17:23:04,796 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@627eaf70
+2022-09-09 17:23:04,796 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] HomeCommand starts
+2022-09-09 17:23:04,806 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] Locale --> en_US
+2022-09-09 17:23:04,806 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] getSearchCriteria starts
+2022-09-09 17:23:04,810 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] getSearchCriteria finally success!
+2022-09-09 17:23:06,420 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-3] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:23:06,472 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-3] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:23:06,578 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-3] Find all theme successfully!
+2022-09-09 17:23:06,590 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-3] Find all type successfully --> en_US
+2022-09-09 17:23:06,592 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] HomeCommand finish
+2022-09-09 17:23:06,593 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:23:06,594 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:23:06,594 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-09 17:23:12,415 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet finished
+2022-09-09 17:23:14,674 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-09 17:23:14,675 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-09 17:23:14,675 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /home
+2022-09-09 17:23:14,675 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@627eaf70
+2022-09-09 17:23:14,676 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand starts
+2022-09-09 17:23:14,677 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] Locale --> en_US
+2022-09-09 17:23:14,677 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria starts
+2022-09-09 17:23:14,678 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria finally success!
+2022-09-09 17:23:14,682 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:23:14,685 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:23:14,699 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-9] Find all theme successfully!
+2022-09-09 17:23:14,703 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-9] Find all type successfully --> en_US
+2022-09-09 17:23:14,705 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand finish
+2022-09-09 17:23:14,705 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:23:14,705 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:23:14,706 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-09 17:23:14,732 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-09 17:23:56,653 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-09 17:23:56,653 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-09 17:23:56,661 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /change-locale
+2022-09-09 17:23:56,661 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.ChangeLocaleCommand@7521d427
+2022-09-09 17:23:56,661 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-4] ChangeLocaleCommand starts
+2022-09-09 17:23:56,662 TRACE c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-4] Locale --> uk_UA
+2022-09-09 17:23:56,663 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-4] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:23:56,664 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-4] ChangeLocaleCommand finish!
+2022-09-09 17:23:56,665 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:23:56,666 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:23:56,667 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:23:56,667 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
+2022-09-09 17:23:56,699 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet starts
+2022-09-09 17:23:56,699 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller starts
+2022-09-09 17:23:56,699 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Request parameter: command --> /home
+2022-09-09 17:23:56,699 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@627eaf70
+2022-09-09 17:23:56,700 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] HomeCommand starts
+2022-09-09 17:23:56,701 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] Locale --> uk_UA
+2022-09-09 17:23:56,701 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] getSearchCriteria starts
+2022-09-09 17:23:56,702 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] getSearchCriteria finally success!
+2022-09-09 17:23:56,715 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-3] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:23:56,719 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-3] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:23:56,723 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-3] Find all theme successfully!
+2022-09-09 17:23:56,727 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-3] Find all type successfully --> uk_UA
+2022-09-09 17:23:56,728 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-3] HomeCommand finish
+2022-09-09 17:23:56,728 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:23:56,728 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:23:56,728 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-09 17:23:56,753 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet finished
+2022-09-09 17:24:02,579 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet starts
+2022-09-09 17:24:02,580 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller starts
+2022-09-09 17:24:02,581 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Request parameter: command --> /login
+2022-09-09 17:24:02,581 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@4a47c442
+2022-09-09 17:24:02,581 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-6] LoginCommand starts
+2022-09-09 17:24:02,582 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-6] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:24:02,599 WARN c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-6] Validation failed!
+2022-09-09 17:24:02,776 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Forward address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-09 17:24:02,776 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller finished, now go to address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-09 17:24:02,777 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Send to forward --> /WEB-INF/jsp/login.jsp
+2022-09-09 17:24:03,475 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet finished
+2022-09-09 17:24:19,967 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGPost starts
+2022-09-09 17:24:19,970 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller starts
+2022-09-09 17:24:19,974 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Request parameter: command --> /login
+2022-09-09 17:24:19,975 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@4a47c442
+2022-09-09 17:24:19,976 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-1] LoginCommand starts
+2022-09-09 17:24:19,976 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-1] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-09 17:24:20,983 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-1] Sending 'POST' request to URL : https://www.google.com/recaptcha/api/siteverify
+2022-09-09 17:24:20,983 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-1] Post parameters : secret=6Ld367khAAAAAN77biIpSCDVo_SbexYV_nIDUtxl&response=03ANYolqtJWSMTgqjLgH_Rj31lRAqnr9G3GPyjwZLCNL9GLZRyrUqclS7vVIHIdeZrDVtOWkmb1rUCvjy8h0tOiSww5OZfYlgejcngLAPUcCaJ2ZrnXTFH0zYTKtiNtwPO-dgJs_LKzBE13YyiuIz_xT5uYk-oWmOBhqgakn1V0OIm9m4fUPKhvw4hcF-oAdog69GH56ZeMuyEig4NMGyQXyOfOa0j8GLlW8BsBOkgT5LV4ey2OdJ_iwxSD0bALjPljvdJJ6ofLvDlk50oTym4phvH94VzyET0Ce4AHadZA0RN_MONJVlgHCvivJqV7Q01VTlOkovtKf_I__Y4fjiGgwCUT857hcwY1eoRT7_zVQJJSyXgVn4Orc_zfNU2HayMVLgQ0Z2hFeTB8OlNjGFy8RJq_8ujWzOXPzSnF_RpufA_RxiIDqIQi5luh49iWm4KHd0ofnPaZqMCOjJs7n74EHZ1VBvDraInhHDkt6RPme5hKm5AP4SD4LKgMSmPqyfQDPmWURDxdc1d
+2022-09-09 17:24:20,984 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-1] Response Code : 200
+2022-09-09 17:24:20,986 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-1] {  "success": true,  "challenge_ts": "2022-09-09T14:24:05Z",  "hostname": "127.0.0.1"}
+2022-09-09 17:24:21,185 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-1] Find password successfully by --> oleg
+2022-09-09 17:24:21,462 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-1] User find by email or login --> oleg
+2022-09-09 17:24:21,462 TRACE c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-1] User find is system successfully --> oleg
+2022-09-09 17:24:21,463 TRACE c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-1] Path to send redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:24:21,464 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-1] LoginCommand finish successfully!
+2022-09-09 17:24:21,464 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Forward address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:24:21,465 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller finished, now go to address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:24:21,465 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Send to redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-09 17:24:21,465 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGPost finished
+2022-09-09 17:24:21,482 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-09 17:24:21,482 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-09 17:24:21,483 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /home
+2022-09-09 17:24:21,483 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@627eaf70
+2022-09-09 17:24:21,483 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand starts
+2022-09-09 17:24:21,483 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Locale --> uk_UA
+2022-09-09 17:24:21,483 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria starts
+2022-09-09 17:24:21,483 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria finally success!
+2022-09-09 17:24:21,486 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:24:21,487 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:24:21,490 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-2] Find all theme successfully!
+2022-09-09 17:24:21,491 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-2] Find all type successfully --> uk_UA
+2022-09-09 17:24:21,492 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand finish
+2022-09-09 17:24:21,492 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:24:21,492 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:24:21,492 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-09 17:24:21,515 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-09 17:34:58,213 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-09 17:34:58,213 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-09 17:34:58,214 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /home
+2022-09-09 17:34:58,214 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@627eaf70
+2022-09-09 17:34:58,214 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] HomeCommand starts
+2022-09-09 17:34:58,214 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] Locale --> uk_UA
+2022-09-09 17:34:58,214 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] getSearchCriteria starts
+2022-09-09 17:34:58,215 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] getSearchCriteria finally success!
+2022-09-09 17:34:58,218 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-5] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=2, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:34:58,221 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-5] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=2, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:34:58,223 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-5] Find all theme successfully!
+2022-09-09 17:34:58,227 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-5] Find all type successfully --> uk_UA
+2022-09-09 17:34:58,227 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] HomeCommand finish
+2022-09-09 17:34:58,228 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:34:58,228 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:34:58,228 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-09 17:34:58,260 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-09 17:35:09,794 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-09 17:35:09,794 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-09 17:35:09,794 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /home
+2022-09-09 17:35:09,794 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@627eaf70
+2022-09-09 17:35:09,794 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand starts
+2022-09-09 17:35:09,795 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] Locale --> uk_UA
+2022-09-09 17:35:09,795 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria starts
+2022-09-09 17:35:09,795 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria finally success!
+2022-09-09 17:35:09,803 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=1, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:35:09,807 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=1, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-09 17:35:09,810 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-9] Find all theme successfully!
+2022-09-09 17:35:09,814 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-9] Find all type successfully --> uk_UA
+2022-09-09 17:35:09,817 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand finish
+2022-09-09 17:35:09,818 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:35:09,818 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-09 17:35:09,819 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-09 17:35:09,854 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-09 17:36:17,229 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGet starts
+2022-09-09 17:36:17,230 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller starts
+2022-09-09 17:36:17,231 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Request parameter: command --> /user/profile
+2022-09-09 17:36:17,242 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Obtain key --> com.gmail.fursovych20.web.command.impl.UserProfileCommand@55bc964c
+2022-09-09 17:36:17,243 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-1] UserProfileCommand starts
+2022-09-09 17:36:17,243 TRACE c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-1] User ID --> 8
+2022-09-09 17:36:17,387 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-1] User by ID is find --> 8
+2022-09-09 17:36:17,388 DEBUG c.g.f.w.c.i.UserProfileCommand [http-nio-8080-exec-1] UserProfileCommand finish success!
+2022-09-09 17:36:17,388 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Forward address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-09 17:36:17,388 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/profile.jsp
+2022-09-09 17:36:17,388 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Send to forward --> /WEB-INF/jsp/user/profile.jsp
+2022-09-09 17:36:18,518 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGet finished
+2022-09-09 17:36:20,802 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-09 17:36:20,803 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-09 17:36:20,803 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /user/subscriptions
+2022-09-09 17:36:20,804 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.UserActiveSubscriptionsCommand@27268974
+2022-09-09 17:36:20,806 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-2] UserActiveSubscriptionCommand starts
+2022-09-09 17:36:20,808 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-2] Locale --> uk_UA
+2022-09-09 17:36:20,808 TRACE c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-2] User ID --> 8
+2022-09-09 17:36:20,818 INFO c.g.f.d.d.i.SubscriptionDAOImpl [http-nio-8080-exec-2] Find active subscription by user id --> 8
+2022-09-09 17:36:20,821 DEBUG c.g.f.w.c.i.UserActiveSubscriptionsCommand [http-nio-8080-exec-2] UserActiveSubscriptionCommand finish success!
+2022-09-09 17:36:20,821 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/user/subscriptions.jsp
+2022-09-09 17:36:20,821 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/subscriptions.jsp
+2022-09-09 17:36:20,821 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/user/subscriptions.jsp
+2022-09-09 17:36:21,981 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-09 17:36:24,055 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-09 17:36:24,055 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-09 17:36:24,055 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /user/subscription-history
+2022-09-09 17:36:24,055 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.UserSubscriptionHistoryCommand@2d2f1dd8
+2022-09-09 17:36:24,055 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-5] UserSubscriptionHistoryCommand starts
+2022-09-09 17:36:24,055 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-5] Locale --> uk_UA
+2022-09-09 17:36:24,056 TRACE c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-5] User ID --> 8
+2022-09-09 17:36:24,058 INFO c.g.f.d.d.i.SubscriptionDAOImpl [http-nio-8080-exec-5] Find all subscription by user id --> 8
+2022-09-09 17:36:24,058 DEBUG c.g.f.w.c.i.UserSubscriptionHistoryCommand [http-nio-8080-exec-5] UserSubscriptionHistoryCommand finish success!
+2022-09-09 17:36:24,058 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/user/subscription_history.jsp
+2022-09-09 17:36:24,058 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/subscription_history.jsp
+2022-09-09 17:36:24,058 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/user/subscription_history.jsp
+2022-09-09 17:36:25,174 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-09 17:36:27,086 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet starts
+2022-09-09 17:36:27,087 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller starts
+2022-09-09 17:36:27,087 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Request parameter: command --> /user/balance-operation-history
+2022-09-09 17:36:27,087 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Obtain key --> com.gmail.fursovych20.web.command.impl.UserBalanceOperationCommand@4eae0bd6
+2022-09-09 17:36:27,087 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-6] BalanceOperation starts
+2022-09-09 17:36:27,090 TRACE c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-6] User ID --> 8
+2022-09-09 17:36:27,110 INFO c.g.f.d.d.i.BalanceOperationDAOImpl [http-nio-8080-exec-6] Find balance operation for user by userId is successfully
+2022-09-09 17:36:27,111 DEBUG c.g.f.w.c.i.UserBalanceOperationCommand [http-nio-8080-exec-6] BalanceOperationCommand finish successfully!
+2022-09-09 17:36:27,111 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Forward address --> forward->/WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-09 17:36:27,111 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller finished, now go to address --> forward->/WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-09 17:36:27,112 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Send to forward --> /WEB-INF/jsp/user/balance_operation_history.jsp
+2022-09-09 17:36:27,956 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet finished

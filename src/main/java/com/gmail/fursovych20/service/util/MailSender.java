@@ -21,6 +21,11 @@ import java.util.ResourceBundle;
 
 import static javax.mail.Message.RecipientType.TO;
 
+/**
+ * Class for sending message to email
+ *
+ * @author O.Fursovych
+ */
 public class MailSender {
 
     private static final Logger logger = LogManager.getLogger(MailSender.class);
@@ -49,6 +54,14 @@ public class MailSender {
         }
     }
 
+    /**
+     * A method for send message to email
+     *
+     * @param users param which using for send message to email and for show information in message
+     * @param issue issue for show information in message
+     * @param localizedPublicationDTO localized publication using for show information in message
+     * @param locale locale message
+     */
     public static void sendNotifications(List<User> users, Issue issue, LocalizedPublicationDTO localizedPublicationDTO, LocaleType locale) {
         ResourceBundle authData = ResourceBundle.getBundle(AUTH_PROPERTIES);
         // Rest of the imports

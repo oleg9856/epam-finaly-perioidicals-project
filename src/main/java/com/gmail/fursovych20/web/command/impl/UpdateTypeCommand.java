@@ -59,7 +59,6 @@ public class UpdateTypeCommand implements Command {
     }
 
     private LocalizedTypeDTO getLocalizedType(HttpServletRequest request) {
-        LocalizedTypeDTO localizedTypeDTO = new LocalizedTypeDTO();
         Map<LocaleType,String> names = new EnumMap<>(LocaleType.class);
         int typeID = Integer.parseInt(request.getParameter(REQUEST_PARAM_TYPE_ID));
         LOG.trace("Type ID --> {}",typeID);
@@ -68,10 +67,10 @@ public class UpdateTypeCommand implements Command {
         names.put(LocaleType.en_US, nameEN);
         names.put(LocaleType.uk_UA, nameUA);
 
-        localizedTypeDTO.setId(typeID);
-        localizedTypeDTO.setLocalizedNames(names);
-        localizedTypeDTO.setDefaultName(nameEN);
-
-        return localizedTypeDTO;
+        return new LocalizedTypeDTO.Builder()
+                .setId(typeID)
+                .setLocalizedNames(names)
+                .setDefaultName(nameEN)
+                .build();
     }
 }

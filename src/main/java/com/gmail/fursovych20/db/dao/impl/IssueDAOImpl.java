@@ -128,15 +128,13 @@ public class IssueDAOImpl implements IssueDAO {
     }
 
     private Issue formIssue(ResultSet resultSet) throws SQLException {
-        Issue issue = new Issue();
-
-        issue.setId(resultSet.getInt(ID));
-        issue.setLocalDateOfPublication(resultSet.getDate(DATE_OF_PUBLICATION).toLocalDate());
-        issue.setPublicationId(resultSet.getInt(PUBLICATION_ID));
-        issue.setDescription(resultSet.getString(DESCRIPTION));
-        issue.setFile(resultSet.getString(FILE));
-
-        return issue;
+        return new Issue.Builder()
+                .setId(resultSet.getInt(ID))
+                .setLocalDateOfPublication(resultSet.getDate(DATE_OF_PUBLICATION).toLocalDate())
+                .setPublicationId(resultSet.getInt(PUBLICATION_ID))
+                .setDescription(resultSet.getString(DESCRIPTION))
+                .setFile(resultSet.getString(FILE))
+                .build();
     }
 
     private Connection getConnection() throws SQLException {

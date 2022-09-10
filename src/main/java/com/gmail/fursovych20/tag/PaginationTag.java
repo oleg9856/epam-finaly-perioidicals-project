@@ -28,8 +28,9 @@ public class PaginationTag extends TagSupport {
     /**
      * Defines tag without body for the pagination
      * 
-     * @see {@link TagSupport#doStartTag}
+     * {@link TagSupport#doStartTag}
      */
+    @Override
     public int doStartTag() throws JspException {
         if (viewPageCount > totalPageCount) {
             viewPageCount = totalPageCount;
