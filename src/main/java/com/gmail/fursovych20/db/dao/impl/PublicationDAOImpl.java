@@ -305,23 +305,25 @@ public class PublicationDAOImpl implements PublicationDAO {
     private LocalizedPublicationDTO formLocalizedPublication(ResultSet resultSet) throws SQLException {
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         Map<LocaleType, String> descriptions = new EnumMap<>(LocaleType.class);
+        LocalizedPublicationDTO localizedPublicationDTO;
         do {
             LocaleType locale = LocaleType.valueOf(resultSet.getString(LOCALE));
             String name = resultSet.getString(NAME);
             String description = resultSet.getString(DESCRIPTION);
             names.put(locale, name);
             descriptions.put(locale, description);
+            localizedPublicationDTO = new LocalizedPublicationDTO.Builder()
+                    .setId(resultSet.getInt(ID))
+                    .setThemeId(resultSet.getShort(ID_THEME))
+                    .setTypeID(resultSet.getShort(ID_TYPE))
+                    .setPrice(resultSet.getDouble(PRICE))
+                    .setPicturePath(resultSet.getString(PICTURE_PATH))
+                    .setNames(names)
+                    .setDescriptions(descriptions)
+                    .build();
         } while (resultSet.next());
 
-        return new LocalizedPublicationDTO.Builder()
-                .setId(resultSet.getInt(ID))
-                .setThemeId(resultSet.getShort(ID_THEME))
-                .setTypeID(resultSet.getShort(ID_TYPE))
-                .setPrice(resultSet.getDouble(PRICE))
-                .setPicturePath(resultSet.getString(PICTURE_PATH))
-                .setNames(names)
-                .setDescriptions(descriptions)
-                .build();
+        return localizedPublicationDTO;
     }
 
     private String formQuery(PublicationSearchCriteriaDTO criteria) {

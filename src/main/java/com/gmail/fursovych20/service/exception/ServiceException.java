@@ -1,5 +1,10 @@
 package com.gmail.fursovych20.service.exception;
 
+/**
+ * Service exception
+ *
+ * @author O.Fursovych
+ */
 public class ServiceException extends Exception{
 
 	private static final long serialVersionUID = -6167534899746513711L;

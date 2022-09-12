@@ -29,7 +29,7 @@ public class Validator {
     private static final Pattern pEmail = Pattern.compile("([A-za-z\\d_.-]+)@([A-za-z\\d_.-]+)\\.([A-za-z.]{2,6})");
 
     /** Constant pattern for name */
-    private static final Pattern pName = Pattern.compile("([A-Za-zА-Яа-я]){2,25}");
+    private static final Pattern pName = Pattern.compile("([A-Za-zА-Яа-я']){2,25}");
 
     /** Constant pattern for surname */
     private static final Pattern pSurname = Pattern.compile("([A-Za-zА-Яа-я]){2,25}");

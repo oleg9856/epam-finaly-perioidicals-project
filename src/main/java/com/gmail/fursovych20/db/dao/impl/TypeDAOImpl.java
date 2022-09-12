@@ -198,6 +198,7 @@ public class TypeDAOImpl implements TypeDAO {
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         LocaleType locale = LocaleType.valueOf(resultSet.getString(LOCALE));
         String name = resultSet.getString(NAME);
+        String defaultName = resultSet.getString(DEFAULT_NAME);
         names.put(locale, name);
 
         while (resultSet.next()) {
@@ -205,6 +206,7 @@ public class TypeDAOImpl implements TypeDAO {
             if (id == nextId) {
                 locale = LocaleType.valueOf(resultSet.getString(LOCALE));
                 name = resultSet.getString(NAME);
+                defaultName = resultSet.getString(DEFAULT_NAME);
                 names.put(locale, name);
             } else {
                 resultSet.previous();
@@ -214,7 +216,7 @@ public class TypeDAOImpl implements TypeDAO {
 
         return new LocalizedTypeDTO.Builder()
                 .setId(id)
-                .setDefaultName(resultSet.getString(DEFAULT_NAME))
+                .setDefaultName(defaultName)
                 .setLocalizedNames(names)
                 .build();
     }

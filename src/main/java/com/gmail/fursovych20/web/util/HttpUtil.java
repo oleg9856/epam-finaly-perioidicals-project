@@ -85,7 +85,15 @@ public final class HttpUtil {
 	public static String formRedirectUrl(HttpServletRequest request, String command) {
 		return request.getContextPath() + CONTROLLER_PATTERN + command;
 	}
-	
+
+	/**
+	 * A method which write issue to the response
+	 *
+	 * @param issue parameter that is writable
+	 * @param response response in servlet
+	 * @param request request in servlet
+	 * @throws IOException throws exception
+	 */
 	public static void writeIssueIntoResponse(Issue issue, HttpServletResponse response, HttpServletRequest request) throws IOException {
 		String filePath = request.getServletContext().getRealPath(ISSUE_FILE_BASE_PATH) + issue.getFile();		
 		response.setContentType("application/pdf");
@@ -93,7 +101,15 @@ public final class HttpUtil {
 	    response.setHeader("Content-Disposition", "filename=" + srcFile.getName());
 		Files.copy(srcFile.toPath(), response.getOutputStream());
 	}
-	
+
+	/**
+	 * The method which upload publication picture by request
+	 *
+	 * @param request request by uploading picture
+	 * @return string name file which create in {@code generateFileForPublicationPicture}
+	 * @throws IOException throws exception
+	 * @throws ServletException throws exception
+	 */
 	public static String uploadPublicationPicture(HttpServletRequest request) throws IOException, ServletException {
 		Part picturePart = request.getPart(REQUEST_PARAM_PUBLICATION_PICTURE);
 		try (InputStream fileContent = picturePart.getInputStream()) {
@@ -104,17 +120,32 @@ public final class HttpUtil {
             return file.getName();
         }
 	}
-	
+
+	/**
+	 * The method which add param to path
+	 *
+	 * @param path parameter to which the parameter is added
+	 * @param paramName param name
+	 * @param value param value the param
+	 * @return path to redirect
+	 */
 	public static String addParamToPath(String path, String paramName, String value) {
 		try {
-			LOG.info(new URIBuilder(path).setParameter(paramName, value).build().toString());
             return new URIBuilder(path).setParameter(paramName, value).build().toString();
         } catch (URISyntaxException e) {
             LOG.warn("Failed to add parameters to path.", e);
         }
 		return path;
 	}
-	
+
+	/**
+	 * This method upload file to the page in browser
+	 *
+	 * @param issue param to be loaded on the page
+	 * @param request param to the request
+	 * @throws IOException throws exception
+	 * @throws ServletException throws exception
+	 */
 	public static void uploadIssueFile(Issue issue, HttpServletRequest request) throws IOException, ServletException {
 		Part issuePart = request.getPart(REQUEST_PARAM_ISSUE_FILE);
 		try (InputStream fileContent = issuePart.getInputStream()) {
@@ -128,7 +159,14 @@ public final class HttpUtil {
            	issue.setFile(addPath +"/" + file.getName());
         }
 	}
-	
+
+	/**
+	 * This method generate file for publication picture
+	 *
+	 * @param path param for generating new file on the server
+	 * @param extension param extension for file
+	 * @return file which created
+	 */
 	private static File generateFileForPublicationPicture(String path, String extension){
 		String fileName = generateFileId() + extension;
 		File file = new File(path, fileName);
@@ -137,7 +175,14 @@ public final class HttpUtil {
 		}
 		return file;
 	}
-	
+
+	/**
+	 * This method generate file for publication issue
+	 *
+	 * @param path param for generating new file of issue on the server
+	 * @param fileName param file name for issue
+	 * @return file of issue
+	 */
 	private static File generateFileForPublicationIssue(String path, String fileName){
 		File pathDir = new File(path);
 		if (!pathDir.exists()) {
@@ -145,11 +190,22 @@ public final class HttpUtil {
 		}
 		return new File(path, fileName);
 	}
-	
+
+	/**
+	 * The method generate file id for publication picture
+	 *
+	 * @return param generated file id
+	 */
 	private static String generateFileId() {
 		return Integer.toString(Math.abs(new Random().nextInt()));
 	}
-	
+
+	/**
+	 * This method generating extension for picture
+	 *
+	 * @param part param Part
+	 * @return picture extension
+	 */
 	private static String getPictureExtension(Part part) {
 		Pattern pattern = Pattern.compile(PIC_EXTENSION_REG_EX);
 		Matcher matcher = pattern.matcher(part.getSubmittedFileName());

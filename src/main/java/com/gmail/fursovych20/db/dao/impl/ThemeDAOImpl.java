@@ -198,6 +198,7 @@ public class ThemeDAOImpl implements ThemeDAO {
         Map<LocaleType, String> names = new EnumMap<>(LocaleType.class);
         LocaleType locale = LocaleType.valueOf(resultSet.getString(LOCALE));
         String name = resultSet.getString(NAME);
+        String defaultName = resultSet.getString(DEFAULT_NAME);
         names.put(locale, name);
 
         while (resultSet.next()) {
@@ -205,6 +206,7 @@ public class ThemeDAOImpl implements ThemeDAO {
             if (id == nextId) {
                 locale = LocaleType.valueOf(resultSet.getString(LOCALE));
                 name = resultSet.getString(NAME);
+                defaultName = resultSet.getString(DEFAULT_NAME);
                 names.put(locale, name);
             } else {
                 resultSet.previous();
@@ -214,7 +216,7 @@ public class ThemeDAOImpl implements ThemeDAO {
 
         return new LocalizedThemeDTO.Builder()
                 .setId(id)
-                .setDefaultName(resultSet.getString(DEFAULT_NAME))
+                .setDefaultName(defaultName)
                 .setLocalizedNames(names)
                 .build();
     }
