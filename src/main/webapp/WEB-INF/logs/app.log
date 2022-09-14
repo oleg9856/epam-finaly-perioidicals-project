@@ -9972,3 +9972,464 @@ Caused by: java.sql.SQLException: After end of result set
 2022-09-12 20:32:35,574 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/login.jsp
 2022-09-12 20:32:35,576 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/login.jsp
 2022-09-12 20:32:36,865 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-13 23:17:23,934 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands start init...
+2022-09-13 23:17:23,955 DEBUG c.g.f.d.c.DBManager [RMI TCP Connection(3)-127.0.0.1] DataSource is initialize
+2022-09-13 23:17:24,007 INFO c.g.f.w.l.ContextListener [RMI TCP Connection(3)-127.0.0.1] Commands was init!
+2022-09-13 23:17:24,089 TRACE c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Number of commands --> 34
+2022-09-13 23:17:24,089 DEBUG c.g.f.w.c.CommandContainer [RMI TCP Connection(3)-127.0.0.1] Command container was successfully initialized
+2022-09-13 23:17:26,380 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-13 23:17:26,380 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-13 23:17:26,380 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /home
+2022-09-13 23:17:26,380 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:17:26,380 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand starts
+2022-09-13 23:17:26,385 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] Locale --> en_US
+2022-09-13 23:17:26,385 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria starts
+2022-09-13 23:17:26,386 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] getSearchCriteria finally success!
+2022-09-13 23:17:27,203 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:27,218 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-2] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:27,245 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-2] Find all theme successfully!
+2022-09-13 23:17:27,260 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-2] Find all type successfully --> en_US
+2022-09-13 23:17:27,261 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-2] HomeCommand finish
+2022-09-13 23:17:27,261 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:27,261 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:27,262 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:17:28,464 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-13 23:17:31,153 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-13 23:17:31,153 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-13 23:17:31,154 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /home
+2022-09-13 23:17:31,155 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:17:31,156 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] HomeCommand starts
+2022-09-13 23:17:31,156 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] Locale --> en_US
+2022-09-13 23:17:31,157 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] getSearchCriteria starts
+2022-09-13 23:17:31,157 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] getSearchCriteria finally success!
+2022-09-13 23:17:31,162 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-5] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:31,166 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-5] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:31,168 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-5] Find all theme successfully!
+2022-09-13 23:17:31,172 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-5] Find all type successfully --> en_US
+2022-09-13 23:17:31,172 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-5] HomeCommand finish
+2022-09-13 23:17:31,172 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:31,172 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:31,173 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:17:31,183 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-13 23:17:35,228 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-13 23:17:35,229 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-13 23:17:35,229 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /home
+2022-09-13 23:17:35,229 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:17:35,230 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand starts
+2022-09-13 23:17:35,231 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] Locale --> en_US
+2022-09-13 23:17:35,231 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria starts
+2022-09-13 23:17:35,231 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] getSearchCriteria finally success!
+2022-09-13 23:17:35,234 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find all publications by criteria --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:35,236 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Received total count --> PublicationSearchCriteria{locale=en_US, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:35,239 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-9] Find all theme successfully!
+2022-09-13 23:17:35,243 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-9] Find all type successfully --> en_US
+2022-09-13 23:17:35,244 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-9] HomeCommand finish
+2022-09-13 23:17:35,245 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:35,245 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:35,246 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:17:35,271 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-13 23:17:36,869 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-13 23:17:36,869 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-13 23:17:36,869 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /change-locale
+2022-09-13 23:17:36,869 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.ChangeLocaleCommand@2961e930
+2022-09-13 23:17:36,870 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-10] ChangeLocaleCommand starts
+2022-09-13 23:17:36,870 TRACE c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-10] Locale --> uk_UA
+2022-09-13 23:17:36,870 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-10] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:36,870 DEBUG c.g.f.w.c.i.ChangeLocaleCommand [http-nio-8080-exec-10] ChangeLocaleCommand finish!
+2022-09-13 23:17:36,871 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:36,871 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:36,871 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:36,871 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-13 23:17:36,908 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGet starts
+2022-09-13 23:17:36,908 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller starts
+2022-09-13 23:17:36,908 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Request parameter: command --> /home
+2022-09-13 23:17:36,908 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:17:36,908 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-1] HomeCommand starts
+2022-09-13 23:17:36,908 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-1] Locale --> uk_UA
+2022-09-13 23:17:36,908 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-1] getSearchCriteria starts
+2022-09-13 23:17:36,909 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-1] getSearchCriteria finally success!
+2022-09-13 23:17:36,916 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-1] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:36,918 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-1] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:36,920 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-1] Find all theme successfully!
+2022-09-13 23:17:36,922 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-1] Find all type successfully --> uk_UA
+2022-09-13 23:17:36,922 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-1] HomeCommand finish
+2022-09-13 23:17:36,922 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:36,922 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:36,923 TRACE c.g.f.w.FontController [http-nio-8080-exec-1] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:17:36,931 DEBUG c.g.f.w.FontController [http-nio-8080-exec-1] Controller#doGet finished
+2022-09-13 23:17:38,833 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-13 23:17:38,834 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-13 23:17:38,834 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /login
+2022-09-13 23:17:38,836 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@4b666d4c
+2022-09-13 23:17:38,836 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-4] LoginCommand starts
+2022-09-13 23:17:38,837 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-4] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:38,849 WARN c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-4] Validation failed!
+2022-09-13 23:17:38,898 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-13 23:17:38,898 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> forward->/WEB-INF/jsp/login.jsp
+2022-09-13 23:17:38,899 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to forward --> /WEB-INF/jsp/login.jsp
+2022-09-13 23:17:39,368 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
+2022-09-13 23:17:43,929 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGPost starts
+2022-09-13 23:17:43,929 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller starts
+2022-09-13 23:17:43,930 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Request parameter: command --> /login
+2022-09-13 23:17:43,930 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Obtain key --> com.gmail.fursovych20.web.command.impl.LoginCommand@4b666d4c
+2022-09-13 23:17:43,930 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-6] LoginCommand starts
+2022-09-13 23:17:43,930 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-6] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/login
+2022-09-13 23:17:44,718 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-6] Sending 'POST' request to URL : https://www.google.com/recaptcha/api/siteverify
+2022-09-13 23:17:44,718 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-6] Post parameters : secret=6Ld367khAAAAAN77biIpSCDVo_SbexYV_nIDUtxl&response=03ANYolqveRmsTmhgQ7vngJyBtzRJ8eFWBlsU5u-dBDnpEIzbUvGJvFhFdPWGC9st2Mpu5UFUQ3Z9Ujq2gyW3nrwM3VmAUA1bg5wUpjcBUQOmus6g5wHsNODsn_RIi79aQQz_XEv5oUPeen63fi8t1fa9wapYmmR91QBt0YlvpeeUhEMorz9j45G03qrP9sDC_WBAKXnprlQvkm4ZtFe1FQs4InmcwGk27durhQEbPt9WVfnIRPu4SMLnsvM-Pu5tL9yR9E7hNbNDFfZG5dIFIqNpk3Vj2ypnw31RJdVIf1bO3F0XDzoOh1wram0Mv2Ibw0Aw6vDGfXipTvMez4kli7lUeK11xmvXMTy9N77ekh6tpZPo66x7hIHdE_voWt3ZC8jDoP8nQeADhhwyRSD_MS_PLVNGe9E81iMNMyVo2zkl6jKnErzKjyVq8JFByBB6WxwDMktdBvE0935vsx3yPpX2kfKJ68H2sh8RZCiQKXuiZQyz9r1Sn6-gYAsTlTVCSsiH-6YIzRX3b
+2022-09-13 23:17:44,718 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-6] Response Code : 200
+2022-09-13 23:17:44,721 INFO c.g.f.s.u.VerifyRecaptcha [http-nio-8080-exec-6] {  "success": true,  "challenge_ts": "2022-09-13T20:17:40Z",  "hostname": "127.0.0.1"}
+2022-09-13 23:17:44,855 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-6] Find password successfully by --> admin1991
+2022-09-13 23:17:45,085 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-6] User find by email or login --> admin1991
+2022-09-13 23:17:45,085 TRACE c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-6] User find is system successfully --> admin1991
+2022-09-13 23:17:45,085 TRACE c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-6] Path to send redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:45,085 DEBUG c.g.f.w.c.i.LoginCommand [http-nio-8080-exec-6] LoginCommand finish successfully!
+2022-09-13 23:17:45,086 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Forward address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:45,086 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller finished, now go to address --> redirect->http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:45,086 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Send to redirect --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/home
+2022-09-13 23:17:45,086 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGPost finished
+2022-09-13 23:17:45,095 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet starts
+2022-09-13 23:17:45,095 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-13 23:17:45,096 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /home
+2022-09-13 23:17:45,096 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:17:45,096 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-8] HomeCommand starts
+2022-09-13 23:17:45,096 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-8] Locale --> uk_UA
+2022-09-13 23:17:45,096 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-8] getSearchCriteria starts
+2022-09-13 23:17:45,096 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-8] getSearchCriteria finally success!
+2022-09-13 23:17:45,103 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-8] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:45,105 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-8] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:17:45,107 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-8] Find all theme successfully!
+2022-09-13 23:17:45,109 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-8] Find all type successfully --> uk_UA
+2022-09-13 23:17:45,110 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-8] HomeCommand finish
+2022-09-13 23:17:45,110 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:45,110 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:17:45,110 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:17:45,124 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet finished
+2022-09-13 23:17:49,632 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-13 23:17:49,632 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-13 23:17:49,632 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /publication
+2022-09-13 23:17:49,633 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowPublicationCommand@68f38911
+2022-09-13 23:17:49,634 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] ShowPublicationCommand starts
+2022-09-13 23:17:49,634 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Locale --> uk_UA
+2022-09-13 23:17:49,634 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Publication Id --> 63241
+2022-09-13 23:17:49,671 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find a publication by ID: 63241, and LocalType: uk_UA
+2022-09-13 23:17:49,672 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Publication --> Publication [id=63241, name=Інформаційні технології: інформатика, розробка програмного забезпечення, кібербезпека, description=У цьому журналі йдеться про сучасні іт технології, прориви в комп' ютерних науках, розробка програмного забезпечення та кібербезпеку., themeId=3, typeID=2, price=449.5]
+2022-09-13 23:17:49,696 INFO c.g.f.d.d.i.ReviewDAOImpl [http-nio-8080-exec-9] Find review by publicationID --> 63241
+2022-09-13 23:17:49,696 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Reviews --> []
+2022-09-13 23:17:49,700 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-9] Find theme by id successfully --> 3
+2022-09-13 23:17:49,701 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Theme --> Theme [id=3, name=Наукові і науково-популярні видання]
+2022-09-13 23:17:49,703 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-9] Find type by id --> 2
+2022-09-13 23:17:49,703 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Type --> Theme [id=2, name=Журнал]
+2022-09-13 23:17:49,704 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] ShowPublicationCommand finish!
+2022-09-13 23:17:49,704 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/publication.jsp
+2022-09-13 23:17:49,706 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/publication.jsp
+2022-09-13 23:17:49,706 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/publication.jsp
+2022-09-13 23:17:50,603 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-13 23:17:56,812 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-13 23:17:56,812 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-13 23:17:56,812 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /admin/add-publication-form
+2022-09-13 23:17:56,812 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.GetAddPublicationFormCommand@5e2d8d96
+2022-09-13 23:17:56,812 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-2] GetAddPublicationFormCommand starts
+2022-09-13 23:17:56,812 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-2] Locale --> uk_UA
+2022-09-13 23:17:56,814 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-2] Find all theme successfully!
+2022-09-13 23:17:56,816 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-2] Find all type successfully --> uk_UA
+2022-09-13 23:17:56,816 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-2] GetAddPublicationFormCommand finish success!
+2022-09-13 23:17:56,816 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:17:56,817 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:17:56,817 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:17:57,266 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-13 23:17:59,207 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-13 23:17:59,208 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-13 23:17:59,208 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /admin/edit-types
+2022-09-13 23:17:59,209 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.EditTypeCommand@4d4ec23f
+2022-09-13 23:17:59,210 DEBUG c.g.f.w.c.i.EditTypeCommand [http-nio-8080-exec-5] EditTypeCommand starts
+2022-09-13 23:17:59,232 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-5] Find all localized successfully!
+2022-09-13 23:17:59,233 DEBUG c.g.f.w.c.i.EditTypeCommand [http-nio-8080-exec-5] EditTypeCommand finish success!
+2022-09-13 23:17:59,233 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/admin/edit_types.jsp
+2022-09-13 23:17:59,233 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/edit_types.jsp
+2022-09-13 23:17:59,233 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/admin/edit_types.jsp
+2022-09-13 23:17:59,664 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-13 23:18:00,951 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet starts
+2022-09-13 23:18:00,951 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller starts
+2022-09-13 23:18:00,951 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Request parameter: command --> /admin/edit-themes
+2022-09-13 23:18:00,961 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Obtain key --> com.gmail.fursovych20.web.command.impl.EditThemeCommand@be91f24
+2022-09-13 23:18:00,961 DEBUG c.g.f.w.c.i.EditThemeCommand [http-nio-8080-exec-6] EditThemeCommand starts
+2022-09-13 23:18:00,972 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-6] Find all localized successfully!
+2022-09-13 23:18:00,973 DEBUG c.g.f.w.c.i.EditThemeCommand [http-nio-8080-exec-6] EditThemeCommand finish success!
+2022-09-13 23:18:00,973 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Forward address --> forward->/WEB-INF/jsp/admin/edit_themes.jsp
+2022-09-13 23:18:00,973 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/edit_themes.jsp
+2022-09-13 23:18:00,974 TRACE c.g.f.w.FontController [http-nio-8080-exec-6] Send to forward --> /WEB-INF/jsp/admin/edit_themes.jsp
+2022-09-13 23:18:01,589 DEBUG c.g.f.w.FontController [http-nio-8080-exec-6] Controller#doGet finished
+2022-09-13 23:18:03,694 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGPost starts
+2022-09-13 23:18:03,694 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-13 23:18:03,694 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /admin/update-theme
+2022-09-13 23:18:03,694 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.UpdateThemeCommand@35b1e1c0
+2022-09-13 23:18:03,694 DEBUG c.g.f.w.c.i.UpdateThemeCommand [http-nio-8080-exec-8] UpdateThemeCommand starts
+2022-09-13 23:18:03,695 TRACE c.g.f.w.c.i.UpdateThemeCommand [http-nio-8080-exec-8] Locale --> uk_UA
+2022-09-13 23:18:03,695 TRACE c.g.f.w.c.i.UpdateThemeCommand [http-nio-8080-exec-8] Theme ID --> 1
+2022-09-13 23:18:03,699 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-8] Validate TitleEdition: true
+2022-09-13 23:18:03,699 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-8] Validate TitleEdition: true
+2022-09-13 23:18:03,727 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-8] Update theme successfully!
+2022-09-13 23:18:03,733 TRACE c.g.f.w.c.i.UpdateThemeCommand [http-nio-8080-exec-8] referPage --> /periodicals_epam_war_exploded/controller/admin/edit-themes
+2022-09-13 23:18:03,733 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> redirect->/periodicals_epam_war_exploded/controller/admin/edit-themes
+2022-09-13 23:18:03,733 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> redirect->/periodicals_epam_war_exploded/controller/admin/edit-themes
+2022-09-13 23:18:03,733 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to redirect --> /periodicals_epam_war_exploded/controller/admin/edit-themes
+2022-09-13 23:18:03,733 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGPost finished
+2022-09-13 23:18:03,746 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-13 23:18:03,746 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-13 23:18:03,746 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /admin/edit-themes
+2022-09-13 23:18:03,746 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.EditThemeCommand@be91f24
+2022-09-13 23:18:03,747 DEBUG c.g.f.w.c.i.EditThemeCommand [http-nio-8080-exec-10] EditThemeCommand starts
+2022-09-13 23:18:03,749 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-10] Find all localized successfully!
+2022-09-13 23:18:03,749 DEBUG c.g.f.w.c.i.EditThemeCommand [http-nio-8080-exec-10] EditThemeCommand finish success!
+2022-09-13 23:18:03,749 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> forward->/WEB-INF/jsp/admin/edit_themes.jsp
+2022-09-13 23:18:03,750 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/edit_themes.jsp
+2022-09-13 23:18:03,750 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to forward --> /WEB-INF/jsp/admin/edit_themes.jsp
+2022-09-13 23:18:03,758 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-13 23:18:07,511 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-13 23:18:07,511 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-13 23:18:07,511 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /admin/edit-users
+2022-09-13 23:18:07,512 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.EditUserCommand@3bc73694
+2022-09-13 23:18:07,512 DEBUG c.g.f.w.c.i.EditUserCommand [http-nio-8080-exec-4] ShowResultPageCommand starts
+2022-09-13 23:18:07,520 INFO c.g.f.d.d.i.UserDAOImpl [http-nio-8080-exec-4] Users is found in size --> 8
+2022-09-13 23:18:07,520 DEBUG c.g.f.w.c.i.EditUserCommand [http-nio-8080-exec-4] ShowResultPageCommand finish
+2022-09-13 23:18:07,521 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> forward->/WEB-INF/jsp/admin/change_user_role.jsp
+2022-09-13 23:18:07,521 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/change_user_role.jsp
+2022-09-13 23:18:07,521 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to forward --> /WEB-INF/jsp/admin/change_user_role.jsp
+2022-09-13 23:18:08,242 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
+2022-09-13 23:18:09,431 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet starts
+2022-09-13 23:18:09,431 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller starts
+2022-09-13 23:18:09,431 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Request parameter: command --> /admin/add-publication-form
+2022-09-13 23:18:09,432 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Obtain key --> com.gmail.fursovych20.web.command.impl.GetAddPublicationFormCommand@5e2d8d96
+2022-09-13 23:18:09,435 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-2] GetAddPublicationFormCommand starts
+2022-09-13 23:18:09,437 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-2] Locale --> uk_UA
+2022-09-13 23:18:09,441 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-2] Find all theme successfully!
+2022-09-13 23:18:09,443 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-2] Find all type successfully --> uk_UA
+2022-09-13 23:18:09,443 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-2] GetAddPublicationFormCommand finish success!
+2022-09-13 23:18:09,443 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Forward address --> forward->/WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:18:09,443 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:18:09,443 TRACE c.g.f.w.FontController [http-nio-8080-exec-2] Send to forward --> /WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:18:09,458 DEBUG c.g.f.w.FontController [http-nio-8080-exec-2] Controller#doGet finished
+2022-09-13 23:18:11,840 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-13 23:18:11,841 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-13 23:18:11,841 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /admin/edit-types
+2022-09-13 23:18:11,842 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.EditTypeCommand@4d4ec23f
+2022-09-13 23:18:11,842 DEBUG c.g.f.w.c.i.EditTypeCommand [http-nio-8080-exec-5] EditTypeCommand starts
+2022-09-13 23:18:11,846 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-5] Find all localized successfully!
+2022-09-13 23:18:11,847 DEBUG c.g.f.w.c.i.EditTypeCommand [http-nio-8080-exec-5] EditTypeCommand finish success!
+2022-09-13 23:18:11,847 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/admin/edit_types.jsp
+2022-09-13 23:18:11,847 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/edit_types.jsp
+2022-09-13 23:18:11,848 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/admin/edit_types.jsp
+2022-09-13 23:18:11,862 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-13 23:18:13,619 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet starts
+2022-09-13 23:18:13,620 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller starts
+2022-09-13 23:18:13,620 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Request parameter: command --> /admin/add-publication-form
+2022-09-13 23:18:13,621 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Obtain key --> com.gmail.fursovych20.web.command.impl.GetAddPublicationFormCommand@5e2d8d96
+2022-09-13 23:18:13,621 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-3] GetAddPublicationFormCommand starts
+2022-09-13 23:18:13,622 TRACE c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-3] Locale --> uk_UA
+2022-09-13 23:18:13,625 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-3] Find all theme successfully!
+2022-09-13 23:18:13,629 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-3] Find all type successfully --> uk_UA
+2022-09-13 23:18:13,630 DEBUG c.g.f.w.c.i.GetAddPublicationFormCommand [http-nio-8080-exec-3] GetAddPublicationFormCommand finish success!
+2022-09-13 23:18:13,630 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Forward address --> forward->/WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:18:13,630 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:18:13,630 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Send to forward --> /WEB-INF/jsp/admin/add_publication_form.jsp
+2022-09-13 23:18:13,644 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet finished
+2022-09-13 23:18:48,836 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGPost starts
+2022-09-13 23:18:48,838 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-13 23:18:48,840 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /admin/add-publication
+2022-09-13 23:18:48,844 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.AddPublicationCommand@6213740f
+2022-09-13 23:18:48,844 DEBUG c.g.f.w.c.i.AddPublicationCommand [http-nio-8080-exec-8] AddPublicationCommand starts
+2022-09-13 23:18:48,844 TRACE c.g.f.w.c.i.AddPublicationCommand [http-nio-8080-exec-8] Locale --> uk_UA
+2022-09-13 23:18:48,912 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-8] Validate TextEdition: true
+2022-09-13 23:18:48,913 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-8] Validate TextEdition: true
+2022-09-13 23:18:48,913 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-8] Validate TitleEdition: true
+2022-09-13 23:18:48,913 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-8] Validate TitleEdition: true
+2022-09-13 23:18:48,981 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-8] Create publication successfully!
+2022-09-13 23:18:48,996 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-8] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/admin/add-publication-form
+2022-09-13 23:18:48,996 TRACE c.g.f.w.c.i.AddPublicationCommand [http-nio-8080-exec-8] referPage --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/admin/add-publication-form
+2022-09-13 23:18:49,016 TRACE c.g.f.w.c.i.AddPublicationCommand [http-nio-8080-exec-8] AddPublicationCommand finish successfully!
+2022-09-13 23:18:49,017 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> redirect->/periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B4%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fadmin%2Fadd-publication-form
+2022-09-13 23:18:49,017 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> redirect->/periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B4%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fadmin%2Fadd-publication-form
+2022-09-13 23:18:49,017 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to redirect --> /periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B4%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fadmin%2Fadd-publication-form
+2022-09-13 23:18:49,017 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGPost finished
+2022-09-13 23:18:49,028 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet starts
+2022-09-13 23:18:49,029 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-13 23:18:49,029 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /show-result-page
+2022-09-13 23:18:49,029 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowResultPageCommand@52121d5e
+2022-09-13 23:18:49,029 DEBUG c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-8] ShowResultPageCommand starts
+2022-09-13 23:18:49,030 TRACE c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-8] Message --> Публікацію успішно додано!
+2022-09-13 23:18:49,031 TRACE c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-8] Return page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/admin/add-publication-form
+2022-09-13 23:18:49,031 DEBUG c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-8] ShowResultPageCommand finish successfully!
+2022-09-13 23:18:49,031 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> forward->/WEB-INF/jsp/result_page.jsp
+2022-09-13 23:18:49,032 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> forward->/WEB-INF/jsp/result_page.jsp
+2022-09-13 23:18:49,032 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to forward --> /WEB-INF/jsp/result_page.jsp
+2022-09-13 23:18:49,710 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGet finished
+2022-09-13 23:18:52,225 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-13 23:18:52,226 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-13 23:18:52,226 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /home.jsp
+2022-09-13 23:18:52,226 WARN c.g.f.w.c.CommandContainer [http-nio-8080-exec-10] Command not found, commandName --> /home.jsp
+2022-09-13 23:18:52,226 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:18:52,226 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] HomeCommand starts
+2022-09-13 23:18:52,226 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] Locale --> uk_UA
+2022-09-13 23:18:52,226 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] getSearchCriteria starts
+2022-09-13 23:18:52,226 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] getSearchCriteria finally success!
+2022-09-13 23:18:52,231 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-10] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:18:52,233 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-10] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:18:52,235 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-10] Find all theme successfully!
+2022-09-13 23:18:52,237 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-10] Find all type successfully --> uk_UA
+2022-09-13 23:18:52,238 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-10] HomeCommand finish
+2022-09-13 23:18:52,238 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:18:52,240 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:18:52,241 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:18:52,250 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-13 23:18:56,030 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-13 23:18:56,031 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-13 23:18:56,031 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /publication
+2022-09-13 23:18:56,032 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowPublicationCommand@68f38911
+2022-09-13 23:18:56,032 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] ShowPublicationCommand starts
+2022-09-13 23:18:56,032 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Locale --> uk_UA
+2022-09-13 23:18:56,033 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Publication Id --> 63242
+2022-09-13 23:18:56,038 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find a publication by ID: 63242, and LocalType: uk_UA
+2022-09-13 23:18:56,041 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Publication --> Publication [id=63242, name=Зовнішня політика, description=Міжнародні відносини. Політика. Зовнішньоекономічна діяльність, themeId=1, typeID=1, price=45.8]
+2022-09-13 23:18:56,042 INFO c.g.f.d.d.i.ReviewDAOImpl [http-nio-8080-exec-9] Find review by publicationID --> 63242
+2022-09-13 23:18:56,042 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Reviews --> []
+2022-09-13 23:18:56,044 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-9] Find theme by id successfully --> 1
+2022-09-13 23:18:56,044 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Theme --> Theme [id=1, name=Мова та література]
+2022-09-13 23:18:56,047 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-9] Find type by id --> 1
+2022-09-13 23:18:56,047 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Type --> Theme [id=1, name=Газета]
+2022-09-13 23:18:56,047 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] ShowPublicationCommand finish!
+2022-09-13 23:18:56,047 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/publication.jsp
+2022-09-13 23:18:56,047 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/publication.jsp
+2022-09-13 23:18:56,047 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/publication.jsp
+2022-09-13 23:18:56,064 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-13 23:18:59,835 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-13 23:18:59,835 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-13 23:18:59,837 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /admin/edit-publication
+2022-09-13 23:18:59,837 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.EditPublicationCommand@43fa8ce0
+2022-09-13 23:18:59,837 DEBUG c.g.f.w.c.i.EditPublicationCommand [http-nio-8080-exec-4] EditPublicationCommand starts
+2022-09-13 23:18:59,838 TRACE c.g.f.w.c.i.EditPublicationCommand [http-nio-8080-exec-4] Locale --> uk_UA
+2022-09-13 23:18:59,840 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-4] Find all theme successfully!
+2022-09-13 23:18:59,842 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-4] Find all type successfully --> uk_UA
+2022-09-13 23:18:59,843 DEBUG c.g.f.w.c.i.EditPublicationCommand [http-nio-8080-exec-4] EditPublicationCommand finish success!
+2022-09-13 23:18:59,843 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> forward->/WEB-INF/jsp/admin/update_publication.jsp
+2022-09-13 23:18:59,843 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/update_publication.jsp
+2022-09-13 23:18:59,843 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to forward --> /WEB-INF/jsp/admin/update_publication.jsp
+2022-09-13 23:19:00,376 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
+2022-09-13 23:19:16,945 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGPost starts
+2022-09-13 23:19:16,945 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-13 23:19:16,946 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /admin/update-publication
+2022-09-13 23:19:16,946 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.UpdatePublicationCommand@2496b49e
+2022-09-13 23:19:16,946 DEBUG c.g.f.w.c.i.UpdatePublicationCommand [http-nio-8080-exec-5] UpdatePublicationCommand starts
+2022-09-13 23:19:16,947 TRACE c.g.f.w.c.i.UpdatePublicationCommand [http-nio-8080-exec-5] Locale --> uk_UA
+2022-09-13 23:19:16,981 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-5] Validate TextEdition: true
+2022-09-13 23:19:16,982 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-5] Validate TextEdition: true
+2022-09-13 23:19:16,983 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-5] Validate TitleEdition: true
+2022-09-13 23:19:16,983 DEBUG c.g.f.s.u.Validator [http-nio-8080-exec-5] Validate TitleEdition: true
+2022-09-13 23:19:16,988 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-5] Update publication successfully!
+2022-09-13 23:19:16,991 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-5] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/admin/edit-publication?publication_id=63242
+2022-09-13 23:19:16,991 TRACE c.g.f.w.c.i.UpdatePublicationCommand [http-nio-8080-exec-5] referPage --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/admin/edit-publication?publication_id=63242
+2022-09-13 23:19:16,992 TRACE c.g.f.w.c.i.UpdatePublicationCommand [http-nio-8080-exec-5] UpdatePublicationCommand finish successfully!
+2022-09-13 23:19:16,993 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> redirect->/periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B4%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fadmin%2Fedit-publication%3Fpublication_id%3D63242
+2022-09-13 23:19:16,993 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> redirect->/periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B4%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fadmin%2Fedit-publication%3Fpublication_id%3D63242
+2022-09-13 23:19:16,993 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to redirect --> /periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B4%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fadmin%2Fedit-publication%3Fpublication_id%3D63242
+2022-09-13 23:19:16,993 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGPost finished
+2022-09-13 23:19:17,005 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet starts
+2022-09-13 23:19:17,005 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller starts
+2022-09-13 23:19:17,005 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Request parameter: command --> /show-result-page
+2022-09-13 23:19:17,005 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowResultPageCommand@52121d5e
+2022-09-13 23:19:17,006 DEBUG c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-5] ShowResultPageCommand starts
+2022-09-13 23:19:17,006 TRACE c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-5] Message --> Публікацію успішно додано!
+2022-09-13 23:19:17,006 TRACE c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-5] Return page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/admin/edit-publication?publication_id=63242
+2022-09-13 23:19:17,006 DEBUG c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-5] ShowResultPageCommand finish successfully!
+2022-09-13 23:19:17,006 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Forward address --> forward->/WEB-INF/jsp/result_page.jsp
+2022-09-13 23:19:17,006 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller finished, now go to address --> forward->/WEB-INF/jsp/result_page.jsp
+2022-09-13 23:19:17,006 TRACE c.g.f.w.FontController [http-nio-8080-exec-5] Send to forward --> /WEB-INF/jsp/result_page.jsp
+2022-09-13 23:19:17,013 DEBUG c.g.f.w.FontController [http-nio-8080-exec-5] Controller#doGet finished
+2022-09-13 23:19:18,566 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet starts
+2022-09-13 23:19:18,566 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller starts
+2022-09-13 23:19:18,566 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Request parameter: command --> /admin/edit-publication
+2022-09-13 23:19:18,567 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Obtain key --> com.gmail.fursovych20.web.command.impl.EditPublicationCommand@43fa8ce0
+2022-09-13 23:19:18,567 DEBUG c.g.f.w.c.i.EditPublicationCommand [http-nio-8080-exec-3] EditPublicationCommand starts
+2022-09-13 23:19:18,568 TRACE c.g.f.w.c.i.EditPublicationCommand [http-nio-8080-exec-3] Locale --> uk_UA
+2022-09-13 23:19:18,571 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-3] Find all theme successfully!
+2022-09-13 23:19:18,575 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-3] Find all type successfully --> uk_UA
+2022-09-13 23:19:18,576 DEBUG c.g.f.w.c.i.EditPublicationCommand [http-nio-8080-exec-3] EditPublicationCommand finish success!
+2022-09-13 23:19:18,576 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Forward address --> forward->/WEB-INF/jsp/admin/update_publication.jsp
+2022-09-13 23:19:18,576 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller finished, now go to address --> forward->/WEB-INF/jsp/admin/update_publication.jsp
+2022-09-13 23:19:18,576 TRACE c.g.f.w.FontController [http-nio-8080-exec-3] Send to forward --> /WEB-INF/jsp/admin/update_publication.jsp
+2022-09-13 23:19:18,592 DEBUG c.g.f.w.FontController [http-nio-8080-exec-3] Controller#doGet finished
+2022-09-13 23:19:24,829 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller#doGet starts
+2022-09-13 23:19:24,830 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller starts
+2022-09-13 23:19:24,831 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Request parameter: command --> /publication
+2022-09-13 23:19:24,831 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowPublicationCommand@68f38911
+2022-09-13 23:19:24,831 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] ShowPublicationCommand starts
+2022-09-13 23:19:24,832 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] Locale --> uk_UA
+2022-09-13 23:19:24,832 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] Publication Id --> 63242
+2022-09-13 23:19:24,835 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-7] Find a publication by ID: 63242, and LocalType: uk_UA
+2022-09-13 23:19:24,836 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] Publication --> Publication [id=63242, name=Зовнішня політика, description=Міжнародні відносини. Політика. Зовнішньоекономічна діяльність, themeId=1, typeID=1, price=697.0]
+2022-09-13 23:19:24,838 INFO c.g.f.d.d.i.ReviewDAOImpl [http-nio-8080-exec-7] Find review by publicationID --> 63242
+2022-09-13 23:19:24,838 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] Reviews --> []
+2022-09-13 23:19:24,840 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-7] Find theme by id successfully --> 1
+2022-09-13 23:19:24,840 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] Theme --> Theme [id=1, name=Мова та література]
+2022-09-13 23:19:24,841 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-7] Find type by id --> 1
+2022-09-13 23:19:24,841 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] Type --> Theme [id=1, name=Газета]
+2022-09-13 23:19:24,841 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-7] ShowPublicationCommand finish!
+2022-09-13 23:19:24,842 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Forward address --> forward->/WEB-INF/jsp/publication.jsp
+2022-09-13 23:19:24,842 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller finished, now go to address --> forward->/WEB-INF/jsp/publication.jsp
+2022-09-13 23:19:24,842 TRACE c.g.f.w.FontController [http-nio-8080-exec-7] Send to forward --> /WEB-INF/jsp/publication.jsp
+2022-09-13 23:19:24,853 DEBUG c.g.f.w.FontController [http-nio-8080-exec-7] Controller#doGet finished
+2022-09-13 23:19:31,736 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGPost starts
+2022-09-13 23:19:31,737 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller starts
+2022-09-13 23:19:31,737 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Request parameter: command --> /admin/delete-publication
+2022-09-13 23:19:31,737 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Obtain key --> com.gmail.fursovych20.web.command.impl.DeletePublicationCommand@c2b3150
+2022-09-13 23:19:31,737 DEBUG c.g.f.w.c.i.DeletePublicationCommand [http-nio-8080-exec-8] DeletePublicationCommand starts
+2022-09-13 23:19:31,737 TRACE c.g.f.w.c.i.DeletePublicationCommand [http-nio-8080-exec-8] Locale --> uk_UA
+2022-09-13 23:19:31,738 TRACE c.g.f.w.c.i.DeletePublicationCommand [http-nio-8080-exec-8] Publication id --> 63242
+2022-09-13 23:19:31,754 TRACE c.g.f.w.u.HttpUtil [http-nio-8080-exec-8] Header page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/publication?id=63242
+2022-09-13 23:19:31,755 DEBUG c.g.f.w.c.i.DeletePublicationCommand [http-nio-8080-exec-8] DeletePublicationCommand finish
+2022-09-13 23:19:31,755 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Forward address --> redirect->/periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B2%D0%B8%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fpublication%3Fid%3D63242
+2022-09-13 23:19:31,755 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller finished, now go to address --> redirect->/periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B2%D0%B8%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fpublication%3Fid%3D63242
+2022-09-13 23:19:31,755 TRACE c.g.f.w.FontController [http-nio-8080-exec-8] Send to redirect --> /periodicals_epam_war_exploded/controller/show-result-page?message=%D0%9F%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8E+%D1%83%D1%81%D0%BF%D1%96%D1%88%D0%BD%D0%BE+%D0%B2%D0%B8%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BE%21&return_page=http%3A%2F%2F127.0.0.1%3A8080%2Fperiodicals_epam_war_exploded%2Fcontroller%2Fpublication%3Fid%3D63242
+2022-09-13 23:19:31,756 DEBUG c.g.f.w.FontController [http-nio-8080-exec-8] Controller#doGPost finished
+2022-09-13 23:19:31,765 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet starts
+2022-09-13 23:19:31,765 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller starts
+2022-09-13 23:19:31,765 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Request parameter: command --> /show-result-page
+2022-09-13 23:19:31,766 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowResultPageCommand@52121d5e
+2022-09-13 23:19:31,766 DEBUG c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-10] ShowResultPageCommand starts
+2022-09-13 23:19:31,766 TRACE c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-10] Message --> Публікацію успішно видалено!
+2022-09-13 23:19:31,766 TRACE c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-10] Return page --> http://127.0.0.1:8080/periodicals_epam_war_exploded/controller/publication?id=63242
+2022-09-13 23:19:31,766 DEBUG c.g.f.w.c.i.ShowResultPageCommand [http-nio-8080-exec-10] ShowResultPageCommand finish successfully!
+2022-09-13 23:19:31,766 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Forward address --> forward->/WEB-INF/jsp/result_page.jsp
+2022-09-13 23:19:31,766 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller finished, now go to address --> forward->/WEB-INF/jsp/result_page.jsp
+2022-09-13 23:19:31,766 TRACE c.g.f.w.FontController [http-nio-8080-exec-10] Send to forward --> /WEB-INF/jsp/result_page.jsp
+2022-09-13 23:19:31,774 DEBUG c.g.f.w.FontController [http-nio-8080-exec-10] Controller#doGet finished
+2022-09-13 23:19:33,202 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet starts
+2022-09-13 23:19:33,202 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller starts
+2022-09-13 23:19:33,202 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Request parameter: command --> /publication
+2022-09-13 23:19:33,202 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Obtain key --> com.gmail.fursovych20.web.command.impl.ShowPublicationCommand@68f38911
+2022-09-13 23:19:33,202 DEBUG c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] ShowPublicationCommand starts
+2022-09-13 23:19:33,203 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Locale --> uk_UA
+2022-09-13 23:19:33,203 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Publication Id --> 63242
+2022-09-13 23:19:33,207 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-9] Find a publication by ID: 63242, and LocalType: uk_UA
+2022-09-13 23:19:33,207 TRACE c.g.f.w.c.i.ShowPublicationCommand [http-nio-8080-exec-9] Publication --> null
+2022-09-13 23:19:33,208 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Forward address --> forward->/WEB-INF/jsp/404-error.jsp
+2022-09-13 23:19:33,208 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller finished, now go to address --> forward->/WEB-INF/jsp/404-error.jsp
+2022-09-13 23:19:33,208 TRACE c.g.f.w.FontController [http-nio-8080-exec-9] Send to forward --> /WEB-INF/jsp/404-error.jsp
+2022-09-13 23:19:33,457 DEBUG c.g.f.w.FontController [http-nio-8080-exec-9] Controller#doGet finished
+2022-09-13 23:19:37,523 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet starts
+2022-09-13 23:19:37,523 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller starts
+2022-09-13 23:19:37,523 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Request parameter: command --> /home.jsp
+2022-09-13 23:19:37,523 WARN c.g.f.w.c.CommandContainer [http-nio-8080-exec-4] Command not found, commandName --> /home.jsp
+2022-09-13 23:19:37,524 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Obtain key --> com.gmail.fursovych20.web.command.impl.HomeCommand@2e40cd83
+2022-09-13 23:19:37,524 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-4] HomeCommand starts
+2022-09-13 23:19:37,524 TRACE c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-4] Locale --> uk_UA
+2022-09-13 23:19:37,524 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-4] getSearchCriteria starts
+2022-09-13 23:19:37,525 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-4] getSearchCriteria finally success!
+2022-09-13 23:19:37,531 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-4] Find all publications by criteria --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:19:37,532 INFO c.g.f.d.d.i.PublicationDAOImpl [http-nio-8080-exec-4] Received total count --> PublicationSearchCriteria{locale=uk_UA, themeId=0, typeId=0, orderId=0, currentPage=1, itemsPerPage=10, pageCount=0}
+2022-09-13 23:19:37,534 INFO c.g.f.d.d.i.ThemeDAOImpl [http-nio-8080-exec-4] Find all theme successfully!
+2022-09-13 23:19:37,536 INFO c.g.f.d.d.i.TypeDAOImpl [http-nio-8080-exec-4] Find all type successfully --> uk_UA
+2022-09-13 23:19:37,536 DEBUG c.g.f.w.c.i.HomeCommand [http-nio-8080-exec-4] HomeCommand finish
+2022-09-13 23:19:37,536 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Forward address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:19:37,536 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller finished, now go to address --> forward->/WEB-INF/jsp/home.jsp
+2022-09-13 23:19:37,536 TRACE c.g.f.w.FontController [http-nio-8080-exec-4] Send to forward --> /WEB-INF/jsp/home.jsp
+2022-09-13 23:19:37,548 DEBUG c.g.f.w.FontController [http-nio-8080-exec-4] Controller#doGet finished
