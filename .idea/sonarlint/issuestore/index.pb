@@ -90,8 +90,6 @@ G.idea/sonarlint/issuestore/f/b/fb612c74e8545d8b39f941c38bd0f83b3f3c813b,e\5\e5
 w
 G.idea/sonarlint/issuestore/f/d/fda1b37c13b485c3a13ac7474f219d905135a335,6\5\6502efe5655cc70ecbc91ce0fc4b9b91be69a522
 w
-G.idea/sonarlint/issuestore/5/8/5804e0a6f9bfcad76b2d361c7810044cedc4086c,7\0\70685a735e67f449b681feae952e4ac5ce04f101
-w
 G.idea/sonarlint/issuestore/6/c/6c5dd3262432b2cfbc1933106776b74bf50223c3,b\a\ba572a2173c4691649919c41c55e383e638609fc
 w
 G.idea/sonarlint/issuestore/2/0/20d8930add0fa43e9067db654baad07b39bd9b84,b\1\b12e819aae2d5eb9b25c8acd1a3a6d61ae583477
@@ -287,8 +285,6 @@ Ksrc/main/java/com/gmail/fursovych20/web/command/impl/ShowIssuesCommand.java,7\
 Psrc/main/java/com/gmail/fursovych20/web/command/impl/ShowPublicationCommand.java,d\3\d314a43c2703f99e5aaae1b50b75b68b2261f1bf
 
 Osrc/main/java/com/gmail/fursovych20/web/command/impl/ShowResultPageCommand.java,6\3\631a45b3714951be62b5b929fcaec5980d93fd08
-†
-Vsrc/main/java/com/gmail/fursovych20/web/command/impl/TerminateSubscriptionCommand.java,2\b\2b471c8d0da73633c32415ea56c3f5aed3eabd23
 }
 Msrc/main/java/com/gmail/fursovych20/web/command/impl/UpdateReviewCommand.java,c\f\cf95c4e897f07085e65bc67a330f0185c8976400
 |
@@ -383,8 +379,6 @@ s
 Csrc/main/java/com/gmail/fursovych20/service/PublicationService.java,b\7\b7d8bf172188bdf1bc4769270477caf4358f87a6
 €
 Psrc/main/java/com/gmail/fursovych20/db/connectionpool/exception/DBException.java,b\5\b5d8c87ee4680ab0f446e6e81824b680181a6d25
-t
-Dsrc/main/java/com/gmail/fursovych20/db/connectionpool/DBManager.java,5\7\57a8a4f3837aeb0ffcbe1038763c0fb188c4f4b9
 r
 Bsrc/main/java/com/gmail/fursovych20/entity/SubscriptionStatus.java,4\0\40a5fffaf8c22e17af71a448838510cf0f9e10d5
 d
@@ -395,8 +389,6 @@ q
 Asrc/main/java/com/gmail/fursovych20/web/util/MessageResolver.java,2\7\27cb96b7ac5750ba38f1685a1c04ae295decd750
 †
 Vsrc/main/java/com/gmail/fursovych20/service/exception/EmailAlreadyExistsException.java,6\2\6249c43f1d1bd38f0e449f2a54efbe6a0ce2c449
-j
-:src/main/java/com/gmail/fursovych20/web/util/HttpUtil.java,3\5\3524c1de6ead1cd6a89dcb73103956d7fa160bfb
 w
 Gsrc/main/java/com/gmail/fursovych20/db/dao/impl/PublicationDAOImpl.java,2\9\29aaea0c757e2fdc51e5a233dceabc9781ad647f
 n
@@ -417,15 +409,15 @@ Vsrc/main/java/com/gmail/fursovych20/service/exception/LoginAlreadyExistsExcepti
 Qsrc/main/java/com/gmail/fursovych20/service/impl/BalanceOperationServiceImpl.java,8\d\8d2119452da9797db2b9685d19d3ba94000ce8fe
 u
 Esrc/main/java/com/gmail/fursovych20/web/command/impl/HomeCommand.java,4\3\439601737e88531d6bbf60fe1e460a7862157452
-
-Osrc/main/java/com/gmail/fursovych20/web/command/impl/AddPublicationCommand.java,a\5\a5fcbb68543d71f52e4d781d795c7b09106234d1
 l
 <src/main/java/com/gmail/fursovych20/web/command/Command.java,c\b\cbe0cf5f1e51d8f3d6f2491898e5b94ad388aa50
-u
-Esrc/main/java/com/gmail/fursovych20/web/listener/ContextListener.java,a\8\a8bdca438dde1dd3dea17f25fa2176e5182c6963
 o
 ?src/main/java/com/gmail/fursovych20/service/util/Validator.java,1\f\1fbfb4e8ccfe322ab89e86a078e8c806e04648f6
 ‡
 Wsrc/main/java/com/gmail/fursovych20/web/command/impl/SubscribeToPublicationCommand.java,2\e\2e2618e1438b4618872b6dd74db4d4b6feb4d1eb
 T
 $src/main/webapp/META-INF/context.xml,c\b\cbfb0d2e9b2b9fbf9d54374577c894a38643c6d0
+n
+>src/main/java/com/gmail/fursovych20/db/dao/PublicationDAO.java,e\e\ee3c999da8d3cfef3d99ef9757a42197fae4ef85
+l
+<src/main/java/com/gmail/fursovych20/service/TypeService.java,0\f\0f4f63982ea4031a0eef2bd71fe53225195d2c11
