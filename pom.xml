@@ -18,8 +18,8 @@
         <maven.compiler.source>11</maven.compiler.source>
 
         <servlet-api.version>4.0.1</servlet-api.version>
-        <jstl.version>1.2</jstl.version>
         <jsp-api.version>2.3.3</jsp-api.version>
+        <jstl.version>1.2</jstl.version>
         <log4j.version>2.18.0</log4j.version>
         <mail-api.version>1.6.2</mail-api.version>
         <junit.version>4.13.2</junit.version>
